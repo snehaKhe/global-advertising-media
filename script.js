@@ -327,6 +327,32 @@ const heroSlides = document.querySelectorAll("#home .hero-bg");
     }
   }
   
+const header = document.querySelector(".header");
+const menuToggle = document.querySelector("#menu-toggle");
+const navLinks = document.querySelectorAll(".nav-links a");
 
+function updateNavbar() {
+  header.classList.toggle("scrolled", window.scrollY > 30);
+}
+
+window.addEventListener("scroll", updateNavbar, {
+  passive: true
+});
+
+updateNavbar();
+
+// Close the mobile menu after clicking a link
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuToggle.checked = false;
+  });
+});
+
+// Close mobile menu with Escape
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    menuToggle.checked = false;
+  }
+});
 });
 

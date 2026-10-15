@@ -18,37 +18,39 @@
 <body>
     <div class="scroll-progress" id="scrollProgress"></div>
   <!-- Navigation -->
-<header class="header">
+
+<header class="header" id="header">
   <nav class="navbar container">
 
     <!-- Logo -->
-    <a href="#home" class="logo">
-      <img src="logo.png" alt="Logo">
+    <a href="#home">
+      <img src="logo.png" alt="Global Advertising Media Logo" class="logo">
+    
     </a>
 
     <!-- Mobile Menu Toggle -->
     <input type="checkbox" id="menu-toggle">
 
-    <!-- Arrow Icon -->
     <label for="menu-toggle" class="menu-icon"
            aria-label="Toggle navigation">
-      <span class="menu-arrow"></span>
+      <span></span>
+      <span></span>
     </label>
 
     <!-- Navigation Links -->
     <ul class="nav-links">
 
       <li>
-        <a href="#home">Home</a>
+        <a href="#home" class="nav-link">Home</a>
       </li>
 
-      <!-- About Us Dropdown -->
-      <li class="nav-dropdown">
-        <a href="index.html#about" class="nav-dropdown-toggle">
+      <!-- About Dropdown -->
+      <li class="nav-item has-dropdown">
+        <a href="index.html#about" class="nav-link">
           About Us <span class="dropdown-arrow"></span>
         </a>
 
-        <ul class="nav-dropdown-menu">
+        <ul class="dropdown-menu">
           <li><a href="index.html#about">About Our Agency</a></li>
           <li><a href="creative-thinking.html">Creative Thinking</a></li>
           <li><a href="integrated-solutions.html">Integrated Solutions</a></li>
@@ -58,11 +60,8 @@
       </li>
 
       <!-- Services Dropdown -->
-      <li class="dropdown">
-        <a href="digital-marketing.html"
-           class="dropdown-toggle"
-           aria-haspopup="true"
-           aria-expanded="false">
+      <li class="nav-item has-dropdown">
+        <a href="digital-marketing.html" class="nav-link">
           Services <span class="dropdown-arrow"></span>
         </a>
 
@@ -76,58 +75,43 @@
         </ul>
       </li>
 
-      
-<!-- Digital Advertising Dropdown -->
-<li class="dropdown">
-  <a href="digital-advertising.html"
-     class="dropdown-toggle"
-     aria-haspopup="true"
-     aria-expanded="false">
-    Digital Advertising
-    <span class="dropdown-arrow"></span>
-  </a>
+      <!-- Digital Advertising Dropdown -->
+      <li class="nav-item has-dropdown">
+        <a href="digital-advertising.html" class="nav-link">
+          Digital Ads <span class="dropdown-arrow"></span>
+        </a>
 
-  <ul class="dropdown-menu">
-    <li>
-      <a href="google-ads.html">Google Ads</a>
-    </li>
-    <li>
-      <a href="social-media-ads.html">Social Media Advertising</a>
-    </li>
-    <li>
-      <a href="display-advertising.html">Display Advertising</a>
-    </li>
-    <li>
-      <a href="video-advertising.html">Video Advertising</a>
-    </li>
-    <li>
-      <a href="remarketing.html">Remarketing &amp; Retargeting</a>
-    </li>
-    <li>
-      <a href="programmatic-advertising.html">Programmatic Advertising</a>
-    </li>
-  </ul>
-</li>
+        <ul class="dropdown-menu">
+          <li><a href="google-ads.html">Google Ads</a></li>
+          <li><a href="social-media-ads.html">Social Media Advertising</a></li>
+          <li><a href="display-advertising.html">Display Advertising</a></li>
+          <li><a href="video-advertising.html">Video Advertising</a></li>
+          <li><a href="remarketing.html">Remarketing &amp; Retargeting</a></li>
+          <li><a href="programmatic-advertising.html">Programmatic Advertising</a></li>
+        </ul>
+      </li>
 
-
-      <!-- Our Work Dropdown -->
-      <li class="nav-dropdown">
-  <a href="#portfolio" class="nav-dropdown-toggle">
-    Our Work</a>
+      <!-- Our Work -->
+      <li>
+        <a href="#portfolio" class="nav-link">Our Work</a>
+      </li>
 
       <!-- FAQs -->
       <li>
-        <a href="#faq">FAQs</a>
+        <a href="#faq" class="nav-link">FAQs</a>
       </li>
 
-      <!-- Contact Button -->
+      <!-- Contact CTA -->
       <li>
-        <a href="#contact" class="nav-cta">Let's Talk ↗</a>
+        <a href="#contact" class="nav-cta">
+          Let's Talk <span class="cta-arrow">↗</span>
+        </a>
       </li>
 
     </ul>
   </nav>
 </header>
+
 
   <main>
     <!-- Hero Section -->
