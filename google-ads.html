@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Ads Management | Your Agency</title>
+  <meta name="description" content="Grow your business with Google Search, Shopping, Display and Performance Max advertising campaigns.">
+  <link rel="stylesheet" href="style.css">
+  <link rel ="stylesheet" href="digital-advertising.css">
+</head>
+<body>
+
+<header class="site-header">
+</header>
+
+<main>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Our Services</span>
+        <h2>Google Advertising Solutions</h2>
+        <p>Reach the right audience with campaigns designed for your objectives.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">🔎</div>
+          <h3>Search Ads</h3>
+          <p>Reach customers searching for relevant products and services on Google.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛍️</div>
+          <h3>Shopping Ads</h3>
+          <p>Showcase product images, pricing and details to potential buyers.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🖼️</div>
+          <h3>Display Ads</h3>
+          <p>Build awareness through visual advertisements across eligible placements.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🚀</div>
+          <h3>Performance Max</h3>
+          <p>Use Google's cross-channel campaign format to pursue your conversion goals.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📞</div>
+          <h3>Lead Generation</h3>
+          <p>Generate enquiries, calls and qualified prospects for your business.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3>Conversion Tracking</h3>
+          <p>Measure valuable actions and identify opportunities to improve performance.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Campaign Management Process</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>01. Research</h3>
+          <p>Understand your audience, competitors, keywords and objectives.</p>
+        </article>
+        <article class="card">
+          <h3>02. Launch</h3>
+          <p>Configure targeting, ads, conversion tracking and campaign budgets.</p>
+        </article>
+        <article class="card">
+          <h3>03. Optimize</h3>
+          <p>Review results and refine bids, search terms, creative and landing pages.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta">
+        <h2>Ready to Improve Your Google Ads?</h2>
+        <p>Let's discuss your goals, audience and advertising budget.</p>
+        <a class="btn" href="mailto:hello@example.com?subject=Google%20Ads%20Consultation">
+          Contact Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Your Agency. All rights reserved.</p>
+    <a href="digital-advertising.html">Back to Digital Advertising</a>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    "#services .card, .section-light .card, #contact .cta"
+  );
+
+  // Show content immediately if reduced motion is preferred
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  elements.forEach((element, index) => {
+    element.classList.add("reveal");
+    element.style.transitionDelay = `${(index % 3) * 100}ms`;
+  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach(element => observer.observe(element));
+  } else {
+    elements.forEach(element => element.classList.add("visible"));
+  }
+});
+</script>
+
+</body>
+</html>

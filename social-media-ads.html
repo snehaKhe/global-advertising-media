@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Media Advertising | Your Agency</title>
+  <meta name="description" content="Social media advertising services for audience targeting, lead generation, sales and brand awareness.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="digital-advertising.css">
+</head>
+<body>
+
+<header class="site-header">
+</header>
+
+<main>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Our Services</span>
+        <h2>Social Advertising Solutions</h2>
+        <p>Choose suitable platforms and campaign formats for your business.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">📘</div>
+          <h3>Facebook Ads</h3>
+          <p>Promote products, services, offers and events to relevant audiences.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📸</div>
+          <h3>Instagram Ads</h3>
+          <p>Use image, video, Stories and Reels placements to showcase your brand.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💼</div>
+          <h3>LinkedIn Ads</h3>
+          <p>Reach professional audiences by industry, job role and other available criteria.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎬</div>
+          <h3>TikTok Ads</h3>
+          <p>Use short-form creative and supported placements to reach relevant audiences.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📝</div>
+          <h3>Lead Generation</h3>
+          <p>Encourage prospects to submit enquiries through lead forms or landing pages.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🧪</div>
+          <h3>Creative Testing</h3>
+          <p>Compare creative concepts, messaging and formats to improve campaign results.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How We Improve Campaign Performance</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Audience Research</h3>
+          <p>Identify customer segments, interests and suitable targeting options.</p>
+        </article>
+        <article class="card">
+          <h3>Ad Creation</h3>
+          <p>Develop compelling copy, visuals, calls to action and landing-page messaging.</p>
+        </article>
+        <article class="card">
+          <h3>Performance Analysis</h3>
+          <p>Monitor reach, clicks, leads, conversions and advertising costs.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta">
+        <h2>Let's Grow Your Social Presence</h2>
+        <p>Discuss your audience, campaign goals and advertising strategy with our team.</p>
+        <a class="btn" href="mailto:hello@example.com?subject=Social%20Media%20Advertising">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Your Agency. All rights reserved.</p>
+    <a href="digital-advertising.html">Back to Digital Advertising</a>
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    "#services .card, .section-light .card, #contact .cta"
+  );
+
+  // Show content immediately if reduced motion is preferred
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  elements.forEach((element, index) => {
+    element.classList.add("reveal");
+    element.style.transitionDelay = `${(index % 3) * 100}ms`;
+  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach(element => observer.observe(element));
+  } else {
+    elements.forEach(element => element.classList.add("visible"));
+  }
+});
+</script>
+</body>
+</html>

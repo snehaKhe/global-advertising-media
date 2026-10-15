@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Display Advertising Services | Your Agency</title>
+  <meta name="description" content="Display advertising services for brand awareness, audience reach and conversion-focused campaigns.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="digital-advertising.css">
+</head>
+<body>
+
+<header class="site-header">
+
+</header>
+<main>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Display Solutions</span>
+        <h2>Our Display Advertising Services</h2>
+        <p>Combine engaging creative with relevant targeting and measurement.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">🧩</div>
+          <h3>Banner Advertising</h3>
+          <p>Promote your brand through visual banner formats across eligible placements.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📐</div>
+          <h3>Responsive Display Ads</h3>
+          <p>Prepare ad assets that adapt to supported sizes and placements.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Audience Targeting</h3>
+          <p>Reach relevant audience segments using available targeting controls.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🌐</div>
+          <h3>Placement Strategy</h3>
+          <p>Review eligible inventory and placements for relevance and suitability.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🔄</div>
+          <h3>Remarketing Campaigns</h3>
+          <p>Reconnect with eligible previous visitors where consent and platform rules permit.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📈</div>
+          <h3>Reporting & Optimization</h3>
+          <p>Measure impressions, clicks, conversions and campaign efficiency.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Display Campaign Workflow</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Creative Planning</h3>
+          <p>Define the message, creative formats, audience and campaign objective.</p>
+        </article>
+        <article class="card">
+          <h3>Campaign Setup</h3>
+          <p>Configure targeting, placements, budgets and measurement settings.</p>
+        </article>
+        <article class="card">
+          <h3>Continuous Improvement</h3>
+          <p>Evaluate results and refine creative assets, placements and targeting.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta">
+        <h2>Ready to Expand Your Brand Reach?</h2>
+        <p>Let's develop a display advertising strategy for your business.</p>
+        <a class="btn" href="mailto:hello@example.com?subject=Display%20Advertising">
+          Contact Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Your Agency. All rights reserved.</p>
+    <a href="digital-advertising.html">Back to Digital Advertising</a>
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    "#services .card, .section-light .card, #contact .cta"
+  );
+
+  // Show content immediately if reduced motion is preferred
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  elements.forEach((element, index) => {
+    element.classList.add("reveal");
+    element.style.transitionDelay = `${(index % 3) * 100}ms`;
+  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach(element => observer.observe(element));
+  } else {
+    elements.forEach(element => element.classList.add("visible"));
+  }
+});
+</script>
+</body>
+</html>

@@ -326,6 +326,7 @@ const heroSlides = document.querySelectorAll("#home .hero-bg");
       });
     }
   }
+  
 
 });
 

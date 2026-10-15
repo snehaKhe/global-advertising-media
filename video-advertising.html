@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Advertising Services | Your Agency</title>
+  <meta name="description" content="Video advertising campaigns for brand awareness, product promotion and customer acquisition.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="digital-advertising.css">
+</head>
+<body>
+
+<header class="site-header">
+</header>
+
+<main>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Our Services</span>
+        <h2>Video Advertising Solutions</h2>
+        <p>Use video formats to communicate your message and reach relevant audiences.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">📺</div>
+          <h3>YouTube Advertising</h3>
+          <p>Promote your business through eligible YouTube video ad formats.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎞️</div>
+          <h3>Short-Form Video Ads</h3>
+          <p>Create vertical video campaigns for supported social placements.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎨</div>
+          <h3>Video Creative Strategy</h3>
+          <p>Plan hooks, messaging, storytelling and calls to action.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">👥</div>
+          <h3>Audience Targeting</h3>
+          <p>Choose relevant audiences using available campaign targeting options.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛒</div>
+          <h3>Product Promotion</h3>
+          <p>Demonstrate product benefits and direct viewers to relevant pages.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3>Video Analytics</h3>
+          <p>Track available metrics such as views, watch time, clicks and conversions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-heading">
+        <h2>From Idea to Campaign</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>01. Plan</h3>
+          <p>Define your audience, campaign objective and video concept.</p>
+        </article>
+        <article class="card">
+          <h3>02. Create</h3>
+          <p>Prepare video assets, captions, creative variations and calls to action.</p>
+        </article>
+        <article class="card">
+          <h3>03. Measure</h3>
+          <p>Evaluate engagement and conversion metrics to guide improvements.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta">
+        <h2>Bring Your Brand to Life</h2>
+        <p>Discuss your video concept and campaign objectives with our team.</p>
+        <a class="btn" href="mailto:hello@example.com?subject=Video%20Advertising">
+          Request a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Your Agency. All rights reserved.</p>
+    <a href="digital-advertising.html">Back to Digital Advertising</a>
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    "#services .card, .section-light .card, #contact .cta"
+  );
+
+  // Show content immediately if reduced motion is preferred
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  elements.forEach((element, index) => {
+    element.classList.add("reveal");
+    element.style.transitionDelay = `${(index % 3) * 100}ms`;
+  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach(element => observer.observe(element));
+  } else {
+    elements.forEach(element => element.classList.add("visible"));
+  }
+});
+</script>
+</body>
+</html>

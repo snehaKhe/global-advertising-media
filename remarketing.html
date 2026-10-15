@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remarketing & Retargeting | Your Agency</title>
+  <meta name="description" content="Reconnect with eligible previous visitors through privacy-conscious remarketing campaigns.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="digital-advertising.css">
+</head>
+<body>
+
+<header class="site-header">
+</header>
+
+<main>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Our Services</span>
+        <h2>Remarketing Campaign Solutions</h2>
+        <p>Develop relevant follow-up campaigns for different stages of the customer journey.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">🌐</div>
+          <h3>Website Visitor Remarketing</h3>
+          <p>Reconnect with eligible website visitors through supported advertising platforms.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛍️</div>
+          <h3>Cart Abandonment</h3>
+          <p>Remind eligible shoppers about unfinished purchases where platform policies permit.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📦</div>
+          <h3>Product Remarketing</h3>
+          <p>Show relevant product advertisements to eligible audiences using supported feeds.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Audience Segmentation</h3>
+          <p>Organize eligible audiences by relevant interactions and campaign objectives.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">✉️</div>
+          <h3>Customer Re-engagement</h3>
+          <p>Coordinate advertising with other permitted marketing touchpoints.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📈</div>
+          <h3>Conversion Optimization</h3>
+          <p>Review campaign performance, frequency and conversion outcomes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-heading">
+        <h2>A Smarter Remarketing Process</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Audience Setup</h3>
+          <p>Configure eligible audience groups and appropriate retention periods.</p>
+        </article>
+        <article class="card">
+          <h3>Relevant Messaging</h3>
+          <p>Prepare suitable creative and offers for different customer journeys.</p>
+        </article>
+        <article class="card">
+          <h3>Measurement</h3>
+          <p>Evaluate conversions and frequency while respecting privacy choices.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta">
+        <h2>Reconnect With Your Audience</h2>
+        <p>Build a remarketing plan that supports your business objectives.</p>
+        <a class="btn" href="mailto:hello@example.com?subject=Remarketing%20Strategy">
+          Discuss Your Strategy
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Your Agency. All rights reserved.</p>
+    <a href="digital-advertising.html">Back to Digital Advertising</a>
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    "#services .card, .section-light .card, #contact .cta"
+  );
+
+  // Show content immediately if reduced motion is preferred
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  elements.forEach((element, index) => {
+    element.classList.add("reveal");
+    element.style.transitionDelay = `${(index % 3) * 100}ms`;
+  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach(element => observer.observe(element));
+  } else {
+    elements.forEach(element => element.classList.add("visible"));
+  }
+});
+</script>
+</body>
+</html>
