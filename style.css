@@ -131,37 +131,6 @@ p {
 /* =========================
    LOGO
 ========================= */
-
-.logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.logo img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  transition: transform 0.4s ease;
-}
-
-.logo:hover img {
-  transform: rotate(-8deg) scale(1.08);
-}
-
-.logo-text {
-  font-size: 23px;
-  font-weight: 800;
-  letter-spacing: -1px;
-  color: #151515;
-}
-
-.logo-text span {
-  color: #ff5b35;
-}
-
 /* =========================
    NAV LINKS
 ========================= */
@@ -251,7 +220,6 @@ p {
   padding: 10px;
   margin: 0;
   list-style: none;
-
   background: #fff;
   border: 1px solid #eeeeee;
   border-radius: 14px;
@@ -583,7 +551,7 @@ p {
   justify-content: space-between;
   gap: 25px;
 }
-.portfolio-card[id] {
+.portfolio-card[id] { 
   scroll-margin-top: 110px;
 }
 html {
@@ -594,22 +562,11 @@ html {
 .why-item[id] {
   scroll-margin-top: 110px;
 }
-.logo {
-  display: inline-flex;
-	width: 200px;
-  height: 50%;
+.logo{
+    width: 350px;
+    height: auto;
+    margin-bottom: 20px;
 }
-
-
-
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-}
-
 .nav-links a {
   font-size: 14px;
   font-weight: 600;
@@ -2835,8 +2792,8 @@ textarea:focus-visible {
   place-items: center;
   width: 76px;
   height: 76px;
-  color: #ea580c;
-  background: #fff1e7;
+  color: #fff1e7;
+  background: #ea580c;
   border-radius: 12px;
   font-family: var(--heading-font);
   font-size: 27px;
@@ -3226,6 +3183,7 @@ textarea:focus-visible {
 }
 
 
+
 /* ==============================
    SERVICES SECTION ANIMATION
 ============================== */
@@ -3346,8 +3304,8 @@ textarea:focus-visible {
 }
 
 .service-card:hover .service-icon {
-  background: #ea580c;
-  color: #ffffff;
+  background: #e0a587;
+  color: #0f0f0f;
   transform: scale(1.08) rotate(-4deg);
 }
 
@@ -3879,5 +3837,443 @@ textarea:focus-visible {
   .detailed-services .detail-card.service-reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+
+/* ==========================================
+   GLOBAL ADVERTISING MEDIA
+   PREMIUM ANIMATION SYSTEM
+========================================== */
+
+:root {
+  --animation-accent: #e94b35;
+  --animation-duration: 700ms;
+  --animation-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ==========================================
+   1. HERO BACKGROUND CINEMATIC ZOOM
+========================================== */
+
+.hero {
+  isolation: isolate;
+}
+
+.hero-bg-slider {
+  overflow: hidden;
+}
+
+.hero-bg {
+  opacity: 0;
+  transform: scale(1.10);
+  transition:
+    opacity 1.3s ease-in-out,
+    transform 7s linear;
+  will-change: opacity, transform;
+}
+
+.hero-bg.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Improve overlay depth */
+
+.hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 12, 22, 0.88) 0%,
+    rgba(8, 12, 22, 0.62) 50%,
+    rgba(8, 12, 22, 0.24) 100%
+  );
+}
+
+/* ==========================================
+   2. HERO CONTENT ENTRANCE
+========================================== */
+
+.hero-content > * {
+  animation: heroReveal 900ms var(--animation-ease) both;
+}
+
+.hero-content > :nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.hero-content > :nth-child(2) {
+  animation-delay: 250ms;
+}
+
+.hero-content > :nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.hero-content > :nth-child(4) {
+  animation-delay: 550ms;
+}
+
+.hero-content > :nth-child(5) {
+  animation-delay: 700ms;
+}
+
+.hero-label {
+  animation: heroLabelReveal 900ms var(--animation-ease) 800ms both;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroLabelReveal {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Subtle accent on hero heading */
+
+.hero h1 span {
+  display: inline-block;
+  animation: headingAccent 1s ease 700ms both;
+}
+
+@keyframes headingAccent {
+  from {
+    opacity: 0.6;
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* ==========================================
+   3. BUTTON MICRO-INTERACTIONS
+========================================== */
+
+.btn,
+.nav-cta,
+.footer-cta-btn {
+  transition:
+    transform 250ms var(--animation-ease),
+    box-shadow 250ms ease,
+    background-color 250ms ease,
+    color 250ms ease;
+}
+
+.btn:hover,
+.nav-cta:hover,
+.footer-cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active,
+.nav-cta:active,
+.footer-cta-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 28px rgba(233, 75, 53, 0.25);
+}
+
+.btn-outline:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Animated arrow */
+
+.btn,
+.text-link,
+.service-card a,
+.footer-nav a,
+.insight-link {
+  --arrow-shift: 4px;
+}
+
+.btn:hover,
+.text-link:hover,
+.service-card a:hover,
+.footer-nav a:hover,
+.insight-link:hover {
+  text-decoration: none;
+}
+
+/* ==========================================
+   4. SCROLL REVEAL
+========================================== */
+
+.js-motion .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity var(--animation-duration) var(--animation-ease),
+    transform var(--animation-duration) var(--animation-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js-motion .reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Optional directional variants */
+
+.js-motion .reveal-left {
+  transform: translate3d(-35px, 0, 0);
+}
+
+.js-motion .reveal-right {
+  transform: translate3d(35px, 0, 0);
+}
+
+.js-motion .reveal-scale {
+  transform: scale(0.96);
+}
+
+.js-motion .reveal-left.is-visible,
+.js-motion .reveal-right.is-visible {
+  transform: translate3d(0, 0, 0);
+}
+
+.js-motion .reveal-scale.is-visible {
+  transform: scale(1);
+}
+
+/* ==========================================
+   5. SERVICE CARD HOVER
+========================================== */
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 350ms var(--animation-ease),
+    box-shadow 350ms ease,
+    border-color 350ms ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--animation-accent);
+  transition: width 450ms var(--animation-ease);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(17, 23, 34, 0.10);
+}
+
+.service-card:hover::before {
+  width: 100%;
+}
+
+.service-icon {
+  transition:
+    transform 300ms var(--animation-ease),
+    color 300ms ease;
+}
+
+.service-card:hover .service-icon {
+  transform: translateY(-4px);
+  color: var(--animation-accent);
+}
+
+/* ==========================================
+   6. PORTFOLIO IMAGE ZOOM
+========================================== */
+
+.portfolio-card {
+  overflow: hidden;
+  transition:
+    transform 350ms var(--animation-ease),
+    box-shadow 350ms ease;
+}
+
+.portfolio-card > img {
+  transition: transform 700ms var(--animation-ease);
+  will-change: transform;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card:hover > img {
+  transform: scale(1.055);
+}
+
+.project-details summary {
+  cursor: pointer;
+  transition: color 250ms ease;
+}
+
+.project-details summary:hover {
+  color: var(--animation-accent);
+}
+
+.project-details summary span {
+  display: inline-block;
+  transition: transform 250ms ease;
+}
+
+.project-details[open] summary span {
+  transform: rotate(45deg);
+}
+
+/* ==========================================
+   7. WHY US & DETAIL CARDS
+========================================== */
+
+.why-item,
+.detail-card,
+.channel-card,
+.process-card,
+.result-card {
+  transition:
+    transform 350ms var(--animation-ease),
+    box-shadow 350ms ease;
+}
+
+.why-item:hover,
+.detail-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ==========================================
+   8. IMAGE DEPTH
+========================================== */
+
+.about-image img {
+  transition: transform 700ms var(--animation-ease);
+}
+
+.about-image:hover img {
+  transform: scale(1.035);
+}
+
+/* ==========================================
+   9. SCROLL PROGRESS BAR
+========================================== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #e94b35,
+    #ff9b6a
+  );
+  box-shadow: 0 0 10px rgba(233, 75, 53, 0.35);
+  pointer-events: none;
+}
+
+/* ==========================================
+   10. ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js-motion .reveal,
+  .js-motion .reveal-left,
+  .js-motion .reveal-right,
+  .js-motion .reveal-scale {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+  .service-card:hover,
+  .portfolio-card:hover,
+  .why-item:hover,
+  .detail-card:hover {
+    transform: none;
+  }
+
+  .portfolio-card:hover > img,
+  .about-image:hover img {
+    transform: none;
+  }
+}
+.portfolio-card[hidden] {
+  display: none !important;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  left: -180px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(233, 75, 53, 0.13);
+  filter: blur(100px);
+  pointer-events: none;
+  animation: heroGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.45;
+  }
+
+  to {
+    transform: translate3d(90px, 35px, 0);
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::after {
+    animation: none;
   }
 }

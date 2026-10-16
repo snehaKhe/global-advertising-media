@@ -20,12 +20,11 @@
   <!-- Navigation -->
 
 <header class="header" id="header">
-  <nav class="navbar container">
+  <nav class="navbar">
 
     <!-- Logo -->
-    <a href="#home">
-      <img src="logo.png" alt="Global Advertising Media Logo" class="logo">
-    
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Global Advertising Media">
     </a>
 
     <!-- Mobile Menu Toggle -->
@@ -51,7 +50,7 @@
         </a>
 
         <ul class="dropdown-menu">
-          <li><a href="index.html#about">About Our Agency</a></li>
+          <li><a href="about-our-agency.html">About Our Agency</a></li>
           <li><a href="creative-thinking.html">Creative Thinking</a></li>
           <li><a href="integrated-solutions.html">Integrated Solutions</a></li>
           <li><a href="audience-focus.html">Audience Focus</a></li>
@@ -78,7 +77,7 @@
       <!-- Digital Advertising Dropdown -->
       <li class="nav-item has-dropdown">
         <a href="digital-advertising.html" class="nav-link">
-          Digital Ads <span class="dropdown-arrow"></span>
+          Digital Advertisement <span class="dropdown-arrow"></span>
         </a>
 
         <ul class="dropdown-menu">
@@ -505,9 +504,13 @@
 
     <!-- Portfolio Filters -->
     <div class="portfolio-filters">
-      <button class="filter-btn active" data-filter="all" data-category="All categories">
-        All Projects
-      </button>
+      <button
+  class="filter-btn active"
+  data-filter="all"
+  data-category="All categories"
+  aria-pressed="true">
+  All Projects
+</button>
       <button class="filter-btn" data-filter="outdoor" data-category="outdoor">
         Outdoor Media
       </button>

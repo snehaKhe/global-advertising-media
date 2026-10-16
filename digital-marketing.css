@@ -15,14 +15,11 @@
     padding-top: 75px;
     padding-bottom: 75px;
   }
-  .logo {
-  display: inline-flex;
-	width: 200px;
-  height: 50%;
+.logo{
+    width: 350px;
+    height: auto;
+    margin-bottom: 20px;
 }
-
-
-  
   .service-hero h1 {
     max-width: 850px;
     margin-bottom: 22px;

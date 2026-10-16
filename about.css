@@ -37,7 +37,11 @@
 .feature-nav nav a:hover {
   color: #ff8b38;
 }
-
+.logo{
+    width: 350px;
+    height: auto;
+    margin-bottom: 20px;
+}
 /* Hero section */
 .feature-hero {
   padding: 85px 0;
@@ -212,10 +216,13 @@
     gap: 14px;
     padding: 18px;
   }
-  .logo {
-  display: inline-flex;
-	width: 300px;
+  
 }
+
+.logo{
+    width: 350px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 

@@ -4,125 +4,348 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Digital Advertising Services | AdGrowth</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="digital-advertising.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <a href="index.html" class="logo">Ad<span>Growth</span></a>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <div class="dropdown">
-      <a href="digital-advertising.html" class="dropdown-toggle">
-        Digital Advertising <span class="arrow">▾</span>
-      </a>
-      <div class="dropdown-menu">
-        <a href="google-ads.html">Google Ads</a>
-        <a href="social-media-ads.html">Social Media Advertising</a>
-        <a href="display-advertising.html">Display Advertising</a>
-        <a href="video-advertising.html">Video Advertising</a>
-        <a href="remarketing.html">Remarketing &amp; Retargeting</a>
-        <a href="programmatic-advertising.html">Programmatic Advertising</a>
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+     <a href="#home">
+      <img src="logo.png" alt="Global Advertising Media Logo" class="logo">
+    
+    </a>
+
+      <button class="menu-toggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="main-navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="navbar" id="main-navigation">
+
+        <a href="index.html" class="nav-link">Home</a>
+
+        <div class="dropdown">
+          <a href="digital-advertising.html"
+             class="nav-link dropdown-toggle active"
+             aria-current="page">
+            Digital Advertising
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+
+          <div class="dropdown-menu">
+            <a href="google-ads.html">Google Ads</a>
+            <a href="social-media-ads.html">Social Media Advertising</a>
+            <a href="display-advertising.html">Display Advertising</a>
+            <a href="video-advertising.html">Video Advertising</a>
+            <a href="remarketing.html">Remarketing &amp; Retargeting</a>
+            <a href="programmatic-advertising.html">Programmatic Advertising</a>
+          </div>
+        </div>
+
+        <a href="index.html#contact" class="nav-link">Contact</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main id="digital-advertising">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+
+        <p class="eyebrow">OUR DIGITAL MARKETING SOLUTIONS</p>
+
+        <h1>
+          Digital Advertising
+          <span>Services</span>
+        </h1>
+
+        <p class="hero-description">
+          Discover data-informed advertising solutions designed
+          to increase visibility, connect with relevant audiences,
+          and support measurable business goals.
+        </p>
+
+        <a href="#services" class="hero-button">
+          Explore Our Services
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
       </div>
-    </div>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-</header>
+    </section>
 
-<main>
-  <section class="page-hero">
-    <div>
-      <p class="eyebrow">OUR DIGITAL MARKETING SOLUTIONS</p>
-      <h1>Digital Advertising Services</h1>
-      <p>
-        Discover data-informed advertising solutions designed
-        to increase visibility, connect with relevant audiences,
-        and support measurable business goals.
-      </p>
-    </div>
-  </section>
+    <!-- Services -->
+    <section class="services" id="services">
 
-  <section class="services">
-    <div class="service-grid">
-      <article class="service-card">
-        <h3>Google Ads</h3>
-        <p>Reach customers through search, shopping and other eligible ad placements.</p>
-        <a href="google-ads.html">View Details →</a>
-      </article>
+      <div class="section-heading">
+        <p class="eyebrow">WHAT WE OFFER</p>
+        <h2>Advertising Solutions for Your Business</h2>
+        <p>
+          Choose the right advertising channels to connect with
+          your audience and grow your business.
+        </p>
+      </div>
 
-      <article class="service-card">
-        <h3>Social Media Advertising</h3>
-        <p>Promote your business through targeted campaigns on social platforms.</p>
-        <a href="social-media-ads.html">View Details →</a>
-      </article>
+      <div class="service-grid">
 
-      <article class="service-card">
-        <h3>Display Advertising</h3>
-        <p>Increase visibility with visual ads across relevant websites and apps.</p>
-        <a href="display-advertising.html">View Details →</a>
-      </article>
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-brands fa-google"></i>
+          </div>
+          <h3>Google Ads</h3>
+          <p>
+            Reach potential customers through search, shopping,
+            and other eligible Google advertising placements.
+          </p>
+          <a href="google-ads.html">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
 
-      <article class="service-card">
-        <h3>Video Advertising</h3>
-        <p>Engage audiences with video campaigns that communicate your brand story.</p>
-        <a href="video-advertising.html">View Details →</a>
-      </article>
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+          <h3>Social Media Advertising</h3>
+          <p>
+            Promote your business through relevant campaigns
+            across social media platforms.
+          </p>
+          <a href="social-media-ads.html">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
 
-      <article class="service-card">
-        <h3>Remarketing &amp; Retargeting</h3>
-        <p>Reconnect with eligible audiences who previously interacted with your brand.</p>
-        <a href="remarketing.html">View Details →</a>
-      </article>
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-display"></i>
+          </div>
+          <h3>Display Advertising</h3>
+          <p>
+            Increase brand visibility with visual advertisements
+            across relevant websites and apps.
+          </p>
+          <a href="display-advertising.html">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
 
-      <article class="service-card">
-        <h3>Programmatic Advertising</h3>
-        <p>Use automated media buying to reach audiences across supported inventory.</p>
-        <a href="programmatic-advertising.html">View Details →</a>
-      </article>
-    </div>
-  </section>
-</main>
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-circle-play"></i>
+          </div>
+          <h3>Video Advertising</h3>
+          <p>
+            Share your brand story and engage audiences through
+            compelling video campaigns.
+          </p>
+          <a href="video-advertising.html">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
 
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3>Remarketing &amp; Retargeting</h3>
+          <p>
+            Reconnect with eligible audiences who have previously
+            interacted with your business.
+          </p>
+          <a href="remarketing.html">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3>Programmatic Advertising</h3>
+          <p>
+            Use automated media buying to reach relevant audiences
+            across supported advertising inventory.
+          </p>
+          <a href="programmatic-advertising.html">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+ 
 <footer class="footer">
-  <p>© 2026 AdGrowth. All rights reserved.</p>
+  <div class="footer-glow footer-glow-one"></div>
+  <div class="footer-glow footer-glow-two"></div>
+
+  <div class="container">
+
+    <!-- CTA Banner -->
+    <div class="footer-cta">
+      <div class="footer-cta-content">
+        <span class="footer-eyebrow">HAVE A PROJECT IN MIND?</span>
+        <h2>Let's Make Your Brand <span>Unforgettable.</span></h2>
+        <p>
+          Great ideas deserve great advertising. Let's create something
+          meaningful for your business.
+        </p>
+      </div>
+
+      <a href="index.html#contact" class="footer-cta-btn">
+        Start a Project <span>↗</span>
+      </a>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <!-- Main Footer -->
+    <div class="footer-main">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img
+            src="logo.png"
+            alt="Global Advertising Media logo"
+            loading="lazy"
+          >
+        </a>
+
+        <p class="footer-description">
+          Ideas that inspire. Advertising that connects.
+          We help brands stand out through creative thinking,
+          strategic advertising, and impactful campaigns.
+        </p>
+
+        <div class="footer-status">
+          <span class="footer-status-dot"></span>
+          <span>Let's build something great together</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <ul class="footer-nav">
+          <li><a href="index.html#home">Home <span>↗</span></a></li>
+          <li><a href="index.html#about">About Us <span>↗</span></a></li>
+          <li><a href="index.html#services">Our Services <span>↗</span></a></li>
+          <li><a href="index.html#portfolio">Our Work <span>↗</span></a></li>
+          <li><a href="index.html#contact">Contact <span>↗</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-column">
+        <h3>What We Do</h3>
+        <ul class="footer-nav">
+          <li><a href="index.html#digital-marketing">Digital Marketing <span>↗</span></a></li>
+          <li><a href="index.html#outdoor-advertising">Outdoor Advertising <span>↗</span></a></li>
+          <li><a href="index.html#branding-design">Branding &amp; Design <span>↗</span></a></li>
+          <li><a href="index.html#media-planning">Media Planning <span>↗</span></a></li>
+          <li><a href="index.html#creative-production">Creative Production <span>↗</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Social Links -->
+      <div class="footer-column footer-connect">
+        <h3>Connect With Us</h3>
+        <p>Have an idea, a question, or a new project? We'd love to hear from you.</p>
+
+        <a
+          class="footer-email-link"
+          href="index.html#contact"
+        >
+          Let's talk about your project <span>↗</span>
+        </a>
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.instagram.com/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://x.com/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="X">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>
+        © 2026 Global Advertising Media.
+        All rights reserved.
+      </p>
+
+      <div class="footer-bottom-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </div>
+
+      <a href="#digital-advertising" class="footer-back-top" >
+        Back to top <span>↑</span>
+      </a>
+    </div>
+
+  </div>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(
-    "#services .card, .section-light .card, #contact .cta"
-  );
 
-  // Show content immediately if reduced motion is preferred
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    return;
-  }
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
 
-  elements.forEach((element, index) => {
-    element.classList.add("reveal");
-    element.style.transitionDelay = `${(index % 3) * 100}ms`;
-  });
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navbar.classList.toggle("nav-open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries, observerInstance) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observerInstance.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
+    dropdownToggle.addEventListener("click", (event) => {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        event.preventDefault();
+        const isOpen = dropdown.classList.toggle("dropdown-open");
+        dropdownToggle.setAttribute("aria-expanded", isOpen);
+      }
+    });
+  </script>
 
-    elements.forEach(element => observer.observe(element));
-  } else {
-    elements.forEach(element => element.classList.add("visible"));
-  }
-});
-</script>
 </body>
 </html>
