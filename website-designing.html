@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Designing | Global Advertising Media</title>
+  <meta name="description" content="Creative, responsive website design and UI/UX solutions for businesses.">
+  <link rel="stylesheet" href="website-development.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Add your existing website header here -->
+
+<main>
+  <section class="web-hero">
+    <div class="web-hero-content">
+      <span class="web-tag">CREATIVE DIGITAL SOLUTIONS</span>
+      <h1>We Design Websites That Make Your Brand Stand Out</h1>
+      <p>
+        We create beautiful, responsive, and user-friendly websites
+        that help businesses build trust and grow online.
+      </p>
+      <a href="index.html#contact" class="web-btn">Start Your Project ↗</a>
+    </div>
+
+    <div class="web-hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1100&q=85"
+        alt="Modern website displayed on a computer screen">
+    </div>
+  </section>
+
+  <section class="web-intro">
+    <span class="web-tag">OUR DESIGN EXPERTISE</span>
+    <h2>Creative Designs. Better User Experiences.</h2>
+    <p>
+      We combine creativity, strategy, and technology to design
+      websites that communicate your brand message effectively.
+    </p>
+
+    <div class="web-grid">
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=700&q=80" alt="Website layout and design workspace" loading="lazy">
+        <div class="web-card-content">
+          <h3>Responsive Website Design</h3>
+          <p>Beautiful layouts that work across mobiles, tablets, and desktops.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=700&q=80" alt="Creative user interface design" loading="lazy">
+        <div class="web-card-content">
+          <h3>UI/UX Design</h3>
+          <p>Intuitive navigation and user experiences designed around your audience.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80" alt="Professional business office" loading="lazy">
+        <div class="web-card-content">
+          <h3>Business Website Design</h3>
+          <p>Professional websites that showcase your services and brand identity.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Digital analytics and website performance on a laptop" loading="lazy">
+        <div class="web-card-content">
+          <h3>Landing Page Design</h3>
+          <p>Focused landing pages created to support campaigns and generate leads.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="web-banner">
+    <div>
+      <h2>Your Brand Deserves a Great Website</h2>
+      <p>Let's turn your ideas into a powerful online experience.</p>
+    </div>
+    <a href="index.html#contact" class="web-btn">Let's Talk ↗</a>
+  </section>
+</main>
+
+<!-- Add your existing website footer here -->
+<script>
+  
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownItems = document.querySelectorAll(".has-dropdown");
+
+    dropdownItems.forEach(function (item) {
+        const link = item.querySelector(":scope > .nav-link");
+
+        if (!link) return;
+
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const isOpen = item.classList.contains("active");
+
+            dropdownItems.forEach(function (otherItem) {
+                otherItem.classList.remove("active");
+            });
+
+            if (!isOpen) {
+                item.classList.add("active");
+            }
+        });
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".navbar")) {
+            dropdownItems.forEach(function (item) {
+                item.classList.remove("active");
+            });
+        }
+    });
+});
+
+</script>>
+</body>
+</html>

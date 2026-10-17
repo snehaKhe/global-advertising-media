@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Writing | Global Advertising Media</title>
+  <meta name="description" content="Website copywriting, SEO content, blog writing, and marketing copy for businesses.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="website-development.css">
+</head>
+<body>
+
+<!-- Add your existing website header here -->
+
+<main>
+  <section class="web-hero">
+    <div class="web-hero-content">
+      <span class="web-tag">WORDS THAT CONNECT</span>
+      <h1>Content That Tells Your Story and Builds Your Brand</h1>
+      <p>
+        We create compelling, relevant, and engaging content
+        that communicates your message and connects with your audience.
+      </p>
+      <a href="index.html#contact" class="web-btn">Create Better Content ↗</a>
+    </div>
+
+    <div class="web-hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1100&q=85"
+        alt="Writing notes and developing creative content">
+    </div>
+  </section>
+
+  <section class="web-intro">
+    <span class="web-tag">OUR CONTENT SERVICES</span>
+    <h2>Meaningful Content. Stronger Connections.</h2>
+    <p>We help businesses communicate clearly with purposeful and audience-focused content.</p>
+
+    <div class="web-grid">
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=700&q=80" alt="Laptop displaying a website for content planning" loading="lazy">
+        <div class="web-card-content">
+          <h3>Website Content Writing</h3>
+          <p>Professional copy for home, about, service, and landing pages.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=700&q=80" alt="Digital marketing content and analytics workspace" loading="lazy">
+        <div class="web-card-content">
+          <h3>SEO Content Writing</h3>
+          <p>Helpful, search-focused content structured around user intent.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=700&q=80" alt="Notebook and written notes for article planning" loading="lazy">
+        <div class="web-card-content">
+          <h3>Blog & Article Writing</h3>
+          <p>Informative articles that educate readers and support brand authority.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?auto=format&fit=crop&w=700&q=80" alt="Marketing team planning brand communications" loading="lazy">
+        <div class="web-card-content">
+          <h3>Marketing Copywriting</h3>
+          <p>Persuasive copy for campaigns, advertisements, and promotional pages.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="web-banner">
+    <div>
+      <h2>Let's Tell Your Brand Story</h2>
+      <p>Give your business a voice that your audience remembers.</p>
+    </div>
+    <a href="index.html#contact" class="web-btn">Contact Us ↗</a>
+  </section>
+</main>
+
+<!-- Add your existing website footer here -->
+<script>
+  
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownItems = document.querySelectorAll(".has-dropdown");
+
+    dropdownItems.forEach(function (item) {
+        const link = item.querySelector(":scope > .nav-link");
+
+        if (!link) return;
+
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const isOpen = item.classList.contains("active");
+
+            dropdownItems.forEach(function (otherItem) {
+                otherItem.classList.remove("active");
+            });
+
+            if (!isOpen) {
+                item.classList.add("active");
+            }
+        });
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".navbar")) {
+            dropdownItems.forEach(function (item) {
+                item.classList.remove("active");
+            });
+        }
+    });
+});
+
+</script>
+</body>
+</html>

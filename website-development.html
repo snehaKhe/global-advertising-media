@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Development | Global Advertising Media</title>
+  <meta name="description" content="Professional website development, e-commerce solutions, and custom web development.">
+  <link rel="stylesheet" href="website-development.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Add your existing website header here -->
+
+<main>
+  <section class="web-hero">
+    <div class="web-hero-content">
+      <span class="web-tag">POWERFUL WEB SOLUTIONS</span>
+      <h1>Building Powerful Websites for Growing Businesses</h1>
+      <p>
+        We develop fast, responsive, and functional websites
+        tailored to your business goals and customer needs.
+      </p>
+      <a href="index.html#contact" class="web-btn">Discuss Your Project ↗</a>
+    </div>
+
+    <div class="web-hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1100&q=85"
+        alt="Developer coding a website on a laptop">
+    </div>
+  </section>
+
+  <section class="web-intro">
+    <span class="web-tag">WHAT WE DEVELOP</span>
+    <h2>Technology That Moves Your Business Forward</h2>
+    <p>From business websites to online stores, we build digital solutions around your needs.</p>
+
+    <div class="web-grid">
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=700&q=80" alt="Business website on a desktop screen" loading="lazy">
+        <div class="web-card-content">
+          <h3>Business Website Development</h3>
+          <p>Functional websites that present your company and services professionally.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80" alt="Online shopping and e-commerce payment" loading="lazy">
+        <div class="web-card-content">
+          <h3>E-commerce Development</h3>
+          <p>Online stores with product listings, shopping carts, and checkout features.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=80" alt="Team collaborating on a technology project" loading="lazy">
+        <div class="web-card-content">
+          <h3>Custom Web Development</h3>
+          <p>Custom functionality and integrations designed for your business.</p>
+        </div>
+      </article>
+
+      <article class="web-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80" alt="Planning and reviewing website project tasks" loading="lazy">
+        <div class="web-card-content">
+          <h3>Website Maintenance</h3>
+          <p>Technical updates, troubleshooting, and ongoing website support.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="web-banner">
+    <div>
+      <h2>Let's Build Your Next Digital Success</h2>
+      <p>Tell us about your development requirements.</p>
+    </div>
+    <a href="index.html#contact" class="web-btn">Get in Touch ↗</a>
+  </section>
+</main>
+
+<!-- Add your existing website footer here -->
+<script>
+  
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownItems = document.querySelectorAll(".has-dropdown");
+
+    dropdownItems.forEach(function (item) {
+        const link = item.querySelector(":scope > .nav-link");
+
+        if (!link) return;
+
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const isOpen = item.classList.contains("active");
+
+            dropdownItems.forEach(function (otherItem) {
+                otherItem.classList.remove("active");
+            });
+
+            if (!isOpen) {
+                item.classList.add("active");
+            }
+        });
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".navbar")) {
+            dropdownItems.forEach(function (item) {
+                item.classList.remove("active");
+            });
+        }
+    });
+});
+
+</script>>
+</body>
+</html>

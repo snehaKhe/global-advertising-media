@@ -26,15 +26,28 @@
 </head>
 
 <body>
-  <header class="header" >
-    <nav class="navbar container">
-      <a href="index.html">
-        <img src="logo.png" alt="Global Advertising Media logo" class="logo">
-      </a>
-       <ul class="nav-links">
+<header class="header" id="header">
+  <nav class="navbar">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Global Advertising Media">
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="menu-icon"
+           aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
 
       <li>
-        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="#home" class="nav-link">Home</a>
       </li>
 
       <!-- About Dropdown -->
@@ -44,7 +57,7 @@
         </a>
 
         <ul class="dropdown-menu">
-          <li><a href="index.html#about">About Our Agency</a></li>
+          <li><a href="about-our-agency.html">About Our Agency</a></li>
           <li><a href="creative-thinking.html">Creative Thinking</a></li>
           <li><a href="integrated-solutions.html">Integrated Solutions</a></li>
           <li><a href="audience-focus.html">Audience Focus</a></li>
@@ -71,7 +84,7 @@
       <!-- Digital Advertising Dropdown -->
       <li class="nav-item has-dropdown">
         <a href="digital-advertising.html" class="nav-link">
-          Digital Ads <span class="dropdown-arrow"></span>
+          Digital Advertisement <span class="dropdown-arrow"></span>
         </a>
 
         <ul class="dropdown-menu">
@@ -80,19 +93,26 @@
           <li><a href="display-advertising.html">Display Advertising</a></li>
           <li><a href="video-advertising.html">Video Advertising</a></li>
           <li><a href="remarketing.html">Remarketing &amp; Retargeting</a></li>
-          <li><a href="programmatic-advertising.html">Programmatic Advertising</a></li>
-        </ul>
+          <li><a href="sem.html">Search Engine Marketing (SEM)</a></li>
+            <li><a href="seo.html">Search Engine Optimization (SEO)</a></li>
+            <li><a href="smo.html">Social Media Optimization (SMO)</a></li>
+            <li><a href="domain-registration.html">Domain Registration</a></li>
+            <li><a href="email-marketing.html">Email Marketing</a></li>
+            <li><a href="sms.html">SMS Marketing</a></li>
+            <li><a href="whatsapp.html">WhatsApp Marketing</a></li>
+            <li><a href="chatgpt-advertising.html">ChatGPT Advertising</a></li>
+            </ul>
       </li>
 
       <!-- Our Work -->
       <li>
-        <a href="index.html#portfolio" class="nav-link">Our Work</a>
+        <a href="#portfolio" class="nav-link">Our Work</a>
       </li>
 
       <!-- FAQs -->
       <li>
         <a href="#faq" class="nav-link">FAQs</a>
-      </li>
+      </li>k
 
       <!-- Contact CTA -->
       <li>
@@ -102,13 +122,9 @@
       </li>
 
     </ul>
+  </nav>
+</header>
 
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="menu-icon"
-             aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </label>
-  </header>
 
   <main id="digital-marketing">
     <section class="service-hero">

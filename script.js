@@ -98,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach(animateCounter);
   }
 
-
   // ==========================================
   // 3. PORTFOLIO CATEGORY FILTERS
   // ==========================================
+  
   const filterButtons = document.querySelectorAll(
     ".portfolio-filters .filter-btn"
   );
