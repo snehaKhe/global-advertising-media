@@ -7,13 +7,134 @@
   <title>Website Development | Global Advertising Media</title>
   <meta name="description" content="Professional website development, e-commerce solutions, and custom web development.">
   <link rel="stylesheet" href="website-development.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- Add your existing website header here -->
+<header class="header" id="header">
+  <nav class="navbar">
 
-<main>
+    <!-- Logo -->
+    <a href="index.html#home" class="logo">
+      <img src="logo.png" alt="Global Advertising Media">
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="menu-icon"
+           aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+
+      <li>
+        <a href="index.html#home" class="nav-link">Home</a>
+      </li>
+
+      <!-- About Dropdown -->
+      <li class="nav-item has-dropdown">
+        <a href="index.html#about" class="nav-link">
+          About Us <span class="dropdown-arrow"></span>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a href="about-our-agency.html">About Our Agency</a></li>
+          <li><a href="creative-thinking.html">Creative Thinking</a></li>
+          <li><a href="integrated-solutions.html">Integrated Solutions</a></li>
+          <li><a href="audience-focus.html">Audience Focus</a></li>
+          <li><a href="transparent-process.html">Transparent Process</a></li>
+        </ul>
+      </li>
+
+      <!-- Services Dropdown -->
+      <li class="nav-item has-dropdown">
+        <a href="digital-marketing.html" class="nav-link">
+          Services <span class="dropdown-arrow"></span>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a href="digital-marketing.html">Digital Marketing</a></li>
+          <li><a href="outdoor-advertising.html">Outdoor Advertising</a></li>
+          <li><a href="branding-design.html">Branding &amp; Design</a></li>
+          <li><a href="media-planning.html">Media Planning</a></li>
+          <li><a href="creative-production.html">Creative Production</a></li>
+          <li><a href="campaign-strategy.html">Campaign Strategy</a></li>
+        </ul>
+      </li>
+
+      <!-- Website Designing Dropdown -->
+<li class="nav-item has-dropdown">
+  <a href="website-designing.html" class="nav-link">
+    Website Designing <span class="dropdown-arrow"></span>
+  </a>
+
+  <ul class="dropdown-menu">
+    <li>
+      <a href="website-designing.html">Website Designing</a>
+    </li>
+    <li>
+      <a href="website-development.html">Website Development</a>
+    </li>
+    <li>
+      <a href="content-writing.html">Content Writing</a>
+    </li>
+    <li>
+      <a href="content-management.html">Content Management</a>
+    </li>
+  </ul>
+</li>
+
+      <!-- Digital Advertising Dropdown -->
+      <li class="nav-item has-dropdown">
+        <a href="digital-advertising.html" class="nav-link">
+          Digital Advertisement <span class="dropdown-arrow"></span>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a href="google-ads.html">Google Ads</a></li>
+          <li><a href="social-media-ads.html">Social Media Advertising</a></li>
+          <li><a href="display-advertising.html">Display Advertising</a></li>
+          <li><a href="video-advertising.html">Video Advertising</a></li>
+          <li><a href="remarketing.html">Remarketing &amp; Retargeting</a></li>
+          <li><a href="sem.html">Search Engine Marketing (SEM)</a></li>
+            <li><a href="seo.html">Search Engine Optimization (SEO)</a></li>
+            <li><a href="smo.html">Social Media Optimization (SMO)</a></li>
+            <li><a href="domain-registration.html">Domain Registration</a></li>
+            <li><a href="email-marketing.html">Email Marketing</a></li>
+            <li><a href="sms.html">SMS Marketing</a></li>
+            <li><a href="whatsapp.html">WhatsApp Marketing</a></li>
+            <li><a href="chatgpt-advertising.html">ChatGPT Advertising</a></li>
+            </ul>
+      </li>
+
+      <!-- Our Work -->
+      <li>
+        <a href="index.html#portfolio" class="nav-link">Our Work</a>
+      </li>
+
+      <!-- FAQs -->
+      <li>
+        <a href="index.html#faq" class="nav-link">FAQs</a>
+      </li>
+
+      <!-- Contact CTA -->
+      <li>
+        <a href="index.html#contact" class="nav-cta">
+          Let's Talk <span class="cta-arrow">↗</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<main id="website-development">
   <section class="web-hero">
     <div class="web-hero-content">
       <span class="web-tag">POWERFUL WEB SOLUTIONS</span>
@@ -80,6 +201,139 @@
     <a href="index.html#contact" class="web-btn">Get in Touch ↗</a>
   </section>
 </main>
+<footer class="footer">
+  <div class="footer-glow footer-glow-one"></div>
+  <div class="footer-glow footer-glow-two"></div>
+
+  <div class="container">
+
+    <!-- CTA Banner -->
+    <div class="footer-cta">
+      <div class="footer-cta-content">
+        <span class="footer-eyebrow">HAVE A PROJECT IN MIND?</span>
+        <h2>Let's Make Your Brand <span>Unforgettable.</span></h2>
+        <p>
+          Great ideas deserve great advertising. Let's create something
+          meaningful for your business.
+        </p>
+      </div>
+
+      <a href="index.html#contact" class="footer-cta-btn">
+        Start a Project <span>↗</span>
+      </a>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <!-- Main Footer -->
+    <div class="footer-main">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img
+            src="logo.png"
+            alt="Global Advertising Media logo"
+            loading="lazy"
+          >
+        </a>
+
+        <p class="footer-description">
+          Ideas that inspire. Advertising that connects.
+          We help brands stand out through creative thinking,
+          strategic advertising, and impactful campaigns.
+        </p>
+
+        <div class="footer-status">
+          <span class="footer-status-dot"></span>
+          <span>Let's build something great together</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <ul class="footer-nav">
+          <li><a href="index.html#home">Home <span>↗</span></a></li>
+          <li><a href="index.html#about">About Us <span>↗</span></a></li>
+          <li><a href="index.html#services">Our Services <span>↗</span></a></li>
+          <li><a href="index.html#portfolio">Our Work <span>↗</span></a></li>
+          <li><a href="index.html#contact">Contact <span>↗</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-column">
+        <h3>What We Do</h3>
+        <ul class="footer-nav">
+          <li><a href="index.html#digital-marketing">Digital Marketing <span>↗</span></a></li>
+          <li><a href="index.html#outdoor-advertising">Outdoor Advertising <span>↗</span></a></li>
+          <li><a href="index.html#branding-design">Branding &amp; Design <span>↗</span></a></li>
+          <li><a href="index.html#media-planning">Media Planning <span>↗</span></a></li>
+          <li><a href="index.html#creative-production">Creative Production <span>↗</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Social Links -->
+      <div class="footer-column footer-connect">
+        <h3>Connect With Us</h3>
+        <p>Have an idea, a question, or a new project? We'd love to hear from you.</p>
+
+        <a
+          class="footer-email-link"
+          href="index.html#contact"
+        >
+          Let's talk about your project <span>↗</span>
+        </a>
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.instagram.com/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://x.com/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="X">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>
+        © 2026 Global Advertising Media.
+        All rights reserved.
+      </p>
+
+      <div class="footer-bottom-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </div>
+
+      <a href="#website-development" class="footer-back-top">
+        Back to top <span>↑</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
 
 <!-- Add your existing website footer here -->
 <script>
@@ -116,6 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-</script>>
+</script>
+
 </body>
 </html>

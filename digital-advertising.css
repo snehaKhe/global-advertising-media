@@ -2856,3 +2856,35 @@ body {
     margin: 24px auto;
   }
 }
+
+
+/* Navbar layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Reduce space between navbar items */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Reduce this value to decrease spacing */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Reduce padding around each navigation link */
+.nav-links > li > .nav-link,
+.nav-links > li > .nav-cta {
+  padding: 8px 6px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Dropdown arrow spacing */
+.dropdown-arrow {
+  margin-left: 3px;
+}
+

@@ -86,8 +86,42 @@ p {
   color: var(--text);
 }
 
+
+/* Navbar layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Reduce space between navbar items */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Reduce this value to decrease spacing */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Reduce padding around each navigation link */
+.nav-links > li > .nav-link,
+.nav-links > li > .nav-cta {
+  padding: 8px 6px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Dropdown arrow spacing */
+.dropdown-arrow {
+  margin-left: 3px;
+}
+
+
 /* Navigation */
 /* =========================
+
+
    NAVBAR BASE
 ========================= */
 
@@ -4330,3 +4364,38 @@ textarea:focus-visible {
   }
 }
 
+
+/* Footer legal links */
+.footer-bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 20px;
+}
+
+.footer-bottom-links a {
+  color: #b8bdc9;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #ffffff;
+}
+
+/* Mobile footer layout */
+@media (max-width: 768px) {
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    gap: 12px 16px;
+  }
+}
