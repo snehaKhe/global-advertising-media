@@ -20,84 +20,621 @@
         rel="stylesheet">
 
   <style>
-   
-/* Page background */
-.legal-page {
-  min-height: 100vh;
-  padding: 150px 20px 80px;
-   background: linear-gradient(135deg, #ddd1c4, #e6c790, #eca84e);
+ 
+/* ==========================================
+   GLOBAL ADVERTISING MEDIA
+   PRIVACY POLICY — PREMIUM DESIGN
+========================================== */
+
+:root {
+  --privacy-navy: #101b33;
+  --privacy-navy-light: #1a2c4e;
+  --privacy-blue: #5365e8;
+  --privacy-blue-dark: #3e4dce;
+  --privacy-text: #283249;
+  --privacy-muted: #68738a;
+  --privacy-border: #e5e9f2;
+  --privacy-bg: #f7f8fc;
+  --privacy-white: #ffffff;
+  --privacy-shadow: 0 18px 50px rgba(24, 39, 78, 0.06);
 }
 
-/* Content card */
-.legal-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 45px;
-  background: #ffffff;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+.privacy-page {
+  overflow: clip;
+  color: var(--privacy-text);
+  background: var(--privacy-white);
+  font-family: "DM Sans", sans-serif;
+}
+
+.privacy-page *,
+.privacy-page *::before,
+.privacy-page *::after {
+  box-sizing: border-box;
+}
+
+.privacy-container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.privacy-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(68px, 9vw, 108px) 0 84px;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(89, 111, 255, 0.30),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 5% 100%,
+      rgba(51, 94, 190, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(130deg, #101a30 0%, #1b3055 100%);
+}
+
+.privacy-hero::before,
+.privacy-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+}
+
+.privacy-hero::before {
+  top: -200px;
+  right: -100px;
+  width: 450px;
+  height: 450px;
+  box-shadow:
+    0 0 0 35px rgba(255, 255, 255, 0.025),
+    0 0 0 75px rgba(255, 255, 255, 0.02);
+}
+
+.privacy-hero::after {
+  right: 15%;
+  bottom: -230px;
+  width: 360px;
+  height: 360px;
+}
+
+.privacy-label,
+.section-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.privacy-label {
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: #e0e6ff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.privacy-hero h1 {
+  max-width: 800px;
+  margin: 25px 0 20px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(39px, 6vw, 68px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2.5px;
+}
+
+.privacy-hero h1 span {
+  color: #aab5ff;
+}
+
+.privacy-intro {
+  max-width: 680px;
+  margin: 0;
+  color: #d2daea;
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.privacy-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 29px;
+  color: #c6d0e5;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.meta-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #9eacff;
+  box-shadow: 0 0 0 4px rgba(158, 172, 255, 0.12);
+}
+
+/* ==========================================
+   CONTENT AREA
+========================================== */
+
+.privacy-content {
+  padding: 60px 0 45px;
+  background:
+    radial-gradient(
+      circle at 100% 15%,
+      rgba(83, 101, 232, 0.035),
+      transparent 25rem
+    ),
+    #ffffff;
+}
+
+.privacy-welcome {
+  max-width: 820px;
+  padding: 15px 0 36px;
+}
+
+.section-kicker {
+  color: var(--privacy-blue);
+}
+
+.privacy-welcome h2,
+.contact-copy h2 {
+  margin: 14px 0 16px;
+  color: var(--privacy-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(27px, 4vw, 38px);
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: -1px;
+}
+
+.privacy-welcome p,
+.contact-copy p {
+  margin: 0 0 14px;
+  color: var(--privacy-muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* ==========================================
+   TABLE OF CONTENTS
+========================================== */
+
+.privacy-toc {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 0 35px;
+  border: 1px solid var(--privacy-border);
   border-radius: 16px;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(24, 39, 78, 0.045);
 }
 
-/* Mobile responsive */
-@media (max-width: 600px) {
-  .legal-page {
-    padding: 115px 16px 50px;
+.privacy-toc-title {
+  flex: 0 0 auto;
+  padding-top: 8px;
+  color: var(--privacy-navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.privacy-toc-links {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.privacy-toc a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #606b82;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.privacy-toc a:hover,
+.privacy-toc a:focus-visible {
+  border-color: #dfe3ff;
+  color: var(--privacy-blue-dark);
+  background: #f1f3ff;
+  outline: none;
+}
+
+/* ==========================================
+   PRIVACY CARDS
+========================================== */
+
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.privacy-card {
+  position: relative;
+  overflow: hidden;
+  padding: 27px 24px;
+  border: 1px solid var(--privacy-border);
+  border-radius: 17px;
+  background: #ffffff;
+  scroll-margin-top: 105px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.privacy-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--privacy-blue);
+  transition: width 0.25s ease;
+}
+
+.privacy-card:hover {
+  transform: translateY(-4px);
+  border-color: #d1d7ff;
+  box-shadow: 0 15px 36px rgba(24, 39, 78, 0.075);
+}
+
+.privacy-card:hover::before {
+  width: 100%;
+}
+
+.privacy-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 19px;
+  border: 1px solid #e5e7ff;
+  border-radius: 13px;
+  color: var(--privacy-blue);
+  background: #f0f2ff;
+  font-size: 19px;
+}
+
+.privacy-card h3 {
+  margin: 0 0 11px;
+  color: var(--privacy-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.55;
+}
+
+.privacy-card p {
+  margin: 0;
+  color: var(--privacy-muted);
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+/* ==========================================
+   ADDITIONAL POLICY SECTIONS
+========================================== */
+
+.privacy-detail {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--privacy-border);
+  scroll-margin-top: 105px;
+}
+
+.privacy-detail h2 {
+  margin: 12px 0 14px;
+  color: var(--privacy-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(23px, 3vw, 29px);
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.6px;
+}
+
+.privacy-detail p,
+.privacy-detail li {
+  color: var(--privacy-muted);
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.privacy-detail p {
+  max-width: 880px;
+  margin: 0 0 13px;
+}
+
+.privacy-detail ul {
+  padding-left: 22px;
+  margin: 12px 0 0;
+}
+
+.privacy-detail li {
+  padding-left: 4px;
+  margin-bottom: 7px;
+}
+
+.privacy-detail p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   CONTACT PANEL
+========================================== */
+
+.privacy-contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: 35px;
+  padding: clamp(25px, 4vw, 42px);
+  margin-top: 50px;
+  border: 1px solid #e1e6fa;
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(83, 101, 232, 0.09),
+      transparent 20rem
+    ),
+    linear-gradient(135deg, #f3f5ff, #ffffff);
+}
+
+.contact-copy h2 {
+  font-size: clamp(26px, 3vw, 34px);
+}
+
+.privacy-email {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 45px 24px 23px;
+  border: 1px solid #e1e6f1;
+  border-radius: 14px;
+  background: #ffffff;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.privacy-email:hover {
+  border-color: var(--privacy-blue);
+  box-shadow: 0 8px 24px rgba(24, 39, 78, 0.06);
+}
+
+.email-caption {
+  color: var(--privacy-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.email-address {
+  color: var(--privacy-blue-dark);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.email-arrow {
+  position: absolute;
+  top: 22px;
+  right: 18px;
+  color: var(--privacy-blue);
+  font-size: 20px;
+}
+
+/* ==========================================
+   BOTTOM LINKS
+========================================== */
+
+.privacy-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 26px 0;
+  margin-top: 35px;
+  border-top: 1px solid var(--privacy-border);
+  color: var(--privacy-muted);
+  font-size: 13px;
+}
+
+.privacy-footer a {
+  color: var(--privacy-navy);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.privacy-footer a:hover {
+  color: var(--privacy-blue);
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.privacy-page a:focus-visible {
+  outline: 3px solid rgba(83, 101, 232, 0.55);
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 960px) {
+  .privacy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .legal-content {
-    padding: 25px 20px;
+  .privacy-contact {
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
 }
 
-    .legal-content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 45px;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    }
+@media (max-width: 680px) {
+  .privacy-container {
+    width: calc(100% - 30px);
+  }
 
-    .legal-content h1 {
-      margin-bottom: 15px;
-      font-size: clamp(32px, 5vw, 48px);
-    }
+  .privacy-hero {
+    padding: 60px 0 55px;
+  }
 
-    .legal-content h2 {
-      margin: 32px 0 12px;
-      font-size: 23px;
-    }
+  .privacy-hero h1 {
+    font-size: clamp(36px, 9vw, 49px);
+    letter-spacing: -1.6px;
+  }
 
-    .legal-content p,
-    .legal-content li {
-      color: #555b68;
-      font-size: 16px;
-      line-height: 1.8;
-    }
+  .privacy-intro {
+    font-size: 14px;
+    line-height: 1.9;
+  }
 
-    .legal-content ul {
-      padding-left: 24px;
-    }
+  .privacy-content {
+    padding-top: 35px;
+  }
 
-    .legal-content a {
-      color: #2459d3;
-      overflow-wrap: anywhere;
-    }
+  .privacy-welcome {
+    padding-top: 10px;
+    padding-bottom: 25px;
+  }
 
-    .legal-updated {
-      margin-bottom: 30px;
-      font-size: 14px !important;
-    }
+  .privacy-welcome h2 {
+    font-size: 27px;
+  }
 
-    @media (max-width: 600px) {
-      .legal-page {
-        padding: 115px 16px 50px;
-      }
+  .privacy-welcome p {
+    font-size: 13px;
+  }
 
-      .legal-content {
-        padding: 25px 20px;
-      }
-    }
+  .privacy-toc {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 23px;
+  }
+
+  .privacy-toc-title {
+    padding-top: 0;
+  }
+
+  .privacy-toc-links {
+    gap: 6px;
+  }
+
+  .privacy-toc a {
+    padding: 8px 9px;
+    background: #f7f8ff;
+    font-size: 11px;
+  }
+
+  .privacy-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .privacy-card {
+    padding: 23px 21px;
+    scroll-margin-top: 20px;
+  }
+
+  .privacy-card p {
+    font-size: 13px;
+  }
+
+  .privacy-detail {
+    padding: 27px 0;
+    scroll-margin-top: 20px;
+  }
+
+  .privacy-detail h2 {
+    font-size: 24px;
+  }
+
+  .privacy-detail p,
+  .privacy-detail li {
+    font-size: 13px;
+  }
+
+  .privacy-contact {
+    gap: 23px;
+    padding: 24px 19px;
+    margin-top: 32px;
+    border-radius: 18px;
+  }
+
+  .privacy-email {
+    padding: 21px 40px 21px 17px;
+  }
+
+  .email-address {
+    font-size: 13px;
+  }
+
+  .privacy-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .privacy-meta {
+    gap: 10px;
+    line-height: 1.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .privacy-page *,
+  .privacy-page *::before,
+  .privacy-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
   </style>
 </head>
 
@@ -222,158 +759,361 @@
     </ul>
   </nav>
 </header>
-  <main class="legal-page" id="privacy-policy">
-    <div class="container">
-      <article class="legal-content">
 
-        <span class="eyebrow dark-eyebrow">LEGAL INFORMATION</span>
+<main class="privacy-page" id="privacy-policy">
 
-        <h1>Privacy Policy</h1>
+  <!-- HERO -->
+  <section class="privacy-hero">
+    <div class="privacy-container">
 
-        <p class="legal-updated">
-          Last updated: October 19, 2026
+      <span class="privacy-label">PRIVACY &amp; TRANSPARENCY</span>
+
+      <h1>Your Privacy, <span>Protected.</span></h1>
+
+      <p class="privacy-intro">
+        Trust starts with transparency. Discover how Global
+        Advertising Media handles personal information when
+        you visit our website or get in touch with our team.
+      </p>
+
+      <div class="privacy-meta">
+        <span>Privacy Policy</span>
+        <span class="meta-dot"></span>
+        <span>Last updated October 19, 2026</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="privacy-content">
+    <div class="privacy-container">
+
+      <!-- INTRODUCTION -->
+      <div class="privacy-welcome" id="privacy-introduction">
+        <span class="section-kicker">OUR COMMITMENT</span>
+
+        <h2>Your trust matters to us.</h2>
+
+        <p>
+          Global Advertising Media ("we", "our", or "us")
+          respects privacy and aims to handle personal
+          information responsibly. This Privacy Policy
+          describes how information may be collected, used,
+          disclosed, and retained when you visit our website
+          or contact us about our services.
         </p>
 
         <p>
-          Global Advertising Media ("we", "our", or "us") respects
-          your privacy. This Privacy Policy explains how we may
-          collect, use, store, and protect personal information when
-          you visit our website or contact us about our services.
+          The information we process depends on how you
+          interact with us and the features available on
+          our website. Additional notices or terms may apply
+          to specific services.
         </p>
+      </div>
 
-        <h2>1. Information We Collect</h2>
+      <!-- TABLE OF CONTENTS -->
+      <nav class="privacy-toc" aria-label="Privacy policy contents">
 
-        <p>Depending on how you interact with us, we may collect:</p>
+        <span class="privacy-toc-title">On this page</span>
 
-        <ul>
-          <li>
-            Contact information, such as your name and email address,
-            when you submit an inquiry.
-          </li>
-          <li>
-            Project information and other details you voluntarily
-            include in your messages.
-          </li>
-          <li>
-            Technical information, such as your browser type,
-            device information, and website usage data, where
-            collected through server logs or analytics tools.
-          </li>
-        </ul>
+        <div class="privacy-toc-links">
+          <a href="#information-collected">Information collected</a>
+          <a href="#information-use">How we use data</a>
+          <a href="#cookies">Cookies</a>
+          <a href="#sharing">Sharing</a>
+          <a href="#security">Security</a>
+          <a href="#retention">Data retention</a>
+          <a href="#privacy-rights">Your rights</a>
+          <a href="#third-parties">Third parties</a>
+          <a href="#children">Children</a>
+          <a href="#international-transfers">Transfers</a>
+          <a href="#policy-updates">Updates</a>
+          <a href="#privacy-contact">Contact</a>
+        </div>
 
-        <h2>2. How We Use Your Information</h2>
+      </nav>
 
-        <p>We may use your information to:</p>
+      <!-- PRIVACY OVERVIEW CARDS -->
+      <div class="privacy-grid">
 
-        <ul>
-          <li>Respond to inquiries and communicate with you.</li>
-          <li>Understand your advertising and marketing requirements.</li>
-          <li>Prepare proposals, quotations, and service information.</li>
-          <li>Operate, maintain, and improve our website.</li>
-          <li>Protect our website against fraud, misuse, and security risks.</li>
-          <li>Meet applicable legal obligations.</li>
-        </ul>
+        <article class="privacy-card" id="information-collected">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-regular fa-rectangle-list"></i>
+          </span>
 
-        <h2>3. Cookies and Analytics</h2>
+          <h3>Information We Collect</h3>
+
+          <p>
+            Depending on how you interact with us, we may
+            collect your name, email address, phone number,
+            company details, project requirements, and
+            information you choose to provide. Basic technical
+            data may also be recorded by our hosting systems.
+          </p>
+        </article>
+
+        <article class="privacy-card" id="information-use">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-solid fa-bullseye"></i>
+          </span>
+
+          <h3>How We Use Information</h3>
+
+          <p>
+            We may use information to answer inquiries,
+            prepare proposals, communicate about projects,
+            provide requested services, maintain security,
+            improve website performance, and meet applicable
+            legal obligations.
+          </p>
+        </article>
+
+        <article class="privacy-card" id="cookies">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-solid fa-cookie-bite"></i>
+          </span>
+
+          <h3>Cookies &amp; Analytics</h3>
+
+          <p>
+            Cookies or similar technologies may support
+            essential website functions and, where configured,
+            analytics or advertising. The technologies used
+            depend on our actual website setup and your
+            applicable consent choices.
+          </p>
+        </article>
+
+        <article class="privacy-card" id="sharing">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-solid fa-share-nodes"></i>
+          </span>
+
+          <h3>When Information Is Shared</h3>
+
+          <p>
+            Where applicable, information may be shared with
+            service providers that help operate our website
+            or deliver requested services, or disclosed when
+            legally required. We do not sell personal
+            information, as described in this policy.
+          </p>
+        </article>
+
+        <article class="privacy-card" id="security">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-solid fa-shield-halved"></i>
+          </span>
+
+          <h3>Security &amp; Protection</h3>
+
+          <p>
+            We aim to use reasonable technical and
+            organizational measures to protect personal
+            information. No method of electronic transmission
+            or storage is completely secure, so absolute
+            security cannot be guaranteed.
+          </p>
+        </article>
+
+        <article class="privacy-card" id="retention">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-regular fa-clock"></i>
+          </span>
+
+          <h3>Data Retention</h3>
+
+          <p>
+            We retain personal information for as long as
+            reasonably necessary for the purposes described
+            in this policy, subject to applicable legal,
+            accounting, contractual, and recordkeeping
+            requirements.
+          </p>
+        </article>
+
+        <article class="privacy-card" id="privacy-rights">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-solid fa-user-shield"></i>
+          </span>
+
+          <h3>Your Privacy Rights</h3>
+
+          <p>
+            Depending on applicable law, you may have rights
+            to request access, correction, deletion, or other
+            actions concerning your personal information.
+            We may need to verify your identity before
+            processing a request.
+          </p>
+        </article>
+
+        <article class="privacy-card" id="third-parties">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+
+          <h3>Third-Party Services</h3>
+
+          <p>
+            Our website may link to third-party websites or
+            use external services. Those providers may handle
+            information under their own policies and terms.
+            Review their privacy notices when using their
+            services.
+          </p>
+        </article>
+
+        <article class="privacy-card" id="children">
+          <span class="privacy-icon" aria-hidden="true">
+            <i class="fa-solid fa-people-group"></i>
+          </span>
+
+          <h3>Children's Privacy</h3>
+
+          <p>
+            Our website is intended for people seeking
+            information about our business and services.
+            If you believe a child has provided personal
+            information inappropriately, please contact us
+            so the situation can be reviewed.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- ADDITIONAL DETAILS -->
+
+      <section class="privacy-detail" id="information-sources">
+        <span class="section-kicker">01 / COLLECTION</span>
+
+        <h2>Where information comes from</h2>
 
         <p>
-          Our website may use cookies or similar technologies to
-          support website functionality, understand visitor activity,
-          and improve user experience. The technologies used depend
-          on the tools enabled on our website.
+          Information may be provided directly by you when
+          you contact us, submit a form, request a quotation,
+          or discuss a potential project. Depending on the
+          website configuration, limited technical
+          information may also be collected automatically.
         </p>
 
         <p>
-          You can manage cookies through your browser settings.
-          Where required by applicable law, we will obtain consent
-          before using non-essential cookies or similar technologies.
+          Please avoid submitting sensitive personal
+          information through general inquiry forms unless
+          it is necessary and the relevant channel is
+          appropriate for that information.
         </p>
+      </section>
 
-        <h2>4. Sharing of Information</h2>
+      <section class="privacy-detail" id="lawful-processing">
+        <span class="section-kicker">02 / PURPOSE &amp; USE</span>
+
+        <h2>How we handle your information</h2>
 
         <p>
-          We do not sell your personal information. We may share
-          relevant information with service providers who help us
-          operate our website, manage communications, or deliver
-          requested services. We may also disclose information
-          where required by law or necessary to protect our rights
-          and security.
-        </p>
-
-        <h2>5. Data Storage and Security</h2>
-
-        <p>
-          We take reasonable measures to protect personal information
-          against unauthorized access, loss, misuse, or disclosure.
-          However, no method of transmitting or storing information
-          online can be guaranteed to be completely secure.
-        </p>
-
-        <h2>6. Data Retention</h2>
-
-        <p>
-          We retain personal information only for as long as reasonably
-          necessary for the purposes described in this policy,
-          including responding to inquiries, maintaining business
-          records, resolving disputes, and complying with legal
+          We use personal information only for relevant
+          purposes, such as responding to your request,
+          managing business communications, delivering
+          agreed services, maintaining website operations,
+          preventing misuse, and meeting applicable
           obligations.
         </p>
 
-        <h2>7. Your Privacy Rights</h2>
+        <p>
+          Where required, we will identify and rely on an
+          appropriate legal basis for processing, provide
+          additional notices, and obtain consent when
+          applicable law requires it.
+        </p>
+      </section>
+
+      <section class="privacy-detail" id="international-transfers">
+        <span class="section-kicker">03 / DATA LOCATION</span>
+
+        <h2>International data transfers</h2>
 
         <p>
-          Depending on applicable law, you may have the right to
-          request access to, correction of, or deletion of your
-          personal information, or to object to or restrict certain
-          processing activities.
+          Depending on the hosting arrangements and service
+          providers we use, information may be processed
+          or stored in countries other than the country
+          where you live.
         </p>
 
         <p>
-          To make a privacy-related request, contact us using the
-          email address provided below. We may need to verify your
-          identity before responding.
+          Where cross-border transfers occur, we will apply
+          safeguards required by the laws that govern the
+          relevant processing.
         </p>
+      </section>
 
+      <section class="privacy-detail" id="policy-updates">
+        <span class="section-kicker">04 / POLICY CHANGES</span>
 
-        <h2>8. Children's Privacy</h2>
+        <h2>Updates to this Privacy Policy</h2>
 
         <p>
-          Our website and services are intended for businesses
-          and general audiences, not specifically for children.
-          Please contact us if you believe a child has provided
-          personal information to us inappropriately.
-        </p>
-
-        <h2>9. Changes to This Policy</h2>
-
-        <p>
-          We may update this Privacy Policy when our practices
-          or legal obligations change. Any revised version will
-          be published on this page with an updated revision date.
-        </p>
-
-        <h2>10. Contact Us</h2>
-
-        <p>
-          If you have questions about this Privacy Policy or how
-          your personal information is handled, contact:
+          We may update this policy to reflect changes to
+          our practices, services, technology, or legal
+          requirements. We will publish the revised policy
+          on this page and update the revision date.
         </p>
 
         <p>
-          <strong>Global Advertising Media</strong><br>
-          Email:
-          <a href="mailto:enquiry@globaladvertisingmedia.com">
+          Please review this page periodically to stay
+          informed about our privacy practices.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="privacy-contact" id="privacy-contact">
+
+        <div class="contact-copy">
+          <span class="section-kicker">WE'RE HERE TO HELP</span>
+
+          <h2>Questions about your privacy?</h2>
+
+          <p>
+            If you have a question about this policy or wish
+            to make a privacy-related request, contact our
+            team using the details provided here.
+          </p>
+        </div>
+
+        <a
+          class="privacy-email"
+          href="mailto:enquiry@globaladvertisingmedia.com?subject=Privacy%20Policy%20Inquiry"
+        >
+          <span class="email-caption">EMAIL OUR TEAM</span>
+
+          <span class="email-address">
             enquiry@globaladvertisingmedia.com
-          </a>
-        </p>
+          </span>
 
-        <p>
-          <a href="index.html">← Back to Home</a>
-        </p>
+          <span class="email-arrow" aria-hidden="true">↗</span>
+        </a>
 
-      </article>
+      </section>
+
+      <!-- BOTTOM NAVIGATION -->
+      <div class="privacy-footer">
+        <span>Global Advertising Media</span>
+
+        <a href="terms-and-conditions.html">
+          Terms &amp; Conditions
+        </a>
+
+        <a href="index.html">
+          <span aria-hidden="true">←</span>
+          Back to Home
+        </a>
+      </div>
+
     </div>
-  </main>
+  </section>
+
+</main>
+
 
   <footer class="footer">
   <div class="footer-glow footer-glow-one"></div>

@@ -73,6 +73,9 @@ body::before {
   isolation: isolate;
 }
 
+.banner-title{
+  font-size: clamp(42px, 6vw, 76px);
+}
 /* ==========================================
    HERO / PAGE BANNER
 ========================================== */

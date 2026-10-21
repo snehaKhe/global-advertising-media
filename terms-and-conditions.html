@@ -20,84 +20,610 @@
         rel="stylesheet">
 
   <style>
-    
-/* Page background */
+ /* ===== TERMS & CONDITIONS PAGE ===== */
+
+/* =========================================
+   GLOBAL ADVERTISING MEDIA
+   TERMS & CONDITIONS — MODERN LEGAL PAGE
+========================================= */
+
+:root {
+  --legal-primary: #5b63e8;
+  --legal-primary-dark: #4149ca;
+  --legal-ink: #20243a;
+  --legal-muted: #687086;
+  --legal-border: #e7e9f2;
+  --legal-bg: #f7f8fc;
+  --legal-white: #ffffff;
+  --legal-radius: 20px;
+  --legal-shadow: 0 18px 55px rgba(36, 42, 88, 0.07);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
 .legal-page {
-  min-height: 100vh;
-  padding: 150px 20px 80px;
-  background: linear-gradient(135deg, #ddd1c4, #e6c790, #eca84e);
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding: 82px 0 90px;
+  color: var(--legal-ink);
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      rgba(97, 105, 232, 0.07),
+      transparent 25rem
+    ),
+    var(--legal-bg);
 }
 
-/* Content card */
+.legal-page *,
+.legal-page *::before,
+.legal-page *::after {
+  box-sizing: border-box;
+}
+
+.legal-page .container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
 .legal-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 45px;
-  background: #ffffff;
+  position: relative;
+}
+
+/* HERO */
+
+.legal-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(32px, 6vw, 68px);
+  margin-bottom: 32px;
+  border: 1px solid rgba(222, 225, 244, 0.95);
+  border-radius: 28px;
+  background:
+    radial-gradient(
+      circle at 92% 15%,
+      rgba(100, 109, 242, 0.18),
+      transparent 19rem
+    ),
+    linear-gradient(135deg, #fff 5%, #f0f2ff 100%);
+  box-shadow: var(--legal-shadow);
+}
+
+.legal-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -95px;
+  bottom: -180px;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(91, 99, 232, 0.15);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 35px rgba(91, 99, 232, 0.035),
+    0 0 0 75px rgba(91, 99, 232, 0.025);
+}
+
+.legal-hero .eyebrow,
+.legal-label {
+  display: inline-block;
+  color: var(--legal-primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.legal-hero .eyebrow {
+  padding: 8px 13px;
+  margin-bottom: 22px;
+  border: 1px solid #dfe1ff;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.legal-hero h1 {
+  max-width: 780px;
+  margin: 0 0 22px;
+  color: #191d31;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2.7px;
+}
+
+.legal-hero h1 span {
+  color: var(--legal-primary);
+}
+
+.legal-intro {
+  max-width: 690px;
+  margin: 0 0 27px;
+  color: var(--legal-muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.legal-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #626a7d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.legal-meta-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: #6269e8;
+  box-shadow: 0 0 0 4px #e5e7ff;
+}
+
+.legal-meta-divider {
+  width: 1px;
+  height: 16px;
+  background: #d9dcea;
+}
+
+/* TABLE OF CONTENTS */
+
+.legal-toc {
+  position: sticky;
+  top: 18px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 18px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(226, 228, 241, 0.95);
   border-radius: 16px;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 28px rgba(30, 36, 73, 0.055);
+  backdrop-filter: blur(14px);
 }
 
-/* Mobile responsive */
-@media (max-width: 600px) {
+.legal-toc-title {
+  flex-shrink: 0;
+  color: var(--legal-ink);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.legal-toc-links {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.legal-toc a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 11px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #60677b;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.legal-toc a:hover,
+.legal-toc a:focus-visible {
+  color: var(--legal-primary-dark);
+  border-color: #e0e2ff;
+  background: #f1f2ff;
+  outline: none;
+}
+
+/* MAIN CONTENT */
+
+.legal-section {
+  padding: 35px 0;
+  border-bottom: 1px solid var(--legal-border);
+  scroll-margin-top: 105px;
+}
+
+.legal-section.legal-welcome {
+  padding-top: 12px;
+}
+
+.legal-label {
+  margin-bottom: 12px;
+}
+
+.legal-section h2,
+.legal-contact h2 {
+  margin: 0 0 17px;
+  color: var(--legal-ink);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(23px, 3vw, 31px);
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.8px;
+}
+
+.legal-section p,
+.legal-contact p {
+  max-width: 850px;
+  margin: 0 0 15px;
+  color: var(--legal-muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* GUIDELINE CARDS */
+
+.legal-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+  margin-top: 28px;
+}
+
+.legal-card {
+  position: relative;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid var(--legal-border);
+  border-radius: 16px;
+  background: var(--legal-white);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.legal-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--legal-primary);
+  transition: width 0.25s ease;
+}
+
+.legal-card:hover {
+  transform: translateY(-4px);
+  border-color: #d3d6ff;
+  box-shadow: 0 15px 35px rgba(37, 43, 86, 0.08);
+}
+
+.legal-card:hover::after {
+  width: 100%;
+}
+
+.legal-card-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  margin-bottom: 17px;
+  border: 1px solid #e4e5ff;
+  border-radius: 12px;
+  color: var(--legal-primary);
+  background: #f0f1ff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.legal-card h3 {
+  margin: 0 0 9px;
+  color: #282c41;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.6;
+}
+
+.legal-card p {
+  margin: 0;
+  color: var(--legal-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* PRIVACY HIGHLIGHT */
+
+.legal-section.legal-highlight {
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 8px;
+  border: 1px solid #e0e3ff;
+  border-radius: 18px;
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(91, 99, 232, 0.1),
+      transparent 18rem
+    ),
+    #f0f2ff;
+}
+
+.legal-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 0;
+  margin-top: 7px;
+  color: var(--legal-primary-dark);
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.legal-inline-link span {
+  transition: transform 0.2s ease;
+}
+
+.legal-inline-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* CONTACT PANEL */
+
+.legal-contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: clamp(26px, 5vw, 45px);
+  margin-top: 45px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 23px;
+  color: white;
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(106, 115, 247, 0.35),
+      transparent 23rem
+    ),
+    #20243a;
+  box-shadow: 0 20px 50px rgba(28, 32, 59, 0.14);
+}
+
+.legal-contact .legal-label {
+  color: #b6bcff;
+}
+
+.legal-contact h2 {
+  margin-bottom: 12px;
+  color: white;
+  font-size: clamp(28px, 4vw, 36px);
+}
+
+.legal-contact p {
+  max-width: 520px;
+  color: #c6cada;
+  font-size: 14px;
+}
+
+.legal-contact-email {
+  display: inline-block;
+  color: #d9dcff;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.legal-contact-email:hover {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.legal-contact-btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 13px 19px;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: #20243a;
+  background: white;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.legal-contact-btn:hover {
+  transform: translateY(-2px);
+  background: #eff0ff;
+}
+
+/* BACK TO HOME */
+
+.legal-back {
+  padding-top: 29px;
+  text-align: center;
+}
+
+.legal-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  color: #697085;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.legal-back a:hover {
+  color: var(--legal-primary);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.legal-page a:focus-visible {
+  outline: 3px solid rgba(91, 99, 232, 0.55);
+  outline-offset: 4px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
   .legal-page {
-    padding: 115px 16px 50px;
+    padding: 48px 0 60px;
   }
 
-  .legal-content {
-    padding: 25px 20px;
+  .legal-page .container {
+    width: calc(100% - 28px);
+  }
+
+  .legal-hero {
+    padding: 32px 24px;
+    margin-bottom: 22px;
+    border-radius: 19px;
+  }
+
+  .legal-hero h1 {
+    font-size: clamp(36px, 9vw, 52px);
+    letter-spacing: -1.6px;
+  }
+
+  .legal-intro {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .legal-toc {
+    position: relative;
+    top: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .legal-toc-links {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .legal-toc a {
+    padding: 8px 9px;
+    background: #f7f7ff;
+    font-size: 11px;
+  }
+
+  .legal-section {
+    padding: 27px 0;
+    scroll-margin-top: 20px;
+  }
+
+  .legal-section.legal-welcome {
+    padding-top: 8px;
+  }
+
+  .legal-section h2 {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .legal-section p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .legal-card-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .legal-card {
+    padding: 21px;
+  }
+
+  .legal-section.legal-highlight {
+    padding: 23px 20px;
+    margin-top: 22px;
+  }
+
+  .legal-contact {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    padding: 27px 22px;
+    margin-top: 30px;
+    border-radius: 18px;
+  }
+
+  .legal-contact-btn {
+    width: 100%;
+  }
+
+  .legal-meta {
+    gap: 10px;
+    line-height: 1.8;
   }
 }
 
-    .legal-content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 45px;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    }
+@media (max-width: 380px) {
+  .legal-hero {
+    padding: 28px 19px;
+  }
 
-    .legal-content h1 {
-      margin-bottom: 15px;
-      font-size: clamp(32px, 5vw, 48px);
-    }
+  .legal-hero h1 {
+    font-size: 34px;
+  }
 
-    .legal-content h2 {
-      margin: 32px 0 12px;
-      font-size: 23px;
-    }
+  .legal-meta-divider {
+    display: none;
+  }
 
-    .legal-content p,
-    .legal-content li {
-      color: #555b68;
-      font-size: 16px;
-      line-height: 1.8;
-    }
+  .legal-toc-links {
+    gap: 4px;
+  }
+}
 
-    .legal-content ul {
-      padding-left: 24px;
-    }
+/* REDUCED MOTION */
 
-    .legal-content a {
-      color: #2459d3;
-      overflow-wrap: anywhere;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .legal-page *,
+  .legal-page *::before,
+  .legal-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
-    .legal-updated {
-      margin-bottom: 30px;
-      font-size: 14px !important;
-    }
-
-    @media (max-width: 600px) {
-      .legal-page {
-        padding: 115px 16px 50px;
-      }
-
-      .legal-content {
-        padding: 25px 20px;
-      }
-    }
   </style>
 </head>
 
@@ -222,166 +748,329 @@
     </ul>
   </nav>
 </header>
-  <main class="legal-page" id="terms-and-conditions">
-    <div class="container">
-      <article class="legal-content">
 
-        <span class="eyebrow dark-eyebrow">LEGAL INFORMATION</span>
+<main class="legal-page" id="terms-and-conditions">
+  <div class="container">
+    <article class="legal-content">
 
-        <h1>Terms &amp; Conditions</h1>
+      <!-- HERO -->
+      <header class="legal-hero">
+        <span class="eyebrow">LEGAL &amp; TRANSPARENCY</span>
 
-        <p class="legal-updated">
-          Last updated: October 19, 2026
+        <h1>
+          Terms &amp; <span>Conditions</span>
+        </h1>
+
+        <p class="legal-intro">
+          Great partnerships begin with clear expectations.
+          Please review the terms that apply when you visit
+          Global Advertising Media and explore our services.
+        </p>
+
+        <div class="legal-meta">
+          <span class="legal-meta-dot"></span>
+          <span>Last updated October 19, 2026</span>
+          <span class="legal-meta-divider"></span>
+          <span>Website Terms</span>
+        </div>
+      </header>
+
+      <!-- TABLE OF CONTENTS -->
+      <nav class="legal-toc" aria-label="Terms and conditions contents">
+        <span class="legal-toc-title">On this page</span>
+
+        <div class="legal-toc-links">
+          <a href="#welcome">Welcome</a>
+          <a href="#website-use">Website use</a>
+          <a href="#services">Our services</a>
+          <a href="#agreements">Agreements</a>
+          <a href="#intellectual-property">Ownership</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#liability">Liability</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#updates">Updates</a>
+          <a href="#governing-law">Applicable law</a>
+          <a href="#contact-legal">Contact</a>
+        </div>
+      </nav>
+
+      <!-- 01: WELCOME -->
+      <section class="legal-section legal-welcome" id="welcome">
+        <span class="legal-label">01 / INTRODUCTION</span>
+
+        <h2>Welcome to Global Advertising Media</h2>
+
+        <p>
+          Thank you for visiting our website. These Terms and
+          Conditions explain the basic rules for accessing and
+          using our website, its content, and related information.
         </p>
 
         <p>
-          Welcome to Global Advertising Media. These Terms and
-          Conditions govern your access to and use of this website.
-          By accessing or using the website, you agree to these
-          terms. If you do not agree, please discontinue use of
-          the website.
+          By using this website, you agree to these terms to the
+          extent permitted by applicable law. If you do not agree,
+          please discontinue using the website.
         </p>
+      </section>
 
-        <h2>1. About Our Website</h2>
+      <!-- 02: WEBSITE USE -->
+      <section class="legal-section" id="website-use">
+        <span class="legal-label">02 / RESPONSIBLE USE</span>
+
+        <h2>Use our website responsibly</h2>
 
         <p>
-          This website provides information about Global Advertising
-          Media and its advertising, branding, digital marketing,
-          creative production, and related services.
+          Our website introduces our advertising, branding,
+          digital marketing, website development, and creative
+          services. When using it, you agree to respect applicable
+          laws and the rights of others.
         </p>
 
-        <h2>2. Use of the Website</h2>
+        <div class="legal-card-grid">
 
-        <p>You agree to use this website lawfully. You must not:</p>
+          <div class="legal-card">
+            <span class="legal-card-mark">01</span>
+            <h3>Lawful use</h3>
+            <p>
+              Do not use the website for fraudulent, misleading,
+              unlawful, or harmful activities.
+            </p>
+          </div>
 
-        <ul>
-          <li>Use the website for unlawful, fraudulent, or misleading purposes.</li>
-          <li>Attempt to gain unauthorized access to the website or its systems.</li>
-          <li>Disrupt website functionality or compromise its security.</li>
-          <li>Copy, misuse, or reproduce website content in violation of applicable law.</li>
-          <li>Submit false, harmful, or unauthorized information through our forms.</li>
-        </ul>
+          <div class="legal-card">
+            <span class="legal-card-mark">02</span>
+            <h3>Website security</h3>
+            <p>
+              Do not attempt unauthorized access, disrupt services,
+              or interfere with website security.
+            </p>
+          </div>
 
-        <h2>3. Our Services</h2>
+          <div class="legal-card">
+            <span class="legal-card-mark">03</span>
+            <h3>Respect intellectual property</h3>
+            <p>
+              Do not reproduce, distribute, or commercially exploit
+              protected content without appropriate permission.
+            </p>
+          </div>
 
-        <p>
-          Information about our services on this website is provided
-          for general informational purposes. The availability,
-          scope, pricing, timelines, and deliverables of any service
-          will be confirmed separately where applicable.
-        </p>
+          <div class="legal-card">
+            <span class="legal-card-mark">04</span>
+            <h3>Accurate information</h3>
+            <p>
+              Provide truthful information when submitting inquiries
+              or communicating with our team.
+            </p>
+          </div>
 
-        <p>
-          Submitting an inquiry does not automatically create a
-          client relationship, confirm a booking, or guarantee
-          that we will accept a project.
-        </p>
+        </div>
+      </section>
 
-        <h2>4. Quotations and Project Agreements</h2>
+      <!-- 03: SERVICES -->
+      <section class="legal-section" id="services">
+        <span class="legal-label">03 / OUR SERVICES</span>
 
-        <p>
-          Any quotation, proposal, project scope, payment schedule,
-          delivery timeline, revision allowance, or cancellation
-          arrangement may be documented separately in a written
-          proposal, quotation, or service agreement.
-        </p>
-
-        <p>
-          Where a separate signed or otherwise accepted agreement
-          applies, its terms will govern the relevant project to
-          the extent permitted by applicable law.
-        </p>
-
-        <h2>5. Intellectual Property</h2>
-
-        <p>
-          Unless otherwise stated, the website's text, design,
-          branding, graphics, and other materials are owned by
-          Global Advertising Media or used with permission.
-          They may not be copied, republished, or commercially
-          exploited without appropriate authorization.
-        </p>
+        <h2>Services, information &amp; availability</h2>
 
         <p>
-          Ownership, licensing, and permitted use of creative
-          materials produced for a client will be governed by
-          the relevant project agreement.
-        </p>
-
-        <h2>6. Portfolio and Illustrative Content</h2>
-
-        <p>
-          Some portfolio descriptions or visuals on this website
-          may be illustrative concepts rather than completed client
-          projects. Any project-specific claims, results, or
-          representations should be verified before being relied
-          upon.
-        </p>
-
-        <h2>8. Limitation of Liability</h2>
-
-        <p>
-          To the extent permitted by applicable law, Global
-          Advertising Media will not be responsible for indirect
-          or consequential losses arising from the use of, or
-          inability to use, this website.
+          Website content is provided for general informational
+          purposes. Service availability, pricing, deliverables,
+          campaign results, and project timelines may vary
+          according to individual requirements.
         </p>
 
         <p>
+          Submitting an inquiry does not guarantee acceptance
+          of a project, confirm a booking, or create a client
+          relationship. Specific arrangements will be confirmed
+          separately where applicable.
+        </p>
+      </section>
+
+      <!-- 04: AGREEMENTS -->
+      <section class="legal-section" id="agreements">
+        <span class="legal-label">04 / PROJECT TERMS</span>
+
+        <h2>Proposals, payments &amp; agreements</h2>
+
+        <p>
+          Projects may be governed by a separate quotation,
+          proposal, purchase order, or service agreement.
+          Depending on the project, it may specify scope,
+          fees, payment schedules, deadlines, revisions,
+          cancellations, and deliverables.
+        </p>
+
+        <p>
+          Where a separate agreement applies, its terms will
+          govern the relevant project to the extent permitted
+          by law. Please review project-specific documents
+          before approving work or making payments.
+        </p>
+      </section>
+
+      <!-- 05: INTELLECTUAL PROPERTY -->
+      <section class="legal-section" id="intellectual-property">
+        <span class="legal-label">05 / CREATIVE OWNERSHIP</span>
+
+        <h2>Intellectual property &amp; usage rights</h2>
+
+        <p>
+          Unless otherwise indicated, website text, layouts,
+          graphics, branding, and other materials are owned by
+          Global Advertising Media or used with authorization.
+        </p>
+
+        <p>
+          You may not reproduce, republish, modify, or commercially
+          exploit protected materials without the required
+          authorization. Ownership and licensing of client work
+          will be determined by the applicable project agreement
+          and law.
+        </p>
+      </section>
+
+      <!-- 06: PORTFOLIO -->
+      <section class="legal-section" id="portfolio">
+        <span class="legal-label">06 / CREATIVE WORK</span>
+
+        <h2>Portfolio, examples &amp; results</h2>
+
+        <p>
+          Portfolio items, concepts, mockups, and visual examples
+          may be illustrative and may not represent completed
+          client engagements. Any case studies or performance
+          figures should be understood in their stated context.
+        </p>
+
+        <p>
+          Advertising and marketing outcomes can vary based on
+          budgets, audiences, market conditions, platforms,
+          and other factors. Past results do not guarantee
+          future performance.
+        </p>
+      </section>
+
+      <!-- 07: LIABILITY -->
+      <section class="legal-section" id="liability">
+        <span class="legal-label">07 / IMPORTANT INFORMATION</span>
+
+        <h2>Website availability &amp; liability</h2>
+
+        <p>
+          We make reasonable efforts to keep our website useful
+          and accessible. However, we do not guarantee that it
+          will always be available, error-free, complete, or
+          up to date.
+        </p>
+
+        <p>
+          To the extent permitted by applicable law, we are not
+          liable for indirect or consequential losses arising
+          from website use or temporary unavailability.
           Nothing in these terms excludes or limits liability
-          where such exclusion or limitation is prohibited by law.
-          Any limitations applicable to paid services should be
-          set out in the relevant service agreement.
-        </p>
-
-        <h2>9. Privacy</h2>
-
-        <p>
-          Our handling of personal information is described in
-          our <a href="privacy-policy.html">Privacy Policy</a>.
-          Please read it to understand how we handle information
-          submitted through our website.
-        </p>
-
-        <h2>10. Changes to These Terms</h2>
-
-        <p>
-          We may revise these Terms and Conditions from time to
-          time. Updates will be published on this page with a
-          revised date. Your continued use of the website after
-          an update is subject to applicable law.
-        </p>
-
-        <h2>11. Governing Law</h2>
-
-        <p>
-          These terms are subject to applicable laws. The
-          governing law and jurisdiction for disputes should be
-          specified based on the location of the business and
-          the requirements of applicable law.
-        </p>
-
-        <h2>12. Contact Us</h2>
-
-        <p>
-          For questions about these Terms and Conditions, contact:
+          that cannot legally be excluded or limited.
         </p>
 
         <p>
-          <strong>Global Advertising Media</strong><br>
-          Email:
-          <a href="mailto:enquiry@globaladvertisingmedia.com">
+          Any additional limitations, warranties, or remedies
+          applicable to paid services should be addressed in
+          the relevant service agreement.
+        </p>
+      </section>
+
+      <!-- 08: PRIVACY -->
+      <section class="legal-section legal-highlight" id="privacy">
+        <span class="legal-label">08 / YOUR PRIVACY</span>
+
+        <h2>Your information deserves care</h2>
+
+        <p>
+          If you contact us or submit information through our
+          website, our Privacy Policy explains how applicable
+          personal information is collected, used, and handled.
+        </p>
+
+        <a href="privacy-policy.html" class="legal-inline-link">
+          Read our Privacy Policy <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <!-- 09: UPDATES -->
+      <section class="legal-section" id="updates">
+        <span class="legal-label">09 / KEEPING THINGS CURRENT</span>
+
+        <h2>Changes to these terms</h2>
+
+        <p>
+          We may revise these Terms and Conditions from time
+          to time. Any changes will be published on this page
+          with an updated revision date.
+        </p>
+
+        <p>
+          Changes will apply as permitted by applicable law.
+          We encourage you to review this page periodically
+          to stay informed.
+        </p>
+      </section>
+
+      <!-- 10: GOVERNING LAW -->
+      <section class="legal-section" id="governing-law">
+        <span class="legal-label">10 / LEGAL JURISDICTION</span>
+
+        <h2>Governing law &amp; jurisdiction</h2>
+
+        <p>
+          These terms are subject to applicable law. The
+          governing law and courts with jurisdiction should
+          be specified based on the business's actual legal
+          location, applicable regulations, and any relevant
+          client agreement.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="legal-contact" id="contact-legal">
+        <div>
+          <span class="legal-label">QUESTIONS ABOUT THESE TERMS?</span>
+
+          <h2>Let's talk.</h2>
+
+          <p>
+            Need clarification about our website terms or
+            service agreements? Contact our team and we'll
+            direct your inquiry appropriately.
+          </p>
+
+          <a
+            href="mailto:enquiry@globaladvertisingmedia.com"
+            class="legal-contact-email"
+          >
             enquiry@globaladvertisingmedia.com
           </a>
-        </p>
+        </div>
 
-        <p>
-          <a href="index.html">← Back to Home</a>
-        </p>
+        <a href="index.html#contact" class="legal-contact-btn">
+          Contact our team
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
 
-      </article>
-    </div>
-  </main>
+      <!-- BACK TO HOME -->
+      <div class="legal-back">
+        <a href="index.html">
+          <span aria-hidden="true">←</span>
+          Back to homepage
+        </a>
+      </div>
+
+    </article>
+  </div>
+</main>
+
+
   
 <footer class="footer">
   <div class="footer-glow footer-glow-one"></div>
