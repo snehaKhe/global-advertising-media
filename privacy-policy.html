@@ -26,18 +26,27 @@
    PRIVACY POLICY — PREMIUM DESIGN
 ========================================== */
 
+
 :root {
-  --privacy-navy: #101b33;
-  --privacy-navy-light: #1a2c4e;
-  --privacy-blue: #5365e8;
-  --privacy-blue-dark: #3e4dce;
-  --privacy-text: #283249;
-  --privacy-muted: #68738a;
-  --privacy-border: #e5e9f2;
-  --privacy-bg: #f7f8fc;
-  --privacy-white: #ffffff;
-  --privacy-shadow: 0 18px 50px rgba(24, 39, 78, 0.06);
+  /* Primary brand colors */
+  --privacy-navy: #23180F;
+  --privacy-navy-light: #3A281B;
+  --privacy-blue: #F07824;
+  --privacy-blue-dark: #C95712;
+
+  /* Text colors */
+  --privacy-text: #33271F;
+  --privacy-muted: #75685E;
+
+  /* Surfaces and borders */
+  --privacy-border: #F0E2D5;
+  --privacy-bg: #FFF8F1;
+  --privacy-white: #FFFFFF;
+
+  /* Shadows */
+  --privacy-shadow: 0 18px 50px rgba(80, 43, 15, 0.08);
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -72,18 +81,23 @@ html {
   overflow: hidden;
   padding: clamp(68px, 9vw, 108px) 0 84px;
   color: #ffffff;
-  background:
+ background:
     radial-gradient(
       ellipse at 85% 15%,
-      rgba(89, 111, 255, 0.30),
+      rgba(255, 151, 65, 0.28),
       transparent 38%
     ),
     radial-gradient(
       ellipse at 5% 100%,
-      rgba(51, 94, 190, 0.18),
+      rgba(240, 120, 36, 0.16),
       transparent 35%
     ),
-    linear-gradient(130deg, #101a30 0%, #1b3055 100%);
+    linear-gradient(
+      130deg,
+      #21170F 0%,
+      #3A2417 55%,
+      #5A3019 100%
+    );
 }
 
 .privacy-hero::before,
@@ -127,14 +141,15 @@ html {
   padding: 9px 14px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
-  color: #e0e6ff;
-  background: rgba(255, 255, 255, 0.07);
+   color: #FFE0C5;
+  border-color: rgba(255, 173, 112, 0.30);
+  background: rgba(240, 120, 36, 0.10);
 }
 
 .privacy-hero h1 {
   max-width: 800px;
   margin: 25px 0 20px;
-  color: #ffffff;
+   color: #FFAD70;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(39px, 6vw, 68px);
   font-weight: 800;
@@ -143,7 +158,7 @@ html {
 }
 
 .privacy-hero h1 span {
-  color: #aab5ff;
+  color: #C95712
 }
 
 .privacy-intro {
@@ -170,8 +185,8 @@ html {
   height: 7px;
   flex: 0 0 7px;
   border-radius: 50%;
-  background: #9eacff;
-  box-shadow: 0 0 0 4px rgba(158, 172, 255, 0.12);
+  background: #FF9B55;
+  box-shadow: 0 0 0 4px rgba(255, 155, 85, 0.14);
 }
 
 /* ==========================================
@@ -195,7 +210,7 @@ html {
 }
 
 .section-kicker {
-  color: var(--privacy-blue);
+   color: #D96518;
 }
 
 .privacy-welcome h2,
@@ -635,6 +650,179 @@ html {
   }
 }
 
+/* ==========================================
+   PRIVACY PAGE — PREMIUM ANIMATIONS
+========================================== */
+
+/* 1. Hero entrance animation */
+@keyframes privacyFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes privacyFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes privacyGlow {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes privacyFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.privacy-hero .privacy-label {
+  animation: privacyFadeUp 0.7s ease both;
+}
+
+.privacy-hero h1 {
+  animation: privacyFadeUp 0.85s ease 0.12s both;
+}
+
+.privacy-hero .privacy-intro {
+  animation: privacyFadeUp 0.85s ease 0.24s both;
+}
+
+.privacy-hero .privacy-meta {
+  animation: privacyFadeUp 0.85s ease 0.36s both;
+}
+
+/* 2. Animated hero background */
+.privacy-hero::before {
+  animation: privacyGlow 8s ease-in-out infinite;
+}
+
+.privacy-hero::after {
+  animation: privacyFloat 7s ease-in-out infinite;
+}
+
+/* 3. Scroll reveal elements */
+.privacy-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.privacy-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. Privacy cards */
+.privacy-card {
+  transition:
+    opacity 0.6s ease,
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.privacy-card.is-visible:hover {
+  transform: translateY(-7px);
+  border-color: #cbd2ff;
+  box-shadow: 0 20px 42px rgba(24, 39, 78, 0.10);
+}
+
+.privacy-icon {
+  transition:
+    transform 0.35s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.privacy-card.is-visible:hover .privacy-icon {
+  transform: translateY(-3px) rotate(-5deg);
+  color: #ffffff;
+  background: var(--privacy-blue);
+}
+
+/* 5. Table of contents links */
+.privacy-toc a {
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.privacy-toc a:hover {
+  transform: translateY(-2px);
+}
+
+/* 6. Section heading accent */
+.privacy-detail h2 {
+  transition: color 0.3s ease;
+}
+
+.privacy-detail:hover h2 {
+  color: var(--privacy-blue-dark);
+}
+
+/* 7. Contact panel */
+.privacy-email .email-arrow {
+  transition: transform 0.3s ease;
+}
+
+.privacy-email:hover .email-arrow {
+  transform: translate(4px, -4px);
+}
+
+/* 8. Footer links */
+.privacy-footer a {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.privacy-footer a:hover {
+  transform: translateX(3px);
+}
+
+/* 9. Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .privacy-page *,
+  .privacy-page *::before,
+  .privacy-page *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .privacy-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
   </style>
 </head>
 
@@ -813,26 +1001,6 @@ html {
       </div>
 
       <!-- TABLE OF CONTENTS -->
-      <nav class="privacy-toc" aria-label="Privacy policy contents">
-
-        <span class="privacy-toc-title">On this page</span>
-
-        <div class="privacy-toc-links">
-          <a href="#information-collected">Information collected</a>
-          <a href="#information-use">How we use data</a>
-          <a href="#cookies">Cookies</a>
-          <a href="#sharing">Sharing</a>
-          <a href="#security">Security</a>
-          <a href="#retention">Data retention</a>
-          <a href="#privacy-rights">Your rights</a>
-          <a href="#third-parties">Third parties</a>
-          <a href="#children">Children</a>
-          <a href="#international-transfers">Transfers</a>
-          <a href="#policy-updates">Updates</a>
-          <a href="#privacy-contact">Contact</a>
-        </div>
-
-      </nav>
 
       <!-- PRIVACY OVERVIEW CARDS -->
       <div class="privacy-grid">

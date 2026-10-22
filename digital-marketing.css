@@ -358,10 +358,10 @@
   font-weight: 750;
   text-decoration: none;
   transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  background 0.3s ease,
+  color 0.3s ease,
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
 }
 
 .footer-cta-btn span {
@@ -464,6 +464,7 @@
 /* Footer columns */
 .footer-column {
   min-width: 0;
+  
 }
 
 .footer-column h3 {
@@ -487,6 +488,7 @@
   background: var(--footer-accent);
   transition: width 0.35s ease;
 }
+
 
 .footer-column:hover h3::after {
   width: 55px;

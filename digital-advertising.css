@@ -1613,6 +1613,7 @@ main,
   background: var(--footer-bg);
   color: #fff;
   font-size: 16px;
+ 
 }
 
 .footer,
@@ -2049,6 +2050,7 @@ main,
   transform: translateY(-3px);
   border-color: var(--footer-accent);
 }
+
 
 /* Animations */
 @keyframes footerFadeUp {
@@ -2857,6 +2859,7 @@ body {
 }
 
 
+
 /* Navbar layout */
 .navbar {
   display: flex;
@@ -2868,7 +2871,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 12px; /* Reduce this value to decrease spacing */
+  gap: 5px; /* Reduce this value to decrease spacing */
   margin: 0;
   padding: 0;
   list-style: none;

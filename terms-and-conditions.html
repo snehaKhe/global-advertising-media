@@ -26,18 +26,18 @@
    GLOBAL ADVERTISING MEDIA
    TERMS & CONDITIONS — MODERN LEGAL PAGE
 ========================================= */
-
 :root {
-  --legal-primary: #5b63e8;
-  --legal-primary-dark: #4149ca;
-  --legal-ink: #20243a;
-  --legal-muted: #687086;
-  --legal-border: #e7e9f2;
-  --legal-bg: #f7f8fc;
+  --legal-primary: #ea580c;
+  --legal-primary-dark: #c2410c;
+  --legal-ink: #292016;
+  --legal-muted: #756b60;
+  --legal-border: #f0e3d7;
+  --legal-bg: #fffaf5;
   --legal-white: #ffffff;
   --legal-radius: 20px;
-  --legal-shadow: 0 18px 55px rgba(36, 42, 88, 0.07);
+  --legal-shadow: 0 18px 55px rgba(124, 45, 18, 0.07);
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -49,14 +49,14 @@ html {
   isolation: isolate;
   overflow: clip;
   padding: 82px 0 90px;
-  color: var(--legal-ink);
-  background:
+ background:
     radial-gradient(
       circle at 5% 5%,
-      rgba(97, 105, 232, 0.07),
+      rgba(234, 88, 12, 0.07),
       transparent 25rem
     ),
-    var(--legal-bg);
+    #fffaf5;
+  color: var(--legal-ink);
 }
 
 .legal-page *,
@@ -82,16 +82,15 @@ html {
   overflow: hidden;
   padding: clamp(32px, 6vw, 68px);
   margin-bottom: 32px;
-  border: 1px solid rgba(222, 225, 244, 0.95);
-  border-radius: 28px;
+  border-color: #f1dfcf;
   background:
     radial-gradient(
       circle at 92% 15%,
-      rgba(100, 109, 242, 0.18),
+      rgba(251, 146, 60, 0.20),
       transparent 19rem
     ),
-    linear-gradient(135deg, #fff 5%, #f0f2ff 100%);
-  box-shadow: var(--legal-shadow);
+    linear-gradient(135deg, #ffffff 5%, #fff0df 100%);
+  box-shadow: 0 18px 55px rgba(124, 45, 18, 0.07);
 }
 
 .legal-hero::before {
@@ -102,17 +101,16 @@ html {
   bottom: -180px;
   width: 340px;
   height: 340px;
-  border: 1px solid rgba(91, 99, 232, 0.15);
-  border-radius: 50%;
+  border-color: rgba(234, 88, 12, 0.15);
   box-shadow:
-    0 0 0 35px rgba(91, 99, 232, 0.035),
-    0 0 0 75px rgba(91, 99, 232, 0.025);
+    0 0 0 35px rgba(234, 88, 12, 0.035),
+    0 0 0 75px rgba(234, 88, 12, 0.025);
 }
 
 .legal-hero .eyebrow,
 .legal-label {
   display: inline-block;
-  color: var(--legal-primary);
+  color: #c2410c;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.8px;
@@ -125,13 +123,14 @@ html {
   margin-bottom: 22px;
   border: 1px solid #dfe1ff;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.8);
+   border-color: #fed7aa;
+  background: rgba(255, 255, 255, 0.85)
 }
 
 .legal-hero h1 {
   max-width: 780px;
   margin: 0 0 22px;
-  color: #191d31;
+   color: #292016;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(38px, 6vw, 68px);
   font-weight: 800;
@@ -140,13 +139,13 @@ html {
 }
 
 .legal-hero h1 span {
-  color: var(--legal-primary);
+   color: #ea580c;
 }
 
 .legal-intro {
   max-width: 690px;
   margin: 0 0 27px;
-  color: var(--legal-muted);
+ color: #756b60;
   font-size: 16px;
   line-height: 1.9;
 }
@@ -156,7 +155,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  color: #626a7d;
+  color: #756b60;
   font-size: 12px;
   font-weight: 600;
 }
@@ -166,14 +165,14 @@ html {
   height: 8px;
   flex: 0 0 8px;
   border-radius: 50%;
-  background: #6269e8;
-  box-shadow: 0 0 0 4px #e5e7ff;
+  background: #f97316;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.14);
 }
 
 .legal-meta-divider {
   width: 1px;
   height: 16px;
-  background: #d9dcea;
+    background: #ead8c7;
 }
 
 /* TABLE OF CONTENTS */
@@ -187,16 +186,16 @@ html {
   gap: 18px;
   padding: 15px 18px;
   margin-bottom: 32px;
-  border: 1px solid rgba(226, 228, 241, 0.95);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 8px 28px rgba(30, 36, 73, 0.055);
+  border-color: #f0e3d7;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 28px rgba(124, 45, 18, 0.055);
+  border-radius: 15px;
   backdrop-filter: blur(14px);
 }
 
 .legal-toc-title {
   flex-shrink: 0;
-  color: var(--legal-ink);
+  color: #292016;
   font-size: 12px;
   font-weight: 800;
 }
@@ -214,7 +213,7 @@ html {
   padding: 8px 11px;
   border: 1px solid transparent;
   border-radius: 8px;
-  color: #60677b;
+  color: #756b60;
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
@@ -226,9 +225,9 @@ html {
 
 .legal-toc a:hover,
 .legal-toc a:focus-visible {
-  color: var(--legal-primary-dark);
-  border-color: #e0e2ff;
-  background: #f1f2ff;
+  color: #c2410c;
+  border-color: #fed7aa;
+  background: #fff1e5;
   outline: none;
 }
 
@@ -236,7 +235,7 @@ html {
 
 .legal-section {
   padding: 35px 0;
-  border-bottom: 1px solid var(--legal-border);
+  border-bottom-color: #f0e3d7;
   scroll-margin-top: 105px;
 }
 
@@ -251,7 +250,7 @@ html {
 .legal-section h2,
 .legal-contact h2 {
   margin: 0 0 17px;
-  color: var(--legal-ink);
+  color: #292016;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(23px, 3vw, 31px);
   font-weight: 750;
@@ -263,7 +262,7 @@ html {
 .legal-contact p {
   max-width: 850px;
   margin: 0 0 15px;
-  color: var(--legal-muted);
+  color: #756b60;
   font-size: 14px;
   line-height: 2;
 }
@@ -285,9 +284,9 @@ html {
   position: relative;
   padding: 26px;
   overflow: hidden;
-  border: 1px solid var(--legal-border);
-  border-radius: 16px;
-  background: var(--legal-white);
+ border-color: #f0e3d7;
+  background: #ffffff;
+  border-radius: 10px;
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
@@ -301,14 +300,14 @@ html {
   left: 0;
   width: 0;
   height: 3px;
-  background: var(--legal-primary);
+    background: #ea580c;  
   transition: width 0.25s ease;
 }
 
 .legal-card:hover {
   transform: translateY(-4px);
-  border-color: #d3d6ff;
-  box-shadow: 0 15px 35px rgba(37, 43, 86, 0.08);
+    border-color: #fdba74;
+  box-shadow: 0 15px 35px rgba(124, 45, 18, 0.09);
 }
 
 .legal-card:hover::after {
@@ -322,17 +321,17 @@ html {
   width: 39px;
   height: 39px;
   margin-bottom: 17px;
-  border: 1px solid #e4e5ff;
-  border-radius: 12px;
-  color: var(--legal-primary);
-  background: #f0f1ff;
+    border-color: #fed7aa;
+  color: #c2410c;
+  background: #fff1e5;
+  border-radius: 10px;
   font-size: 12px;
   font-weight: 800;
 }
 
 .legal-card h3 {
   margin: 0 0 9px;
-  color: #282c41;
+  color: #292016;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 750;
@@ -341,7 +340,7 @@ html {
 
 .legal-card p {
   margin: 0;
-  color: var(--legal-muted);
+ color: #756b60;
   font-size: 13px;
   line-height: 1.9;
 }
@@ -354,13 +353,14 @@ html {
   margin-bottom: 8px;
   border: 1px solid #e0e3ff;
   border-radius: 18px;
+  border-color: #fed7aa;
   background:
     radial-gradient(
       circle at 100% 0,
-      rgba(91, 99, 232, 0.1),
+      rgba(249, 115, 22, 0.12),
       transparent 18rem
     ),
-    #f0f2ff;
+    #fff3e6;
 }
 
 .legal-inline-link {
@@ -369,7 +369,7 @@ html {
   gap: 9px;
   padding: 9px 0;
   margin-top: 7px;
-  color: var(--legal-primary-dark);
+  color: #c2410c;
   font-size: 13px;
   font-weight: 750;
   text-decoration: none;
@@ -408,7 +408,7 @@ html {
 }
 
 .legal-contact .legal-label {
-  color: #b6bcff;
+  color: #fdba74;
 }
 
 .legal-contact h2 {
@@ -419,13 +419,13 @@ html {
 
 .legal-contact p {
   max-width: 520px;
-  color: #c6cada;
+  color: #e4d5c8;
   font-size: 14px;
 }
 
 .legal-contact-email {
   display: inline-block;
-  color: #d9dcff;
+  color: #fdba74;
   font-size: 14px;
   font-weight: 650;
   text-decoration: none;
@@ -433,7 +433,7 @@ html {
 }
 
 .legal-contact-email:hover {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -446,10 +446,11 @@ html {
   gap: 12px;
   min-height: 48px;
   padding: 13px 19px;
-  border: 1px solid white;
   border-radius: 10px;
-  color: #20243a;
-  background: white;
+  border: 1px solid white;
+    border-color: #ea580c;
+  color: #ffffff;
+  background: #ea580c;
   font-size: 13px;
   font-weight: 750;
   text-decoration: none;
@@ -459,8 +460,8 @@ html {
 }
 
 .legal-contact-btn:hover {
-  transform: translateY(-2px);
-  background: #eff0ff;
+  border-color: #c2410c;
+  background: #c2410c;
 }
 
 /* BACK TO HOME */
@@ -468,6 +469,7 @@ html {
 .legal-back {
   padding-top: 29px;
   text-align: center;
+   color: #756b60;
 }
 
 .legal-back a {
@@ -475,7 +477,7 @@ html {
   align-items: center;
   gap: 8px;
   padding: 10px;
-  color: #697085;
+   color: #ea580c;
   font-size: 13px;
   font-weight: 650;
   text-decoration: none;
@@ -488,7 +490,7 @@ html {
 /* KEYBOARD ACCESSIBILITY */
 
 .legal-page a:focus-visible {
-  outline: 3px solid rgba(91, 99, 232, 0.55);
+   outline: 3px solid rgba(234, 88, 12, 0.55);
   outline-offset: 4px;
 }
 
@@ -524,6 +526,7 @@ html {
     top: auto;
     align-items: flex-start;
     flex-direction: column;
+     background: #fff7ef;
     gap: 9px;
     padding: 15px;
     margin-bottom: 20px;
@@ -581,6 +584,7 @@ html {
     padding: 27px 22px;
     margin-top: 30px;
     border-radius: 18px;
+    color: #fdba74;
   }
 
   .legal-contact-btn {
@@ -623,8 +627,8 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
-
-  </style>
+ 
+</style>
 </head>
 
 <body>
@@ -775,24 +779,6 @@ html {
         </div>
       </header>
 
-      <!-- TABLE OF CONTENTS -->
-      <nav class="legal-toc" aria-label="Terms and conditions contents">
-        <span class="legal-toc-title">On this page</span>
-
-        <div class="legal-toc-links">
-          <a href="#welcome">Welcome</a>
-          <a href="#website-use">Website use</a>
-          <a href="#services">Our services</a>
-          <a href="#agreements">Agreements</a>
-          <a href="#intellectual-property">Ownership</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#liability">Liability</a>
-          <a href="#privacy">Privacy</a>
-          <a href="#updates">Updates</a>
-          <a href="#governing-law">Applicable law</a>
-          <a href="#contact-legal">Contact</a>
-        </div>
-      </nav>
 
       <!-- 01: WELCOME -->
       <section class="legal-section legal-welcome" id="welcome">
@@ -1209,9 +1195,6 @@ html {
 
   </div>
 </footer>
-
-  <!-- Reuse your existing footer by copying the footer
-       from index.html into this location. -->
 
 </body>
 </html>
