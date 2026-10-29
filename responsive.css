@@ -1,0 +1,124 @@
+/* Bootstrap 5.3 adaptation. Load after the original page styles. */
+:root { --bs-primary: #f97316; --bs-primary-rgb: 249,115,22; }
+html { scroll-padding-top: 100px; }
+body { margin: 0; min-width: 0; }
+img, video, svg, canvas { max-width: 100%; }
+iframe { max-width: 100%; }
+input, select, textarea { max-width: 100%; }
+p, li, h1, h2, h3, h4, a { overflow-wrap: anywhere; }
+.container { width: 100%; padding-inline: max(16px, var(--bs-gutter-x, 24px) * .5); }
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1400px) { .container { max-width: 1320px; } }
+.bootstrap-layout.row {
+  display: flex; flex-wrap: wrap; gap: 0;
+  --bs-gutter-x: 2rem; --bs-gutter-y: 2rem;
+}
+.bootstrap-layout.row > * { min-width: 0; }
+.bootstrap-layout.row:not(.container) { margin-inline: calc(-.5 * var(--bs-gutter-x)); }
+.bootstrap-layout.row.container { margin-inline: auto; }
+.bootstrap-layout.row.web-hero { margin-inline: 0; }
+@media (max-width: 991.98px) { .about-image .image-badge { right: 0; } }
+.bootstrap-layout.row > .is-hidden { display: none; }
+.bootstrap-layout.row > .service-card,
+.bootstrap-layout.row > .card,
+.bootstrap-layout.row > .web-card,
+.bootstrap-layout.row > .privacy-card,
+.bootstrap-layout.row > .service-benefit-card { background-clip: padding-box; }
+/* Give cards their own gutters without reducing Bootstrap column widths. */
+.bootstrap-layout.row:has(> .card),
+.bootstrap-layout.row:has(> .service-card),
+.bootstrap-layout.row:has(> .web-card),
+.bootstrap-layout.row:has(> .privacy-card),
+.bootstrap-layout.row:has(> .service-benefit-card) { --bs-gutter-x: 0; --bs-gutter-y: 0; gap: 24px; }
+.bootstrap-layout.row:has(> .card) > *,
+.bootstrap-layout.row:has(> .service-card) > *,
+.bootstrap-layout.row:has(> .web-card) > *,
+.bootstrap-layout.row:has(> .privacy-card) > *,
+.bootstrap-layout.row:has(> .service-benefit-card) > * { width: 100%; }
+.header .navbar { width: 100%; gap: 16px; padding-block: 0; }
+.header .logo { flex: 0 1 260px; width: 260px; max-width: min(260px, calc(100% - 76px)); }
+.header .logo img { width: 100%; height: auto; max-height: 65px; object-fit: contain; }
+.header .navbar-collapse { min-width: 0; }
+.header .nav-links { display: flex; position: static; opacity: 1; visibility: visible; pointer-events: auto; transform: none; gap: 5px; }
+.header .nav-links > li { position: relative; }
+.header .nav-links > li > .nav-link { padding: 12px 5px; font-size: 13px; }
+.header .has-dropdown { display: flex; align-items: center; flex-wrap: wrap; }
+.header .submenu-toggle { display: inline-flex; align-items: center; justify-content: center; width: 32px; min-height: 44px; padding: 0; border: 0; background: transparent; color: #242424; border-radius: 6px; }
+.header .submenu-toggle:focus-visible, .header a:focus-visible { outline: 2px solid #f97316; outline-offset: 2px; }
+.header .dropdown-menu { display: none; top: 100%; left: 0; max-height: 65vh; overflow-y: auto; min-width: 245px; opacity: 1; visibility: visible; pointer-events: auto; transform: none; }
+.header .has-dropdown > .dropdown-menu:not(.show) { display: none; }
+.header .has-dropdown > .dropdown-menu.show { display: block; }
+.header .dropdown-menu a { white-space: normal; min-height: 40px; display: flex; align-items: center; padding: 8px 12px !important; }
+.header .nav-cta { padding: 5px 12px !important; }
+.header .dropdown-menu::before { display: none; }
+.header .navbar-toggler { margin-left: auto; min-height: 44px; }
+.hero-buttons, .portfolio-filters, .footer-bottom, .footer-bottom-links { flex-wrap: wrap; }
+.hero-buttons .btn { white-space: normal; }
+main > .web-hero:first-child { margin-top: 0px; }
+@media (min-width: 768px) {
+  .bootstrap-layout.row:has(> .card) > *,
+  .bootstrap-layout.row:has(> .service-card) > *,
+  .bootstrap-layout.row:has(> .web-card) > *,
+  .bootstrap-layout.row:has(> .privacy-card) > *,
+  .bootstrap-layout.row:has(> .service-benefit-card) > * { width: calc(50% - 12px); }
+}
+@media (min-width: 1200px) {
+  .bootstrap-layout.row:has(> .card) > .col-xl-4,
+  .bootstrap-layout.row:has(> .service-card) > .col-xl-4,
+  .bootstrap-layout.row:has(> .service-benefit-card) > .col-xl-4 { width: calc((100% - 48px) / 3); }
+}
+@media (max-width: 1199.98px) {
+  .header { padding: 8px 4%; }
+  .header .navbar { position: relative; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; min-height: 56px; }
+  .header .logo { height: auto; min-height: 0; aspect-ratio: auto; margin: 0; align-self: center; }
+  .header .navbar-toggler { flex: 0 0 44px; width: 44px; height: 44px; padding: 10px; margin: 0; border: 1px solid var(--brand-border, #dfe5ee); border-radius: 10px; color: var(--brand-navy, #14243b); }
+  .header .navbar-toggler-icon { position: relative; display: block; width: 22px; height: 18px; background: none; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; }
+  .header .navbar-toggler-icon::before, .header .navbar-toggler-icon::after { content: ""; position: absolute; top: 6px; left: 0; width: 22px; height: 2px; background: currentColor; transition: transform .2s; }
+  .header .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon { border-color: transparent; }
+  .header .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before { transform: rotate(45deg); }
+  .header .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after { transform: rotate(-45deg); }
+  .header .navbar-collapse { position: absolute; top: calc(100% + 8px); left: 0; right: 0; flex-basis: 100%; max-height: calc(100vh - 88px); max-height: calc(100dvh - 88px); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; background: #fff; border: 1px solid var(--brand-border, #dfe5ee); border-radius: 14px; box-shadow: 0 16px 40px rgb(20 36 59 / 14%); }
+  .header .navbar-collapse:not(.show):not(.collapsing) { display: none; }
+  .header .nav-links { flex-direction: column; align-items: stretch; width: 100%; max-height: none; overflow: visible; padding: 12px; margin: 0; background: white; border-radius: 12px; box-shadow: none; }
+  .header .nav-links > li { width: 100%; }
+  .header .nav-links { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+  .header .has-dropdown { flex-direction: row; }
+  .header .nav-links > li > .nav-link { display: flex; width: auto; flex: 1; min-height: 44px; font-size: 15px; white-space: normal; padding: 10px 8px; }
+  .header .submenu-toggle { width: 44px; }
+  .header .dropdown-menu a { min-height: 44px; }
+  .header .dropdown-menu { position: static; flex-basis: 100%; width: 100%; min-width: 0; max-height: none; box-shadow: none; border: 0; background: #fafafa; }
+  .header .nav-cta { margin: 8px 0; }
+}
+@media (max-width: 767.98px) {
+  .header .logo { flex-basis: 230px; width: 230px; }
+  .section { padding-block: 56px; }
+  .hero h1, .service-hero h1, .google-hero h1, .web-hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero { min-height: 620px; height: auto; padding-block: 140px 70px; }
+  .hero-content { min-width: 0; }
+  .hero-buttons { display: flex; gap: 12px; }
+  .hero-buttons > a { max-width: 100%; }
+  .web-hero { padding: 50px 20px; }
+  .about-image img, .web-hero-image img { height: auto; }
+  .contact-form { padding: 24px 18px; }
+  .footer-main, .footer-col { min-width: 0; }
+  .footer-bottom { gap: 16px; }
+  .footer-bottom-links { gap: 12px; }
+  .detail-content ul { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* Shared pop-up reveals use the animation API; retain normal hover effects. */
+.js-motion .reveal.scroll-pop,
+.reveal.scroll-pop,
+.detailed-services .detail-card.service-reveal.scroll-pop {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0ms;
+}

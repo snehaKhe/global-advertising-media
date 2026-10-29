@@ -2,76 +2,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search Engine Optimization (SEO) Services</title>
+  <title>SEO Company &amp; Social Media Marketing | Global Advertising Media</title>
    <link rel="stylesheet" href="style.css">
   <link rel = "stylesheet" href="digital-advertising.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <meta name="description" content="Improve website visibility, organic search rankings and relevant traffic with professional SEO services.">
+  <meta name="description" content="Discover Global Advertising Media's SEO services and professional approach to social media marketing, from website audits and content strategy to campaign planning and reporting.">
+  <link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;750;800&display=swap">
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
   
-<header class="header" id="header">
-  <nav class="navbar">
+<header class="header" id="header"><div class="header-contact-strip" aria-label="Contact our team"><div class="header-contact-strip-inner"><a class="header-strip-email" href="mailto:enquiry@globaladvertisingmedia.in"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>enquiry@globaladvertisingmedia.in</span></a><div class="header-strip-actions"><a href="tel:+919324850002" aria-label="Call +91 9324 850 002"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+91 9324 850 002</span></a><a href="https://wa.me/919324850002" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +91 9324 850 002"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>+91 9324 850 002</span></a></div></div></div>
+
+  <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
 
     <!-- Logo -->
     <a href="index.html#home" class="logo">
-      <img src="logo.png" alt="Global Advertising Media">
+      <img src="logo.png" alt="Global Advertising Media" class="img-fluid">
     </a>
 
     <!-- Mobile Menu Toggle -->
-    <input type="checkbox" id="menu-toggle">
-
-    <label for="menu-toggle" class="menu-icon"
-           aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-    </label>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
     <!-- Navigation Links -->
-    <ul class="nav-links">
+    <div class="collapse navbar-collapse" id="mainNavigation"><ul class="nav-links navbar-nav ms-auto">
 
       <li>
         <a href="index.html#home" class="nav-link">Home</a>
       </li>
 
       <!-- About Dropdown -->
-      <li class="nav-item has-dropdown">
-        <a href="index.html#about" class="nav-link">
-          About Us <span class="dropdown-arrow"></span>
-        </a>
+      <li class="nav-item has-dropdown dropdown">
+        <a href="index.html#about" class="nav-link">About Us</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open About Us menu"><span class="dropdown-arrow" aria-hidden="true"></span></button>
 
         <ul class="dropdown-menu">
-          <li><a href="about-our-agency.html">About Our Agency</a></li>
-          <li><a href="creative-thinking.html">Creative Thinking</a></li>
-          <li><a href="integrated-solutions.html">Integrated Solutions</a></li>
-          <li><a href="audience-focus.html">Audience Focus</a></li>
-          <li><a href="transparent-process.html">Transparent Process</a></li>
+          <li><a class="dropdown-item" href="about-our-agency.html">About Our Agency</a></li>
+          <li><a class="dropdown-item" href="creative-thinking.html">Creative Thinking</a></li>
+          <li><a class="dropdown-item" href="integrated-solutions.html">Integrated Solutions</a></li>
+          <li><a class="dropdown-item" href="audience-focus.html">Audience Focus</a></li>
+          <li><a class="dropdown-item" href="transparent-process.html">Transparent Process</a></li>
+<li><a class="dropdown-item" href="start-your-project.html">Start Your Project</a></li>
         </ul>
       </li>
 
       <!-- Services Dropdown -->
-      <li class="nav-item has-dropdown">
-        <a href="digital-marketing.html" class="nav-link">
-          Services <span class="dropdown-arrow"></span>
-        </a>
+      <li class="nav-item has-dropdown dropdown outdoor-advertising-nav"><a href="outdoor-advertising.html" class="nav-link">Outdoor Advertising</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open Outdoor Advertising menu"><span class="dropdown-arrow" aria-hidden="true"></span></button><ul class="dropdown-menu"><li><a class="dropdown-item" href="railway-advertising.html">Railway Advertising</a></li><li><a class="dropdown-item" href="metro-advertising.html">Metro Advertising</a></li><li><a class="dropdown-item" href="bus-advertising.html">Bus Advertising</a></li><li><a class="dropdown-item" href="tv-advertising.html">TV Advertising</a></li><li><a class="dropdown-item" href="theater-advertising.html">Theater Advertising</a></li><li><a class="dropdown-item" href="radio-advertising.html">Radio Advertising</a></li><li><a class="dropdown-item" href="tricycle-advertising.html">Tricycle Advertising</a></li><li><a class="dropdown-item" href="mall-advertising.html">Mall Advertising</a></li><li><a class="dropdown-item" href="airport-advertising.html">Airport Advertising</a></li><li><a class="dropdown-item" href="newspaper-advertising.html">Newspaper Advertising</a></li><li><a class="dropdown-item" href="cab-advertising.html">Cab Advertising</a></li><li><a class="dropdown-item" href="autorickshaw-advertising.html">Autorickshaw Advertising</a></li></ul></li>
 
-        <ul class="dropdown-menu">
-          <li><a href="digital-marketing.html">Digital Marketing</a></li>
-          <li><a href="outdoor-advertising.html">Outdoor Advertising</a></li>
-          <li><a href="branding-design.html">Branding &amp; Design</a></li>
-          <li><a href="media-planning.html">Media Planning</a></li>
-          <li><a href="creative-production.html">Creative Production</a></li>
-          <li><a href="campaign-strategy.html">Campaign Strategy</a></li>
-        </ul>
-      </li>
+      <li class="nav-item has-dropdown dropdown graphic-design-nav"><a href="graphic-design.html" class="nav-link">Graphic Design</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open Graphic Design menu"><span class="dropdown-arrow" aria-hidden="true"></span></button><ul class="dropdown-menu"><li><a class="dropdown-item" href="logo-designing.html">Logo Designing</a></li><li><a class="dropdown-item" href="visiting-card-designing.html">Visiting Card Designing</a></li><li><a class="dropdown-item" href="letterhead-designing.html">Letterhead Designing</a></li><li><a class="dropdown-item" href="pamphlet-designing.html">Pamphlet Designing</a></li><li><a class="dropdown-item" href="social-post-design.html">Social Post Design</a></li><li><a class="dropdown-item" href="festival-greetings.html">Festival Greeting</a></li><li><a class="dropdown-item" href="animated-video.html">Animated Video</a></li><li><a class="dropdown-item" href="ai-video.html">AI Video</a></li></ul></li>
 
       <!-- Website Designing Dropdown -->
-<li class="nav-item has-dropdown">
-  <a href="website-designing.html" class="nav-link">
-    Website Designing <span class="dropdown-arrow"></span>
-  </a>
+<li class="nav-item has-dropdown dropdown">
+  <a href="website-designing.html" class="nav-link">Website Designing</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open Website Designing menu"><span class="dropdown-arrow" aria-hidden="true"></span></button>
 
   <ul class="dropdown-menu">
     <li>
@@ -90,51 +75,88 @@
 </li>
 
       <!-- Digital Advertising Dropdown -->
-      <li class="nav-item has-dropdown">
-        <a href="digital-advertising.html" class="nav-link">
-          Digital Advertisement <span class="dropdown-arrow"></span>
-        </a>
+      <li class="nav-item has-dropdown dropdown">
+        <a href="digital-advertising.html" class="nav-link">Digital Advertisement</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open Digital Advertisement menu"><span class="dropdown-arrow" aria-hidden="true"></span></button>
 
         <ul class="dropdown-menu">
-          <li><a href="google-ads.html">Google Ads</a></li>
-          <li><a href="social-media-ads.html">Social Media Advertising</a></li>
-          <li><a href="display-advertising.html">Display Advertising</a></li>
-          <li><a href="video-advertising.html">Video Advertising</a></li>
-          <li><a href="remarketing.html">Remarketing &amp; Retargeting</a></li>
-          <li><a href="sem.html">Search Engine Marketing (SEM)</a></li>
-            <li><a href="seo.html">Search Engine Optimization (SEO)</a></li>
-            <li><a href="smo.html">Social Media Optimization (SMO)</a></li>
-            <li><a href="domain-registration.html">Domain Registration</a></li>
-            <li><a href="email-marketing.html">Email Marketing</a></li>
-            <li><a href="sms.html">SMS Marketing</a></li>
-            <li><a href="whatsapp.html">WhatsApp Marketing</a></li>
-            <li><a href="chatgpt-advertising.html">ChatGPT Advertising</a></li>
+          <li><a class="dropdown-item" href="google-ads.html">Google Ads</a></li>
+          <li><a class="dropdown-item" href="social-media-ads.html">Social Media Advertising</a></li>
+          <li><a class="dropdown-item" href="display-advertising.html">Display Advertising</a></li>
+          <li><a class="dropdown-item" href="video-advertising.html">Video Advertising</a></li>
+          <li><a class="dropdown-item" href="remarketing.html">Remarketing &amp; Retargeting</a></li>
+          <li><a class="dropdown-item" href="Sem.html">Search Engine Marketing (SEM)</a></li>
+            <li><a class="dropdown-item" href="Seo.html">Search Engine Optimization (SEO)</a></li>
+            <li><a class="dropdown-item" href="Smo.html">Social Media Optimization (SMO)</a></li>
+            <li><a class="dropdown-item" href="domain-registration.html">Domain Registration</a></li>
+            <li><a class="dropdown-item" href="email-marketing.html">Email Marketing</a></li>
+            <li><a class="dropdown-item" href="Sms.html">SMS Marketing</a></li>
+            <li><a class="dropdown-item" href="whatsapp.html">WhatsApp Marketing</a></li>
+            <li><a class="dropdown-item" href="chatgpt-advertising.html">ChatGPT Advertising</a></li>
             </ul>
       </li>
 
       <!-- Our Work -->
-      <li>
-        <a href="index.html#portfolio" class="nav-link">Our Work</a>
-      </li>
 
       <!-- FAQs -->
-      <li>
-        <a href="index.html#faq" class="nav-link">FAQs</a>
-      </li>
 
       <!-- Contact CTA -->
-      <li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+<li>
         <a href="index.html#contact" class="nav-cta">
           Let's Talk <span class="cta-arrow">↗</span>
         </a>
       </li>
 
     </ul>
-  </nav>
+  </div></nav>
 </header>
 
 
  <main id="seo">
+  <section class="page-hero seo-hero" aria-labelledby="seo-heading">
+    <div class="container seo-hero-layout">
+      <div class="seo-hero-copy">
+      <span class="eyebrow">SEARCH VISIBILITY. MEANINGFUL CONNECTIONS.</span>
+      <h1 id="seo-heading">An SEO Company That Puts <span>Your Business First.</span></h1>
+      <p class="hero-description">Help customers discover your business, understand your value, and take the next step. Global Advertising Media brings SEO and social media marketing together through thoughtful strategy, useful content, and clear communication.</p>
+      <div class="hero-buttons justify-content-center mt-4">
+        <a class="btn" href="index.html#contact">Discuss Your Digital Strategy ↗</a>
+        <a class="btn btn-outline" href="#social-media-approach">Our Social Media Approach</a>
+      </div>
+      <div class="seo-hero-points" aria-label="Our focus areas"><span>Search strategy</span><span>Useful content</span><span>Clear reporting</span></div>
+      </div>
+      <figure class="seo-hero-visual">
+        <img src="images/seo-search-illustration.jpg" alt="Illustration of a laptop, search results, magnifying glass, and analytics chart" width="1536" height="1024" fetchpriority="high" decoding="async">
+        <figcaption><span aria-hidden="true">↗</span> Discover. Connect. Grow.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="seo-company-heading">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-7">
+          <span class="eyebrow">YOUR DIGITAL GROWTH PARTNER</span>
+          <h2 id="seo-company-heading">SEO Built Around <span>People and Purpose.</span></h2>
+          <p>At Global Advertising Media, we approach search engine optimization as part of your wider business strategy. We begin by understanding your products, services, customers, and priorities, then identify where your website can answer customer questions more clearly and make useful information easier to find.</p>
+          <p>Our work connects website improvements with content planning and ongoing measurement. Whether you want to strengthen a local presence, introduce a service, or support a growing brand, we shape the scope around your website's condition and the resources available to your team.</p>
+          <p>You receive a clear explanation of recommended work, agreed priorities, and progress. We focus on practical improvements and relevant enquiries rather than promises of instant rankings.</p>
+        </div>
+        <div class="col-12 col-lg-5">
+          <aside class="service-detail-panel p-4" aria-labelledby="seo-priorities-heading">
+            <h3 id="seo-priorities-heading">What Guides Our Work</h3>
+            <ul class="seo-priorities">
+              <li><strong>Business relevance:</strong> focus on the audiences and services that matter to you.</li>
+              <li><strong>Helpful experiences:</strong> make pages clear, accessible, and easy to navigate.</li>
+              <li><strong>Agreed priorities:</strong> explain the scope, responsibilities, and next steps.</li>
+              <li><strong>Ongoing review:</strong> use performance insights to guide the next round of improvements.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="services">
     <div class="container">
       <div class="section-heading">
@@ -146,45 +168,55 @@
         </p>
       </div>
 
-      <div class="card-grid">
-        <article class="card">
+      <div class="card-grid row g-4 bootstrap-layout">
+        <article class="card col-12 col-md-6 col-xl-4">
           <div class="card-icon">🔎</div>
           <h3>Keyword Research</h3>
           <p>Discover relevant search queries that match your audience's needs and intent.</p>
+        <a class="seo-text-link" href="seo-services.html#keyword-research">Explore this service ↗</a>
         </article>
 
-        <article class="card">
+        <article class="card col-12 col-md-6 col-xl-4">
           <div class="card-icon">📝</div>
           <h3>On-Page SEO</h3>
           <p>Optimize page titles, headings, descriptions, content and internal links.</p>
+        <a class="seo-text-link" href="seo-services.html#on-page-seo">Explore this service ↗</a>
         </article>
 
-        <article class="card">
+        <article class="card col-12 col-md-6 col-xl-4">
           <div class="card-icon">⚙️</div>
           <h3>Technical SEO</h3>
           <p>Review crawling, indexing, site structure, mobile usability and page performance.</p>
+        <a class="seo-text-link" href="seo-services.html#technical-seo">Explore this service ↗</a>
         </article>
 
-        <article class="card">
+        <article class="card col-12 col-md-6 col-xl-4">
           <div class="card-icon">✍️</div>
           <h3>SEO Content Strategy</h3>
           <p>Plan helpful content that addresses search intent and supports your business goals.</p>
+        <a class="seo-text-link" href="seo-services.html#content-strategy">Explore this service ↗</a>
         </article>
 
-        <article class="card">
+        <article class="card col-12 col-md-6 col-xl-4">
           <div class="card-icon">🔗</div>
           <h3>Off-Page SEO</h3>
           <p>Support website authority through relevant outreach and quality backlink opportunities.</p>
+        <a class="seo-text-link" href="seo-services.html#off-page-seo">Explore this service ↗</a>
         </article>
 
-        <article class="card">
+        <article class="card col-12 col-md-6 col-xl-4">
           <div class="card-icon">📊</div>
           <h3>SEO Reporting</h3>
           <p>Monitor organic traffic, search visibility, rankings and technical improvements.</p>
+        <a class="seo-text-link" href="seo-services.html#seo-reporting">Explore this service ↗</a>
         </article>
       </div>
     </div>
   </section>
+
+
+
+  <div class="container text-center pb-4"><a class="btn btn-primary" href="seo-services.html">Explore all 12 SEO services ↗</a></div>
 
   <section class="section section-light">
     <div class="container">
@@ -192,18 +224,18 @@
         <h2>Our SEO Workflow</h2>
       </div>
 
-      <div class="card-grid">
-        <article class="card">
+      <div class="card-grid row g-4 bootstrap-layout">
+        <article class="card col-12 col-md-6 col-xl-4">
           <h3>SEO Audit & Research</h3>
           <p>Evaluate your website, competitors, search queries and optimization opportunities.</p>
         </article>
 
-        <article class="card">
+        <article class="card col-12 col-md-6 col-xl-4">
           <h3>Optimization & Implementation</h3>
           <p>Improve website structure, page content, technical SEO and internal linking.</p>
         </article>
 
-        <article class="card">
+        <article class="card col-12 col-md-6 col-xl-4">
           <h3>Tracking & Improvement</h3>
           <p>Measure organic search performance and refine the strategy over time.</p>
         </article>
@@ -211,15 +243,338 @@
     </div>
   </section>
 
+  <section class="section" aria-labelledby="seo-opportunities-heading">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">A STRATEGY THAT FITS YOUR BUSINESS</span>
+        <h2 id="seo-opportunities-heading">Make Every Visit <span>More Useful.</span></h2>
+        <p>We look beyond individual keywords to consider what customers need at each stage of their journey.</p>
+      </div>
+      <div class="card-grid row g-4 bootstrap-layout">
+        <article class="card col-12 col-md-6 col-xl-4">
+          <h3>Local Search Presence</h3>
+          <p>Review your business information, location pages, and local content so nearby customers can understand where you operate and which services you provide. Where relevant, we include your Google Business Profile in the agreed scope.</p>
+        </article>
+        <article class="card col-12 col-md-6 col-xl-4">
+          <h3>Content With a Clear Role</h3>
+          <p>Develop service pages, practical guides, and answers to common questions. Each piece has a defined audience and purpose, with language that reflects your brand and explains your offering without unnecessary jargon.</p>
+        </article>
+        <article class="card col-12 col-md-6 col-xl-4">
+          <h3>A Clear Path to Enquiry</h3>
+          <p>Review page structure, calls to action, and contact journeys to help interested visitors take the next step. Reporting can include enquiry actions alongside traffic and search visibility when suitable tracking is in place.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="social-media-approach" aria-labelledby="social-approach-heading">
+    <div class="container">
+      <div class="seo-planning-feature">
+        <figure>
+          <img src="images/seo-content-planning.jpg" alt="Conceptual scene of colleagues planning content beside a laptop with analytics charts" width="1536" height="1024" loading="lazy" decoding="async">
+          <figcaption>From audience insights to a coordinated content plan.</figcaption>
+        </figure>
+        <div>
+          <span class="eyebrow">STRATEGY MEETS CREATIVITY</span>
+          <h2>Good Content Starts With <span>A Better Plan.</span></h2>
+          <p>Bring your search insights, brand story, and social calendar into one purposeful plan. We turn audience questions into useful content and keep your messages consistent from the first post to the website visit.</p>
+          <ul class="seo-visual-list">
+            <li><span aria-hidden="true">01</span><div><strong>Listen to your audience</strong><p>Understand their questions, interests, and next steps.</p></div></li>
+            <li><span aria-hidden="true">02</span><div><strong>Create with purpose</strong><p>Give every page, post, and campaign a clear role.</p></div></li>
+            <li><span aria-hidden="true">03</span><div><strong>Learn and improve</strong><p>Use relevant performance insights to refine the plan.</p></div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-heading">
+        <span class="eyebrow">PROFESSIONAL SOCIAL MEDIA MARKETING</span>
+        <h2 id="social-approach-heading">A Clear Plan. <span>A Consistent Brand.</span></h2>
+        <p>Social media deserves the same care as your website. Our approach connects audience research, creative planning, approvals, and measurement so every activity has a clear reason behind it.</p>
+      </div>
+      <div class="card-grid row g-4 bootstrap-layout">
+        <article class="card col-12 col-md-6 col-xl-4">
+          <span class="eyebrow">01 / DISCOVERY</span>
+          <h3>Understand Your Audience</h3>
+          <p>We discuss your goals, customer profiles, competitors, and existing channels. Together, we choose priorities such as awareness, engagement, website visits, or enquiries and agree how progress will be assessed.</p>
+        </article>
+        <article class="card col-12 col-md-6 col-xl-4">
+          <span class="eyebrow">02 / STRATEGY</span>
+          <h3>Select the Right Channels</h3>
+          <p>We recommend a focused mix of platforms based on your audience, message, and available resources. The plan defines content themes, tone of voice, posting frequency, and the role of organic content and paid campaigns.</p>
+        </article>
+        <article class="card col-12 col-md-6 col-xl-4">
+          <span class="eyebrow">03 / CREATIVE PLANNING</span>
+          <h3>Create With Consistency</h3>
+          <p>A content calendar brings captions, graphics, video ideas, and campaign messages into one coordinated plan. We balance service information, educational content, brand stories, and timely updates to give audiences a reason to engage.</p>
+        </article>
+        <article class="card col-12 col-md-6 col-xl-4">
+          <span class="eyebrow">04 / COLLABORATION</span>
+          <h3>Review Before Publishing</h3>
+          <p>We agree an approval process, content responsibilities, and publishing schedule. For community management included in the scope, we define response guidance and when customer questions should be passed to your team.</p>
+        </article>
+        <article class="card col-12 col-md-6 col-xl-4">
+          <span class="eyebrow">05 / CAMPAIGNS</span>
+          <h3>Plan Paid Activity Carefully</h3>
+          <p>When paid advertising is appropriate, we agree campaign objectives, creative options, audience settings, and budgets before launch. Tests compare messages and formats, while the landing page is reviewed for consistency with the ad.</p>
+        </article>
+        <article class="card col-12 col-md-6 col-xl-4">
+          <span class="eyebrow">06 / IMPROVEMENT</span>
+          <h3>Report and Refine</h3>
+          <p>We review performance against the agreed objectives, using relevant measures such as engagement, website visits, enquiries, and paid campaign costs. Reports explain what we learned and what we recommend changing next.</p>
+        </article>
+      </div>
+      <p class="text-center mt-4 mb-0"><a class="seo-text-link" href="Smm.html">Discover our social media marketing services ↗</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="connected-marketing-heading">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">ONE CONNECTED CONTENT STRATEGY</span>
+        <h2 id="connected-marketing-heading">Bring Search and Social <span>Together.</span></h2>
+        <p>Your website and social channels should tell a consistent story. We plan complementary content that gives people useful information wherever they encounter your brand.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <h3>Turn Customer Questions Into Content</h3>
+          <p>A detailed website guide can become a series of social posts, a short video, or a helpful carousel. Questions raised in comments and enquiries can also inform future website content, helping your team build a more useful library of answers.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h3>Keep the Journey Consistent</h3>
+          <p>We align campaign messages, landing pages, and calls to action so visitors know what to expect. Search and social performance are reviewed in their own context; social engagement is not presented as a guarantee of better search rankings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" aria-labelledby="seo-faq-heading">
+    <div class="container seo-faq">
+      <div class="section-heading">
+        <span class="eyebrow">BEFORE WE GET STARTED</span>
+        <h2 id="seo-faq-heading">Your Questions, <span>Answered.</span></h2>
+      </div>
+      <details class="faq-item"><summary>How do you build an SEO plan for my business?</summary><p>We start with your goals and an initial review of your website, content, and search presence. We then recommend priorities, agree a scope of work, and explain which changes need input or access from your team.</p></details>
+      <details class="faq-item"><summary>How soon should I expect SEO results?</summary><p>SEO is an ongoing process. Timing depends on your starting point, competition, website condition, and the work implemented. We establish a baseline and review progress over time rather than promise a fixed ranking or deadline.</p></details>
+      <details class="faq-item"><summary>Can you manage both SEO and social media?</summary><p>We can discuss a combined plan covering website optimization, content, and social media activity. Deliverables, approvals, reporting, and any paid advertising budget are agreed before work begins.</p></details>
+      <details class="faq-item"><summary>What information do you need to prepare a proposal?</summary><p>Share your website address, services, target locations, social profiles, business objectives, and an indicative budget. We will identify any additional information needed to prepare a relevant scope and proposal.</p></details>
+    </div>
+  </section>
+
   <section class="section" id="contact">
     <div class="container">
       <div class="cta">
-        <h2>Ready to Improve Your Search Visibility?</h2>
-        <p>Let's develop an SEO strategy to help more customers discover your website.</p>
-        <a class="btn" href="mailto:hello@example.com?subject=SEO%20Services">
-          Contact Our Team
+        <h2>Ready for a More Connected Digital Presence?</h2>
+        <p>Tell us about your business and goals. Let's discuss an SEO and social media marketing plan with clear priorities, practical deliverables, and a professional approach.</p>
+        <a class="btn" href="index.html#contact">
+          Discuss Your Project ↗
         </a>
       </div>
+    </div>
+  </section>
+
+  <section class="seo-countries" aria-labelledby="countries-heading">
+    <div class="container">
+      <div class="countries-heading">
+        <div><span class="eyebrow">LOCAL UNDERSTANDING. GLOBAL POSSIBILITIES.</span><h2 id="countries-heading">Countries <span>We Serve.</span></h2></div>
+        <p>Helping businesses connect with audiences across borders. Discuss your target country with us, and we will shape an SEO and digital marketing plan around your audience, language requirements, and business goals.</p>
+      </div>
+      <ul class="countries-grid" aria-label="Countries we serve">
+          <li class="country-flag" title="Afghanistan"><a href="countries/google-ads-afghanistan.html" aria-label="Google Ads in Afghanistan"><img src="https://flagcdn.com/w40/af.png" alt="Afghanistan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Albania"><a href="countries/google-ads-albania.html" aria-label="Google Ads in Albania"><img src="https://flagcdn.com/w40/al.png" alt="Albania" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Algeria"><a href="countries/google-ads-algeria.html" aria-label="Google Ads in Algeria"><img src="https://flagcdn.com/w40/dz.png" alt="Algeria" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Andorra"><a href="countries/google-ads-andorra.html" aria-label="Google Ads in Andorra"><img src="https://flagcdn.com/w40/ad.png" alt="Andorra" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Angola"><a href="countries/google-ads-angola.html" aria-label="Google Ads in Angola"><img src="https://flagcdn.com/w40/ao.png" alt="Angola" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Antigua &amp; Barbuda"><a href="countries/google-ads-antigua-and-barbuda.html" aria-label="Google Ads in Antigua &amp; Barbuda"><img src="https://flagcdn.com/w40/ag.png" alt="Antigua &amp; Barbuda" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Argentina"><a href="countries/google-ads-argentina.html" aria-label="Google Ads in Argentina"><img src="https://flagcdn.com/w40/ar.png" alt="Argentina" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Armenia"><a href="countries/google-ads-armenia.html" aria-label="Google Ads in Armenia"><img src="https://flagcdn.com/w40/am.png" alt="Armenia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Australia"><a href="countries/google-ads-australia.html" aria-label="Google Ads in Australia"><img src="https://flagcdn.com/w40/au.png" alt="Australia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Austria"><a href="countries/google-ads-austria.html" aria-label="Google Ads in Austria"><img src="https://flagcdn.com/w40/at.png" alt="Austria" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Azerbaijan"><a href="countries/google-ads-azerbaijan.html" aria-label="Google Ads in Azerbaijan"><img src="https://flagcdn.com/w40/az.png" alt="Azerbaijan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Bahamas"><a href="countries/google-ads-bahamas.html" aria-label="Google Ads in Bahamas"><img src="https://flagcdn.com/w40/bs.png" alt="Bahamas" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Bahrain"><a href="countries/google-ads-bahrain.html" aria-label="Google Ads in Bahrain"><img src="https://flagcdn.com/w40/bh.png" alt="Bahrain" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Bangladesh"><a href="countries/google-ads-bangladesh.html" aria-label="Google Ads in Bangladesh"><img src="https://flagcdn.com/w40/bd.png" alt="Bangladesh" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Barbados"><a href="countries/google-ads-barbados.html" aria-label="Google Ads in Barbados"><img src="https://flagcdn.com/w40/bb.png" alt="Barbados" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Belarus"><a href="countries/google-ads-belarus.html" aria-label="Google Ads in Belarus"><img src="https://flagcdn.com/w40/by.png" alt="Belarus" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Belgium"><a href="countries/google-ads-belgium.html" aria-label="Google Ads in Belgium"><img src="https://flagcdn.com/w40/be.png" alt="Belgium" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Belize"><a href="countries/google-ads-belize.html" aria-label="Google Ads in Belize"><img src="https://flagcdn.com/w40/bz.png" alt="Belize" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Benin"><a href="countries/google-ads-benin.html" aria-label="Google Ads in Benin"><img src="https://flagcdn.com/w40/bj.png" alt="Benin" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Bhutan"><a href="countries/google-ads-bhutan.html" aria-label="Google Ads in Bhutan"><img src="https://flagcdn.com/w40/bt.png" alt="Bhutan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Bolivia"><a href="countries/google-ads-bolivia.html" aria-label="Google Ads in Bolivia"><img src="https://flagcdn.com/w40/bo.png" alt="Bolivia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Bosnia &amp; Herzegovina"><a href="countries/google-ads-bosnia-and-herzegovina.html" aria-label="Google Ads in Bosnia &amp; Herzegovina"><img src="https://flagcdn.com/w40/ba.png" alt="Bosnia &amp; Herzegovina" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Botswana"><a href="countries/google-ads-botswana.html" aria-label="Google Ads in Botswana"><img src="https://flagcdn.com/w40/bw.png" alt="Botswana" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Brazil"><a href="countries/google-ads-brazil.html" aria-label="Google Ads in Brazil"><img src="https://flagcdn.com/w40/br.png" alt="Brazil" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Brunei"><a href="countries/google-ads-brunei.html" aria-label="Google Ads in Brunei"><img src="https://flagcdn.com/w40/bn.png" alt="Brunei" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Bulgaria"><a href="countries/google-ads-bulgaria.html" aria-label="Google Ads in Bulgaria"><img src="https://flagcdn.com/w40/bg.png" alt="Bulgaria" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Burkina Faso"><a href="countries/google-ads-burkina-faso.html" aria-label="Google Ads in Burkina Faso"><img src="https://flagcdn.com/w40/bf.png" alt="Burkina Faso" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Burundi"><a href="countries/google-ads-burundi.html" aria-label="Google Ads in Burundi"><img src="https://flagcdn.com/w40/bi.png" alt="Burundi" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Cape Verde"><a href="countries/google-ads-cape-verde.html" aria-label="Google Ads in Cape Verde"><img src="https://flagcdn.com/w40/cv.png" alt="Cape Verde" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Cambodia"><a href="countries/google-ads-cambodia.html" aria-label="Google Ads in Cambodia"><img src="https://flagcdn.com/w40/kh.png" alt="Cambodia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Cameroon"><a href="countries/google-ads-cameroon.html" aria-label="Google Ads in Cameroon"><img src="https://flagcdn.com/w40/cm.png" alt="Cameroon" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Canada"><a href="countries/google-ads-canada.html" aria-label="Google Ads in Canada"><img src="https://flagcdn.com/w40/ca.png" alt="Canada" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Central African Republic"><a href="countries/google-ads-central-african-republic.html" aria-label="Google Ads in Central African Republic"><img src="https://flagcdn.com/w40/cf.png" alt="Central African Republic" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Chad"><a href="countries/google-ads-chad.html" aria-label="Google Ads in Chad"><img src="https://flagcdn.com/w40/td.png" alt="Chad" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Chile"><a href="countries/google-ads-chile.html" aria-label="Google Ads in Chile"><img src="https://flagcdn.com/w40/cl.png" alt="Chile" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="China"><a href="countries/google-ads-china.html" aria-label="Google Ads in China"><img src="https://flagcdn.com/w40/cn.png" alt="China" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Colombia"><a href="countries/google-ads-colombia.html" aria-label="Google Ads in Colombia"><img src="https://flagcdn.com/w40/co.png" alt="Colombia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Comoros"><a href="countries/google-ads-comoros.html" aria-label="Google Ads in Comoros"><img src="https://flagcdn.com/w40/km.png" alt="Comoros" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Congo - Brazzaville"><a href="countries/google-ads-congo-brazzaville.html" aria-label="Google Ads in Congo - Brazzaville"><img src="https://flagcdn.com/w40/cg.png" alt="Congo - Brazzaville" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Congo - Kinshasa"><a href="countries/google-ads-congo-kinshasa.html" aria-label="Google Ads in Congo - Kinshasa"><img src="https://flagcdn.com/w40/cd.png" alt="Congo - Kinshasa" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Costa Rica"><a href="countries/google-ads-costa-rica.html" aria-label="Google Ads in Costa Rica"><img src="https://flagcdn.com/w40/cr.png" alt="Costa Rica" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Côte d’Ivoire"><a href="countries/google-ads-cote-d-ivoire.html" aria-label="Google Ads in Côte d’Ivoire"><img src="https://flagcdn.com/w40/ci.png" alt="Côte d’Ivoire" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Croatia"><a href="countries/google-ads-croatia.html" aria-label="Google Ads in Croatia"><img src="https://flagcdn.com/w40/hr.png" alt="Croatia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Cuba"><a href="countries/google-ads-cuba.html" aria-label="Google Ads in Cuba"><img src="https://flagcdn.com/w40/cu.png" alt="Cuba" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Cyprus"><a href="countries/google-ads-cyprus.html" aria-label="Google Ads in Cyprus"><img src="https://flagcdn.com/w40/cy.png" alt="Cyprus" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Czechia"><a href="countries/google-ads-czechia.html" aria-label="Google Ads in Czechia"><img src="https://flagcdn.com/w40/cz.png" alt="Czechia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Denmark"><a href="countries/google-ads-denmark.html" aria-label="Google Ads in Denmark"><img src="https://flagcdn.com/w40/dk.png" alt="Denmark" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Djibouti"><a href="countries/google-ads-djibouti.html" aria-label="Google Ads in Djibouti"><img src="https://flagcdn.com/w40/dj.png" alt="Djibouti" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Dominica"><a href="countries/google-ads-dominica.html" aria-label="Google Ads in Dominica"><img src="https://flagcdn.com/w40/dm.png" alt="Dominica" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Dominican Republic"><a href="countries/google-ads-dominican-republic.html" aria-label="Google Ads in Dominican Republic"><img src="https://flagcdn.com/w40/do.png" alt="Dominican Republic" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Ecuador"><a href="countries/google-ads-ecuador.html" aria-label="Google Ads in Ecuador"><img src="https://flagcdn.com/w40/ec.png" alt="Ecuador" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Egypt"><a href="countries/google-ads-egypt.html" aria-label="Google Ads in Egypt"><img src="https://flagcdn.com/w40/eg.png" alt="Egypt" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="El Salvador"><a href="countries/google-ads-el-salvador.html" aria-label="Google Ads in El Salvador"><img src="https://flagcdn.com/w40/sv.png" alt="El Salvador" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Equatorial Guinea"><a href="countries/google-ads-equatorial-guinea.html" aria-label="Google Ads in Equatorial Guinea"><img src="https://flagcdn.com/w40/gq.png" alt="Equatorial Guinea" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Eritrea"><a href="countries/google-ads-eritrea.html" aria-label="Google Ads in Eritrea"><img src="https://flagcdn.com/w40/er.png" alt="Eritrea" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Estonia"><a href="countries/google-ads-estonia.html" aria-label="Google Ads in Estonia"><img src="https://flagcdn.com/w40/ee.png" alt="Estonia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Eswatini"><a href="countries/google-ads-eswatini.html" aria-label="Google Ads in Eswatini"><img src="https://flagcdn.com/w40/sz.png" alt="Eswatini" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Ethiopia"><a href="countries/google-ads-ethiopia.html" aria-label="Google Ads in Ethiopia"><img src="https://flagcdn.com/w40/et.png" alt="Ethiopia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Fiji"><a href="countries/google-ads-fiji.html" aria-label="Google Ads in Fiji"><img src="https://flagcdn.com/w40/fj.png" alt="Fiji" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Finland"><a href="countries/google-ads-finland.html" aria-label="Google Ads in Finland"><img src="https://flagcdn.com/w40/fi.png" alt="Finland" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="France"><a href="countries/google-ads-france.html" aria-label="Google Ads in France"><img src="https://flagcdn.com/w40/fr.png" alt="France" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Gabon"><a href="countries/google-ads-gabon.html" aria-label="Google Ads in Gabon"><img src="https://flagcdn.com/w40/ga.png" alt="Gabon" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Gambia"><a href="countries/google-ads-gambia.html" aria-label="Google Ads in Gambia"><img src="https://flagcdn.com/w40/gm.png" alt="Gambia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Georgia"><a href="countries/google-ads-georgia.html" aria-label="Google Ads in Georgia"><img src="https://flagcdn.com/w40/ge.png" alt="Georgia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Germany"><a href="countries/google-ads-germany.html" aria-label="Google Ads in Germany"><img src="https://flagcdn.com/w40/de.png" alt="Germany" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Ghana"><a href="countries/google-ads-ghana.html" aria-label="Google Ads in Ghana"><img src="https://flagcdn.com/w40/gh.png" alt="Ghana" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Greece"><a href="countries/google-ads-greece.html" aria-label="Google Ads in Greece"><img src="https://flagcdn.com/w40/gr.png" alt="Greece" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Grenada"><a href="countries/google-ads-grenada.html" aria-label="Google Ads in Grenada"><img src="https://flagcdn.com/w40/gd.png" alt="Grenada" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Guatemala"><a href="countries/google-ads-guatemala.html" aria-label="Google Ads in Guatemala"><img src="https://flagcdn.com/w40/gt.png" alt="Guatemala" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Guinea"><a href="countries/google-ads-guinea.html" aria-label="Google Ads in Guinea"><img src="https://flagcdn.com/w40/gn.png" alt="Guinea" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Guinea-Bissau"><a href="countries/google-ads-guinea-bissau.html" aria-label="Google Ads in Guinea-Bissau"><img src="https://flagcdn.com/w40/gw.png" alt="Guinea-Bissau" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Guyana"><a href="countries/google-ads-guyana.html" aria-label="Google Ads in Guyana"><img src="https://flagcdn.com/w40/gy.png" alt="Guyana" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Haiti"><a href="countries/google-ads-haiti.html" aria-label="Google Ads in Haiti"><img src="https://flagcdn.com/w40/ht.png" alt="Haiti" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Honduras"><a href="countries/google-ads-honduras.html" aria-label="Google Ads in Honduras"><img src="https://flagcdn.com/w40/hn.png" alt="Honduras" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Hungary"><a href="countries/google-ads-hungary.html" aria-label="Google Ads in Hungary"><img src="https://flagcdn.com/w40/hu.png" alt="Hungary" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Iceland"><a href="countries/google-ads-iceland.html" aria-label="Google Ads in Iceland"><img src="https://flagcdn.com/w40/is.png" alt="Iceland" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="India"><a href="countries/google-ads-india.html" aria-label="Google Ads in India"><img src="https://flagcdn.com/w40/in.png" alt="India" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Indonesia"><a href="countries/google-ads-indonesia.html" aria-label="Google Ads in Indonesia"><img src="https://flagcdn.com/w40/id.png" alt="Indonesia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Iran"><a href="countries/google-ads-iran.html" aria-label="Google Ads in Iran"><img src="https://flagcdn.com/w40/ir.png" alt="Iran" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Iraq"><a href="countries/google-ads-iraq.html" aria-label="Google Ads in Iraq"><img src="https://flagcdn.com/w40/iq.png" alt="Iraq" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Ireland"><a href="countries/google-ads-ireland.html" aria-label="Google Ads in Ireland"><img src="https://flagcdn.com/w40/ie.png" alt="Ireland" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Israel"><a href="countries/google-ads-israel.html" aria-label="Google Ads in Israel"><img src="https://flagcdn.com/w40/il.png" alt="Israel" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Italy"><a href="countries/google-ads-italy.html" aria-label="Google Ads in Italy"><img src="https://flagcdn.com/w40/it.png" alt="Italy" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Jamaica"><a href="countries/google-ads-jamaica.html" aria-label="Google Ads in Jamaica"><img src="https://flagcdn.com/w40/jm.png" alt="Jamaica" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Japan"><a href="countries/google-ads-japan.html" aria-label="Google Ads in Japan"><img src="https://flagcdn.com/w40/jp.png" alt="Japan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Jordan"><a href="countries/google-ads-jordan.html" aria-label="Google Ads in Jordan"><img src="https://flagcdn.com/w40/jo.png" alt="Jordan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Kazakhstan"><a href="countries/google-ads-kazakhstan.html" aria-label="Google Ads in Kazakhstan"><img src="https://flagcdn.com/w40/kz.png" alt="Kazakhstan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Kenya"><a href="countries/google-ads-kenya.html" aria-label="Google Ads in Kenya"><img src="https://flagcdn.com/w40/ke.png" alt="Kenya" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Kiribati"><a href="countries/google-ads-kiribati.html" aria-label="Google Ads in Kiribati"><img src="https://flagcdn.com/w40/ki.png" alt="Kiribati" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="North Korea"><a href="countries/google-ads-north-korea.html" aria-label="Google Ads in North Korea"><img src="https://flagcdn.com/w40/kp.png" alt="North Korea" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="South Korea"><a href="countries/google-ads-south-korea.html" aria-label="Google Ads in South Korea"><img src="https://flagcdn.com/w40/kr.png" alt="South Korea" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Kuwait"><a href="countries/google-ads-kuwait.html" aria-label="Google Ads in Kuwait"><img src="https://flagcdn.com/w40/kw.png" alt="Kuwait" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Kyrgyzstan"><a href="countries/google-ads-kyrgyzstan.html" aria-label="Google Ads in Kyrgyzstan"><img src="https://flagcdn.com/w40/kg.png" alt="Kyrgyzstan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Laos"><a href="countries/google-ads-laos.html" aria-label="Google Ads in Laos"><img src="https://flagcdn.com/w40/la.png" alt="Laos" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Latvia"><a href="countries/google-ads-latvia.html" aria-label="Google Ads in Latvia"><img src="https://flagcdn.com/w40/lv.png" alt="Latvia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Lebanon"><a href="countries/google-ads-lebanon.html" aria-label="Google Ads in Lebanon"><img src="https://flagcdn.com/w40/lb.png" alt="Lebanon" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Lesotho"><a href="countries/google-ads-lesotho.html" aria-label="Google Ads in Lesotho"><img src="https://flagcdn.com/w40/ls.png" alt="Lesotho" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Liberia"><a href="countries/google-ads-liberia.html" aria-label="Google Ads in Liberia"><img src="https://flagcdn.com/w40/lr.png" alt="Liberia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Libya"><a href="countries/google-ads-libya.html" aria-label="Google Ads in Libya"><img src="https://flagcdn.com/w40/ly.png" alt="Libya" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Liechtenstein"><a href="countries/google-ads-liechtenstein.html" aria-label="Google Ads in Liechtenstein"><img src="https://flagcdn.com/w40/li.png" alt="Liechtenstein" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Lithuania"><a href="countries/google-ads-lithuania.html" aria-label="Google Ads in Lithuania"><img src="https://flagcdn.com/w40/lt.png" alt="Lithuania" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Luxembourg"><a href="countries/google-ads-luxembourg.html" aria-label="Google Ads in Luxembourg"><img src="https://flagcdn.com/w40/lu.png" alt="Luxembourg" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Madagascar"><a href="countries/google-ads-madagascar.html" aria-label="Google Ads in Madagascar"><img src="https://flagcdn.com/w40/mg.png" alt="Madagascar" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Malawi"><a href="countries/google-ads-malawi.html" aria-label="Google Ads in Malawi"><img src="https://flagcdn.com/w40/mw.png" alt="Malawi" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Malaysia"><a href="countries/google-ads-malaysia.html" aria-label="Google Ads in Malaysia"><img src="https://flagcdn.com/w40/my.png" alt="Malaysia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Maldives"><a href="countries/google-ads-maldives.html" aria-label="Google Ads in Maldives"><img src="https://flagcdn.com/w40/mv.png" alt="Maldives" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Mali"><a href="countries/google-ads-mali.html" aria-label="Google Ads in Mali"><img src="https://flagcdn.com/w40/ml.png" alt="Mali" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Malta"><a href="countries/google-ads-malta.html" aria-label="Google Ads in Malta"><img src="https://flagcdn.com/w40/mt.png" alt="Malta" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Marshall Islands"><a href="countries/google-ads-marshall-islands.html" aria-label="Google Ads in Marshall Islands"><img src="https://flagcdn.com/w40/mh.png" alt="Marshall Islands" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Mauritania"><a href="countries/google-ads-mauritania.html" aria-label="Google Ads in Mauritania"><img src="https://flagcdn.com/w40/mr.png" alt="Mauritania" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Mauritius"><a href="countries/google-ads-mauritius.html" aria-label="Google Ads in Mauritius"><img src="https://flagcdn.com/w40/mu.png" alt="Mauritius" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Mexico"><a href="countries/google-ads-mexico.html" aria-label="Google Ads in Mexico"><img src="https://flagcdn.com/w40/mx.png" alt="Mexico" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Micronesia"><a href="countries/google-ads-micronesia.html" aria-label="Google Ads in Micronesia"><img src="https://flagcdn.com/w40/fm.png" alt="Micronesia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Moldova"><a href="countries/google-ads-moldova.html" aria-label="Google Ads in Moldova"><img src="https://flagcdn.com/w40/md.png" alt="Moldova" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Monaco"><a href="countries/google-ads-monaco.html" aria-label="Google Ads in Monaco"><img src="https://flagcdn.com/w40/mc.png" alt="Monaco" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Mongolia"><a href="countries/google-ads-mongolia.html" aria-label="Google Ads in Mongolia"><img src="https://flagcdn.com/w40/mn.png" alt="Mongolia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Montenegro"><a href="countries/google-ads-montenegro.html" aria-label="Google Ads in Montenegro"><img src="https://flagcdn.com/w40/me.png" alt="Montenegro" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Morocco"><a href="countries/google-ads-morocco.html" aria-label="Google Ads in Morocco"><img src="https://flagcdn.com/w40/ma.png" alt="Morocco" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Mozambique"><a href="countries/google-ads-mozambique.html" aria-label="Google Ads in Mozambique"><img src="https://flagcdn.com/w40/mz.png" alt="Mozambique" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Myanmar (Burma)"><a href="countries/google-ads-myanmar-burma.html" aria-label="Google Ads in Myanmar (Burma)"><img src="https://flagcdn.com/w40/mm.png" alt="Myanmar (Burma)" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Namibia"><a href="countries/google-ads-namibia.html" aria-label="Google Ads in Namibia"><img src="https://flagcdn.com/w40/na.png" alt="Namibia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Nauru"><a href="countries/google-ads-nauru.html" aria-label="Google Ads in Nauru"><img src="https://flagcdn.com/w40/nr.png" alt="Nauru" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Nepal"><a href="countries/google-ads-nepal.html" aria-label="Google Ads in Nepal"><img src="https://flagcdn.com/w40/np.png" alt="Nepal" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Netherlands"><a href="countries/google-ads-netherlands.html" aria-label="Google Ads in Netherlands"><img src="https://flagcdn.com/w40/nl.png" alt="Netherlands" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="New Zealand"><a href="countries/google-ads-new-zealand.html" aria-label="Google Ads in New Zealand"><img src="https://flagcdn.com/w40/nz.png" alt="New Zealand" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Nicaragua"><a href="countries/google-ads-nicaragua.html" aria-label="Google Ads in Nicaragua"><img src="https://flagcdn.com/w40/ni.png" alt="Nicaragua" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Niger"><a href="countries/google-ads-niger.html" aria-label="Google Ads in Niger"><img src="https://flagcdn.com/w40/ne.png" alt="Niger" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Nigeria"><a href="countries/google-ads-nigeria.html" aria-label="Google Ads in Nigeria"><img src="https://flagcdn.com/w40/ng.png" alt="Nigeria" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="North Macedonia"><a href="countries/google-ads-north-macedonia.html" aria-label="Google Ads in North Macedonia"><img src="https://flagcdn.com/w40/mk.png" alt="North Macedonia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Norway"><a href="countries/google-ads-norway.html" aria-label="Google Ads in Norway"><img src="https://flagcdn.com/w40/no.png" alt="Norway" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Oman"><a href="countries/google-ads-oman.html" aria-label="Google Ads in Oman"><img src="https://flagcdn.com/w40/om.png" alt="Oman" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Pakistan"><a href="countries/google-ads-pakistan.html" aria-label="Google Ads in Pakistan"><img src="https://flagcdn.com/w40/pk.png" alt="Pakistan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Palau"><a href="countries/google-ads-palau.html" aria-label="Google Ads in Palau"><img src="https://flagcdn.com/w40/pw.png" alt="Palau" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Palestinian Territories"><a href="countries/google-ads-palestinian-territories.html" aria-label="Google Ads in Palestinian Territories"><img src="https://flagcdn.com/w40/ps.png" alt="Palestinian Territories" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Panama"><a href="countries/google-ads-panama.html" aria-label="Google Ads in Panama"><img src="https://flagcdn.com/w40/pa.png" alt="Panama" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Papua New Guinea"><a href="countries/google-ads-papua-new-guinea.html" aria-label="Google Ads in Papua New Guinea"><img src="https://flagcdn.com/w40/pg.png" alt="Papua New Guinea" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Paraguay"><a href="countries/google-ads-paraguay.html" aria-label="Google Ads in Paraguay"><img src="https://flagcdn.com/w40/py.png" alt="Paraguay" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Peru"><a href="countries/google-ads-peru.html" aria-label="Google Ads in Peru"><img src="https://flagcdn.com/w40/pe.png" alt="Peru" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Philippines"><a href="countries/google-ads-philippines.html" aria-label="Google Ads in Philippines"><img src="https://flagcdn.com/w40/ph.png" alt="Philippines" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Poland"><a href="countries/google-ads-poland.html" aria-label="Google Ads in Poland"><img src="https://flagcdn.com/w40/pl.png" alt="Poland" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Portugal"><a href="countries/google-ads-portugal.html" aria-label="Google Ads in Portugal"><img src="https://flagcdn.com/w40/pt.png" alt="Portugal" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Qatar"><a href="countries/google-ads-qatar.html" aria-label="Google Ads in Qatar"><img src="https://flagcdn.com/w40/qa.png" alt="Qatar" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Romania"><a href="countries/google-ads-romania.html" aria-label="Google Ads in Romania"><img src="https://flagcdn.com/w40/ro.png" alt="Romania" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Russia"><a href="countries/google-ads-russia.html" aria-label="Google Ads in Russia"><img src="https://flagcdn.com/w40/ru.png" alt="Russia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Rwanda"><a href="countries/google-ads-rwanda.html" aria-label="Google Ads in Rwanda"><img src="https://flagcdn.com/w40/rw.png" alt="Rwanda" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="St. Kitts &amp; Nevis"><a href="countries/google-ads-st-kitts-and-nevis.html" aria-label="Google Ads in St. Kitts &amp; Nevis"><img src="https://flagcdn.com/w40/kn.png" alt="St. Kitts &amp; Nevis" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="St. Lucia"><a href="countries/google-ads-st-lucia.html" aria-label="Google Ads in St. Lucia"><img src="https://flagcdn.com/w40/lc.png" alt="St. Lucia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="St. Vincent &amp; Grenadines"><a href="countries/google-ads-st-vincent-and-grenadines.html" aria-label="Google Ads in St. Vincent &amp; Grenadines"><img src="https://flagcdn.com/w40/vc.png" alt="St. Vincent &amp; Grenadines" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Samoa"><a href="countries/google-ads-samoa.html" aria-label="Google Ads in Samoa"><img src="https://flagcdn.com/w40/ws.png" alt="Samoa" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="San Marino"><a href="countries/google-ads-san-marino.html" aria-label="Google Ads in San Marino"><img src="https://flagcdn.com/w40/sm.png" alt="San Marino" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="São Tomé &amp; Príncipe"><a href="countries/google-ads-sao-tome-and-principe.html" aria-label="Google Ads in São Tomé &amp; Príncipe"><img src="https://flagcdn.com/w40/st.png" alt="São Tomé &amp; Príncipe" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Saudi Arabia"><a href="countries/google-ads-saudi-arabia.html" aria-label="Google Ads in Saudi Arabia"><img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Senegal"><a href="countries/google-ads-senegal.html" aria-label="Google Ads in Senegal"><img src="https://flagcdn.com/w40/sn.png" alt="Senegal" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Serbia"><a href="countries/google-ads-serbia.html" aria-label="Google Ads in Serbia"><img src="https://flagcdn.com/w40/rs.png" alt="Serbia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Seychelles"><a href="countries/google-ads-seychelles.html" aria-label="Google Ads in Seychelles"><img src="https://flagcdn.com/w40/sc.png" alt="Seychelles" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Sierra Leone"><a href="countries/google-ads-sierra-leone.html" aria-label="Google Ads in Sierra Leone"><img src="https://flagcdn.com/w40/sl.png" alt="Sierra Leone" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Singapore"><a href="countries/google-ads-singapore.html" aria-label="Google Ads in Singapore"><img src="https://flagcdn.com/w40/sg.png" alt="Singapore" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Slovakia"><a href="countries/google-ads-slovakia.html" aria-label="Google Ads in Slovakia"><img src="https://flagcdn.com/w40/sk.png" alt="Slovakia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Slovenia"><a href="countries/google-ads-slovenia.html" aria-label="Google Ads in Slovenia"><img src="https://flagcdn.com/w40/si.png" alt="Slovenia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Solomon Islands"><a href="countries/google-ads-solomon-islands.html" aria-label="Google Ads in Solomon Islands"><img src="https://flagcdn.com/w40/sb.png" alt="Solomon Islands" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Somalia"><a href="countries/google-ads-somalia.html" aria-label="Google Ads in Somalia"><img src="https://flagcdn.com/w40/so.png" alt="Somalia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="South Africa"><a href="countries/google-ads-south-africa.html" aria-label="Google Ads in South Africa"><img src="https://flagcdn.com/w40/za.png" alt="South Africa" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="South Sudan"><a href="countries/google-ads-south-sudan.html" aria-label="Google Ads in South Sudan"><img src="https://flagcdn.com/w40/ss.png" alt="South Sudan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Spain"><a href="countries/google-ads-spain.html" aria-label="Google Ads in Spain"><img src="https://flagcdn.com/w40/es.png" alt="Spain" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Sri Lanka"><a href="countries/google-ads-sri-lanka.html" aria-label="Google Ads in Sri Lanka"><img src="https://flagcdn.com/w40/lk.png" alt="Sri Lanka" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Sudan"><a href="countries/google-ads-sudan.html" aria-label="Google Ads in Sudan"><img src="https://flagcdn.com/w40/sd.png" alt="Sudan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Suriname"><a href="countries/google-ads-suriname.html" aria-label="Google Ads in Suriname"><img src="https://flagcdn.com/w40/sr.png" alt="Suriname" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Sweden"><a href="countries/google-ads-sweden.html" aria-label="Google Ads in Sweden"><img src="https://flagcdn.com/w40/se.png" alt="Sweden" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Switzerland"><a href="countries/google-ads-switzerland.html" aria-label="Google Ads in Switzerland"><img src="https://flagcdn.com/w40/ch.png" alt="Switzerland" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Syria"><a href="countries/google-ads-syria.html" aria-label="Google Ads in Syria"><img src="https://flagcdn.com/w40/sy.png" alt="Syria" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Tajikistan"><a href="countries/google-ads-tajikistan.html" aria-label="Google Ads in Tajikistan"><img src="https://flagcdn.com/w40/tj.png" alt="Tajikistan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Tanzania"><a href="countries/google-ads-tanzania.html" aria-label="Google Ads in Tanzania"><img src="https://flagcdn.com/w40/tz.png" alt="Tanzania" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Thailand"><a href="countries/google-ads-thailand.html" aria-label="Google Ads in Thailand"><img src="https://flagcdn.com/w40/th.png" alt="Thailand" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Timor-Leste"><a href="countries/google-ads-timor-leste.html" aria-label="Google Ads in Timor-Leste"><img src="https://flagcdn.com/w40/tl.png" alt="Timor-Leste" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Togo"><a href="countries/google-ads-togo.html" aria-label="Google Ads in Togo"><img src="https://flagcdn.com/w40/tg.png" alt="Togo" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Tonga"><a href="countries/google-ads-tonga.html" aria-label="Google Ads in Tonga"><img src="https://flagcdn.com/w40/to.png" alt="Tonga" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Trinidad &amp; Tobago"><a href="countries/google-ads-trinidad-and-tobago.html" aria-label="Google Ads in Trinidad &amp; Tobago"><img src="https://flagcdn.com/w40/tt.png" alt="Trinidad &amp; Tobago" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Tunisia"><a href="countries/google-ads-tunisia.html" aria-label="Google Ads in Tunisia"><img src="https://flagcdn.com/w40/tn.png" alt="Tunisia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Türkiye"><a href="countries/google-ads-turkiye.html" aria-label="Google Ads in Türkiye"><img src="https://flagcdn.com/w40/tr.png" alt="Türkiye" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Turkmenistan"><a href="countries/google-ads-turkmenistan.html" aria-label="Google Ads in Turkmenistan"><img src="https://flagcdn.com/w40/tm.png" alt="Turkmenistan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Tuvalu"><a href="countries/google-ads-tuvalu.html" aria-label="Google Ads in Tuvalu"><img src="https://flagcdn.com/w40/tv.png" alt="Tuvalu" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Uganda"><a href="countries/google-ads-uganda.html" aria-label="Google Ads in Uganda"><img src="https://flagcdn.com/w40/ug.png" alt="Uganda" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Ukraine"><a href="countries/google-ads-ukraine.html" aria-label="Google Ads in Ukraine"><img src="https://flagcdn.com/w40/ua.png" alt="Ukraine" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="United Arab Emirates"><a href="countries/google-ads-united-arab-emirates.html" aria-label="Google Ads in United Arab Emirates"><img src="https://flagcdn.com/w40/ae.png" alt="United Arab Emirates" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="United Kingdom"><a href="countries/google-ads-united-kingdom.html" aria-label="Google Ads in United Kingdom"><img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="United States"><a href="countries/google-ads-united-states.html" aria-label="Google Ads in United States"><img src="https://flagcdn.com/w40/us.png" alt="United States" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Uruguay"><a href="countries/google-ads-uruguay.html" aria-label="Google Ads in Uruguay"><img src="https://flagcdn.com/w40/uy.png" alt="Uruguay" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Uzbekistan"><a href="countries/google-ads-uzbekistan.html" aria-label="Google Ads in Uzbekistan"><img src="https://flagcdn.com/w40/uz.png" alt="Uzbekistan" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Vanuatu"><a href="countries/google-ads-vanuatu.html" aria-label="Google Ads in Vanuatu"><img src="https://flagcdn.com/w40/vu.png" alt="Vanuatu" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Vatican City"><a href="countries/google-ads-vatican-city.html" aria-label="Google Ads in Vatican City"><img src="https://flagcdn.com/w40/va.png" alt="Vatican City" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Venezuela"><a href="countries/google-ads-venezuela.html" aria-label="Google Ads in Venezuela"><img src="https://flagcdn.com/w40/ve.png" alt="Venezuela" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Vietnam"><a href="countries/google-ads-vietnam.html" aria-label="Google Ads in Vietnam"><img src="https://flagcdn.com/w40/vn.png" alt="Vietnam" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Yemen"><a href="countries/google-ads-yemen.html" aria-label="Google Ads in Yemen"><img src="https://flagcdn.com/w40/ye.png" alt="Yemen" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Zambia"><a href="countries/google-ads-zambia.html" aria-label="Google Ads in Zambia"><img src="https://flagcdn.com/w40/zm.png" alt="Zambia" width="40" height="30" loading="lazy" decoding="async"></a></li>
+          <li class="country-flag" title="Zimbabwe"><a href="countries/google-ads-zimbabwe.html" aria-label="Google Ads in Zimbabwe"><img src="https://flagcdn.com/w40/zw.png" alt="Zimbabwe" width="40" height="30" loading="lazy" decoding="async"></a></li>
+      </ul>
+      <div class="countries-contact"><p>Your next opportunity could be anywhere. Let's talk about the market you want to reach.</p><a class="seo-text-link" href="index.html#contact">Discuss Your Target Market <span aria-hidden="true">↗</span></a></div>
     </div>
   </section>
 </main>
@@ -250,15 +605,15 @@
     <div class="footer-divider"></div>
 
     <!-- Main Footer -->
-    <div class="footer-main">
+    <div class="footer-main row g-4 bootstrap-layout">
 
       <!-- Brand -->
-      <div class="footer-brand">
+      <div class="footer-brand col-12 col-md-6 col-xl-3">
         <a href="index.html" class="footer-logo">
           <img
             src="logo.png"
             alt="Global Advertising Media logo"
-            loading="lazy"
+            loading="lazy" class="img-fluid"
           >
         </a>
 
@@ -275,19 +630,22 @@
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-column">
+      <div class="footer-column col-12 col-md-6 col-xl-3">
         <h3>Explore</h3>
         <ul class="footer-nav">
           <li><a href="index.html#home">Home <span>↗</span></a></li>
           <li><a href="index.html#about">About Us <span>↗</span></a></li>
           <li><a href="index.html#services">Our Services <span>↗</span></a></li>
+          <li><a href="website-designing.html">Website Designing<span>↗</span></a></li>
+          <li><a href="digital-advertising.html">Digital Advertisement<span>↗</span></a></li>
           <li><a href="index.html#portfolio">Our Work <span>↗</span></a></li>
+          <li><a href="start-your-project.html">Start Your Project <span>↗</span></a></li>
           <li><a href="index.html#contact">Contact <span>↗</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-column">
+      <div class="footer-column col-12 col-md-6 col-xl-3">
         <h3>What We Do</h3>
         <ul class="footer-nav">
           <li><a href="index.html#digital-marketing">Digital Marketing <span>↗</span></a></li>
@@ -295,21 +653,24 @@
           <li><a href="index.html#branding-design">Branding &amp; Design <span>↗</span></a></li>
           <li><a href="index.html#media-planning">Media Planning <span>↗</span></a></li>
           <li><a href="index.html#creative-production">Creative Production <span>↗</span></a></li>
+           <li><a href="website-development.html">Website Development<span>↗</span></a></li>
+            <li><a href="content-management.html">Content Management<span>↗</span></a></li>
+            <li><a href="Seo.html">Search Engine Optimization(SEO)<span>↗</span></a></li>
+             <li><a href="email-marketing.html">Email Marketing<span>↗</span></a></li>
+             <li><a href="domain-registration.html">Domain Registration<span>↗</span></a></li>
         </ul>
       </div>
 
       <!-- Social Links -->
-      <div class="footer-column footer-connect">
-        <h3>Connect With Us</h3>
-        <p>Have an idea, a question, or a new project? We'd love to hear from you.</p>
-
-        <a
-          class="footer-email-link"
-          href="index.html#contact"
-        >
-          Let's talk about your project <span>↗</span>
-        </a>
-
+      <div class="footer-column footer-connect col-12 col-md-6 col-xl-3">
+        <h3>Contact Us</h3>
+        <p class="footer-company-name">GLOBAL ADVERTISING MEDIA PRIVATE LIMITED</p>
+        <address class="footer-office"><strong>Sales Office</strong><p>Office No. 5, Ground Floor, Shree Naman Plaza, S. V. Road, Opp. Shankar Lane, Kandivali (West), Mumbai - 400 067, Maharashtra, INDIA.</p></address>
+        <ul class="footer-contact-list" aria-label="Contact numbers">
+          <li><a href="tel:+919324850002"><span aria-hidden="true">☎</span> +91 9324850002</a></li>
+          <li><a href="tel:+919892994104"><span aria-hidden="true">☎</span> +91 9892994104</a></li>
+        </ul>
+        <div class="footer-websites"><strong>Website:</strong><a href="https://www.globaladvertisingmedia.com">www.globaladvertisingmedia.com</a><a href="https://www.globaladvertisingmedia.in">www.globaladvertisingmedia.in</a></div>
         <div class="footer-social">
           <a href="https://www.facebook.com/"
              target="_blank" rel="noopener noreferrer"
@@ -398,5 +759,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="responsive.js"></script>
 </body>
 </html>

@@ -162,8 +162,8 @@ body::before {
   max-width: 850px;
   margin: 15px 0 20px;
   color: #ffffff;
-  font-size: clamp(42px, 6vw, 76px);
-  font-weight: 800;
+  font-size: clamp(3.2rem, 2.5vw, 4rem);
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -2px;
   text-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
@@ -238,7 +238,7 @@ body::before {
 ========================================== */
 
 .agency-intro {
-  padding: 110px 7%;
+  padding: 50px 7%;
   background: transparent;
 }
 
@@ -343,7 +343,7 @@ body::before {
 ========================================== */
 
 .mission-vision {
-  padding: 95px 7%;
+  padding: 20px 7%;
   background:
     linear-gradient(
       135deg,
@@ -439,7 +439,7 @@ body::before {
 ========================================== */
 
 .core-values {
-  padding: 110px 7%;
+  padding: 10px 7%;
   background: transparent;
 }
 

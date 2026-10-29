@@ -180,124 +180,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
   // 5. MOBILE NAVIGATION
   // ==========================================
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.querySelectorAll(".nav-links a");
+  // Shared navigation is managed by Bootstrap.
 
-  function closeMobileMenu() {
-    if (menuToggle) {
-      menuToggle.checked = false;
-    }
-
-    document.querySelectorAll(".nav-links .dropdown").forEach(dropdown => {
-      dropdown.classList.remove("open");
-
-      const toggle = dropdown.querySelector(".dropdown-toggle");
-
-      toggle?.setAttribute("aria-expanded", "false");
-    });
-  }
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      // Allow the dropdown's first mobile tap to open its submenu.
-      const dropdown = link.closest(".dropdown");
-      const isDropdownToggle = link.classList.contains("dropdown-toggle");
-
-      if (
-        dropdown &&
-        isDropdownToggle &&
-        window.matchMedia("(max-width: 680px)").matches &&
-        !dropdown.classList.contains("open")
-      ) {
-        return;
-      }
-
-      closeMobileMenu();
-    });
-  });
-
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      closeMobileMenu();
-    }
-  });
-
-
-  // ==========================================
-  // 6. NAVIGATION DROPDOWN
-  // ==========================================
-  const dropdowns = document.querySelectorAll(
-    ".nav-links .dropdown"
-  );
-
-  dropdowns.forEach(dropdown => {
-    const toggle = dropdown.querySelector(".dropdown-toggle");
-
-    if (!toggle) return;
-
-    toggle.setAttribute("aria-haspopup", "true");
-    toggle.setAttribute(
-      "aria-expanded",
-      String(dropdown.classList.contains("open"))
-    );
-
-    toggle.addEventListener("click", event => {
-      const isMobile = window.matchMedia(
-        "(max-width: 680px)"
-      ).matches;
-
-      if (!isMobile) return;
-
-      if (!dropdown.classList.contains("open")) {
-        event.preventDefault();
-
-        // Close other dropdowns first.
-        dropdowns.forEach(other => {
-          if (other !== dropdown) {
-            other.classList.remove("open");
-
-            other.querySelector(".dropdown-toggle")
-              ?.setAttribute("aria-expanded", "false");
-          }
-        });
-
-        dropdown.classList.add("open");
-        toggle.setAttribute("aria-expanded", "true");
-      } else if (toggle.getAttribute("href") === "#") {
-        event.preventDefault();
-
-        dropdown.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
-    });
-
-    dropdown.querySelectorAll(".dropdown-menu a").forEach(link => {
-      link.addEventListener("click", () => {
-        dropdown.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-
-        if (menuToggle) {
-          menuToggle.checked = false;
-        }
-      });
-    });
-  });
-
-  document.addEventListener("click", event => {
-    dropdowns.forEach(dropdown => {
-      if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove("open");
-
-        dropdown.querySelector(".dropdown-toggle")
-          ?.setAttribute("aria-expanded", "false");
-      }
-    });
-  });
-
-
-  // ==========================================
-  // 7. FAQ - ONLY ONE ANSWER OPEN AT A TIME
-  // ==========================================
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach(item => {
@@ -677,11 +561,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateScrollProgress();
 
-
-  /* ========================================
-     5. HERO BACKGROUND IMAGE SLIDER
-  ======================================== */
-
+  
   const heroSlides = [
     ...document.querySelectorAll(".hero-bg-slider .hero-bg")
   ];

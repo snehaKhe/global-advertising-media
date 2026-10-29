@@ -1,0 +1,5 @@
+const fs=require('node:fs'), path=require('node:path');
+const root=process.cwd();let checked=0;const errors=[];const ids=new Map();
+function hasId(file,id){if(!ids.has(file)){const s=fs.readFileSync(file,'utf8');ids.set(file,new Set([...s.matchAll(/\bid=["']([^"']+)["']/g)].map(m=>m[1])));}return ids.get(file).has(id);}
+function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(e.name.startsWith('.')||e.name==='node_modules')continue;const file=path.join(dir,e.name);if(e.isDirectory()){walk(file);continue;}if(!e.name.endsWith('.html'))continue;const s=fs.readFileSync(file,'utf8'), footer=s.match(/<footer\b[\s\S]*?<\/footer>/)?.[0];if(!footer)continue;checked++;for(const m of footer.matchAll(/(?:href|src)="([^"\s]+)"/g)){const v=m[1];if(/^(https?:|tel:|mailto:|data:)/.test(v))continue;const [rel,hash]=v.split('#');const dest=rel?path.resolve(path.dirname(file),rel):file;if(!fs.existsSync(dest))errors.push(file+': '+v);else if(hash&&!hasId(dest,hash))errors.push(file+': missing '+v);}}}
+walk(root);console.log(JSON.stringify({pages:checked,errors:errors.slice(0,10),errorCount:errors.length}));if(errors.length)process.exitCode=1;

@@ -42,7 +42,7 @@
 
 /* Hero section */
 .feature-hero {
-  padding: 50px 0;
+  padding: 10px 0;
   background: #ff8b38;
 }
 
@@ -73,13 +73,14 @@
 
 .feature-content h2 {
   margin: 35px 0 15px;
-  color: #111827;
+  color: #14233a;
   font-size: clamp(24px, 3vw, 34px);
   line-height: 1.3;
+  font-weight: 800;
 }
 
 .feature-content h2:first-child {
-  margin-top: 0;
+  margin-top: 0px;
 }
 
 .feature-content p,

@@ -2,84 +2,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Global Advertising Media delivers creative advertising, branding, outdoor media and digital marketing solutions.">
   <title>Global Advertising Media | Creative Advertising Agency</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;750;800&display=swap">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="preload" as="image" href="images/home-creative-studio.png">
 </head>
 <body>
     <div class="scroll-progress" id="scrollProgress"></div>
   <!-- Navigation -->
 
-<header class="header" id="header">
-  <nav class="navbar">
+<header class="header" id="header"><div class="header-contact-strip" aria-label="Contact our team"><div class="header-contact-strip-inner"><a class="header-strip-email" href="mailto:enquiry@globaladvertisingmedia.in"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>enquiry@globaladvertisingmedia.in</span></a><div class="header-strip-actions"><a href="tel:+919324850002" aria-label="Call +91 9324 850 002"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+91 9324 850 002</span></a><a href="https://wa.me/919324850002" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +91 9324 850 002"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>+91 9324 850 002</span></a></div></div></div>
+
+  <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
 
     <!-- Logo -->
     <a href="index.html#home" class="logo">
-      <img src="logo.png" alt="Global Advertising Media">
+      <img src="logo.png" alt="Global Advertising Media" class="img-fluid">
     </a>
 
     <!-- Mobile Menu Toggle -->
-    <input type="checkbox" id="menu-toggle">
-
-    <label for="menu-toggle" class="menu-icon"
-           aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-    </label>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
     <!-- Navigation Links -->
-    <ul class="nav-links">
+    <div class="collapse navbar-collapse" id="mainNavigation"><ul class="nav-links navbar-nav ms-auto">
 
       <li>
         <a href="index.html#home" class="nav-link">Home</a>
       </li>
 
       <!-- About Dropdown -->
-      <li class="nav-item has-dropdown">
-        <a href="index.html#about" class="nav-link">
-          About Us <span class="dropdown-arrow"></span>
-        </a>
+      <li class="nav-item has-dropdown dropdown">
+        <a href="index.html#about" class="nav-link">About Us</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open About Us menu"><span class="dropdown-arrow" aria-hidden="true"></span></button>
 
         <ul class="dropdown-menu">
-          <li><a href="about-our-agency.html">About Our Agency</a></li>
-          <li><a href="creative-thinking.html">Creative Thinking</a></li>
-          <li><a href="integrated-solutions.html">Integrated Solutions</a></li>
-          <li><a href="audience-focus.html">Audience Focus</a></li>
-          <li><a href="transparent-process.html">Transparent Process</a></li>
+          <li><a class="dropdown-item" href="about-our-agency.html">About Our Agency</a></li>
+          <li><a class="dropdown-item" href="creative-thinking.html">Creative Thinking</a></li>
+          <li><a class="dropdown-item" href="integrated-solutions.html">Integrated Solutions</a></li>
+          <li><a class="dropdown-item" href="audience-focus.html">Audience Focus</a></li>
+          <li><a class="dropdown-item" href="transparent-process.html">Transparent Process</a></li>
+          <li><a class="dropdown-item" href="start-your-project.html">Start Your Project</a></li>
         </ul>
       </li>
 
       <!-- Services Dropdown -->
-      <li class="nav-item has-dropdown">
-        <a href="digital-marketing.html" class="nav-link">
-          Services <span class="dropdown-arrow"></span>
-        </a>
+      <li class="nav-item has-dropdown dropdown outdoor-advertising-nav"><a href="outdoor-advertising.html" class="nav-link">Outdoor Advertising</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open Outdoor Advertising menu"><span class="dropdown-arrow" aria-hidden="true"></span></button><ul class="dropdown-menu"><li><a class="dropdown-item" href="railway-advertising.html">Railway Advertising</a></li><li><a class="dropdown-item" href="metro-advertising.html">Metro Advertising</a></li><li><a class="dropdown-item" href="bus-advertising.html">Bus Advertising</a></li><li><a class="dropdown-item" href="tv-advertising.html">TV Advertising</a></li><li><a class="dropdown-item" href="theater-advertising.html">Theater Advertising</a></li><li><a class="dropdown-item" href="radio-advertising.html">Radio Advertising</a></li><li><a class="dropdown-item" href="tricycle-advertising.html">Tricycle Advertising</a></li><li><a class="dropdown-item" href="mall-advertising.html">Mall Advertising</a></li><li><a class="dropdown-item" href="airport-advertising.html">Airport Advertising</a></li><li><a class="dropdown-item" href="newspaper-advertising.html">Newspaper Advertising</a></li><li><a class="dropdown-item" href="cab-advertising.html">Cab Advertising</a></li><li><a class="dropdown-item" href="autorickshaw-advertising.html">Autorickshaw Advertising</a></li></ul></li>
 
-        <ul class="dropdown-menu">
-          <li><a href="digital-marketing.html">Digital Marketing</a></li>
-          <li><a href="outdoor-advertising.html">Outdoor Advertising</a></li>
-          <li><a href="branding-design.html">Branding &amp; Design</a></li>
-          <li><a href="media-planning.html">Media Planning</a></li>
-          <li><a href="creative-production.html">Creative Production</a></li>
-          <li><a href="campaign-strategy.html">Campaign Strategy</a></li>
-        </ul>
-      </li>
+      <li class="nav-item has-dropdown dropdown graphic-design-nav"><a href="graphic-design.html" class="nav-link">Graphic Design</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open Graphic Design menu"><span class="dropdown-arrow" aria-hidden="true"></span></button><ul class="dropdown-menu"><li><a class="dropdown-item" href="logo-designing.html">Logo Designing</a></li><li><a class="dropdown-item" href="visiting-card-designing.html">Visiting Card Designing</a></li><li><a class="dropdown-item" href="letterhead-designing.html">Letterhead Designing</a></li><li><a class="dropdown-item" href="pamphlet-designing.html">Pamphlet Designing</a></li><li><a class="dropdown-item" href="social-post-design.html">Social Post Design</a></li><li><a class="dropdown-item" href="festival-greetings.html">Festival Greeting</a></li><li><a class="dropdown-item" href="animated-video.html">Animated Video</a></li><li><a class="dropdown-item" href="ai-video.html">AI Video</a></li></ul></li>
 
       <!-- Website Designing Dropdown -->
-<li class="nav-item has-dropdown">
-  <a href="website-designing.html" class="nav-link">
-    Website Designing <span class="dropdown-arrow"></span>
-  </a>
+<li class="nav-item has-dropdown dropdown">
+  <a href="website-designing.html" class="nav-link">Website Designing</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open Website Designing menu"><span class="dropdown-arrow" aria-hidden="true"></span></button>
 
   <ul class="dropdown-menu">
     <li>
@@ -98,47 +80,40 @@
 </li>
 
       <!-- Digital Advertising Dropdown -->
-      <li class="nav-item has-dropdown">
-        <a href="digital-advertising.html" class="nav-link">
-          Digital Advertisement <span class="dropdown-arrow"></span>
-        </a>
+      <li class="nav-item has-dropdown dropdown">
+        <a href="digital-advertising.html" class="nav-link">Digital Advertisement</a><button type="button" class="submenu-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open Digital Advertisement menu"><span class="dropdown-arrow" aria-hidden="true"></span></button>
 
         <ul class="dropdown-menu">
-          <li><a href="google-ads.html">Google Ads</a></li>
-          <li><a href="social-media-ads.html">Social Media Advertising</a></li>
-          <li><a href="display-advertising.html">Display Advertising</a></li>
-          <li><a href="video-advertising.html">Video Advertising</a></li>
-          <li><a href="remarketing.html">Remarketing &amp; Retargeting</a></li>
-          <li><a href="sem.html">Search Engine Marketing (SEM)</a></li>
-            <li><a href="seo.html">Search Engine Optimization (SEO)</a></li>
-            <li><a href="smo.html">Social Media Optimization (SMO)</a></li>
-            <li><a href="domain-registration.html">Domain Registration</a></li>
-            <li><a href="email-marketing.html">Email Marketing</a></li>
-            <li><a href="sms.html">SMS Marketing</a></li>
-            <li><a href="whatsapp.html">WhatsApp Marketing</a></li>
-            <li><a href="chatgpt-advertising.html">ChatGPT Advertising</a></li>
+          <li><a class="dropdown-item" href="google-ads.html">Google Ads</a></li>
+          <li><a class="dropdown-item" href="social-media-ads.html">Social Media Advertising</a></li>
+          <li><a class="dropdown-item" href="display-advertising.html">Display Advertising</a></li>
+          <li><a class="dropdown-item" href="video-advertising.html">Video Advertising</a></li>
+          <li><a class="dropdown-item" href="remarketing.html">Remarketing &amp; Retargeting</a></li>
+          <li><a class="dropdown-item" href="sem.html">Search Engine Marketing (SEM)</a></li>
+            <li><a class="dropdown-item" href="seo.html">Search Engine Optimization (SEO)</a></li>
+            <li><a class="dropdown-item" href="smo.html">Social Media Optimization (SMO)</a></li>
+            <li><a class="dropdown-item" href="domain-registration.html">Domain Registration</a></li>
+            <li><a class="dropdown-item" href="email-marketing.html">Email Marketing</a></li>
+            <li><a class="dropdown-item" href="sms.html">SMS Marketing</a></li>
+            <li><a class="dropdown-item" href="whatsapp.html">WhatsApp Marketing</a></li>
+            <li><a class="dropdown-item" href="chatgpt-advertising.html">ChatGPT Advertising</a></li>
             </ul>
       </li>
 
       <!-- Our Work -->
-      <li>
-        <a href="index.html#portfolio" class="nav-link">Our Work</a>
-      </li>
 
       <!-- FAQs -->
-      <li>
-        <a href="index.html#faq" class="nav-link">FAQs</a>
-      </li>
 
       <!-- Contact CTA -->
-      <li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+<li>
         <a href="index.html#contact" class="nav-cta">
           Let's Talk <span class="cta-arrow">↗</span>
         </a>
       </li>
 
     </ul>
-  </nav>
+  </div></nav>
 </header>
 
 
@@ -148,15 +123,14 @@
 <section class="hero" id="home">
 
   <!-- Background images -->
-  <div class="hero-bg-slider">
+  <div class="hero-bg-slider" aria-hidden="true">
     <div class="hero-bg active"
-         style="background-image: url('images/hero1.jpg')"></div>
+         style="background-image: url('images/hom1.jpg')"></div>
 
     <div class="hero-bg"
-         style="background-image: url('images/hero2.jpg')"></div>
-
+         style="background-image: url('images/home2.jpg')"></div>
     <div class="hero-bg"
-         style="background-image: url('images/hero3.jpg')"></div>
+         style="background-image: url('images/home3.jpg')"></div>
   </div>
 
   <!-- Dark overlay -->
@@ -183,15 +157,15 @@
 
     <div class="hero-stats">
       <div>
-        <strong><span class="counter" data-target="150">0</span>+</strong>
+        <strong><span class="counter" data-target="2500">0</span>+</strong>
         <span>Projects Delivered</span>
       </div>
       <div>
-        <strong><span class="counter" data-target="80">0</span>+</strong>
+        <strong><span class="counter" data-target="500">0</span>+</strong>
         <span>Happy Clients</span>
       </div>
       <div>
-        <strong><span class="counter" data-target="12">0</span>+</strong>
+        <strong><span class="counter" data-target="20">0</span>+</strong>
         <span>Years of Creativity</span>
       </div>
     </div>
@@ -201,31 +175,75 @@
 </section>
 
 
+    <!-- Partners and advertising platforms -->
+    <section class="partners-section" id="partners" aria-labelledby="partners-heading">
+      <div class="container">
+        <div class="partners-heading">
+          <div>
+            <span class="eyebrow">OUR PARTNERS &amp; PLATFORMS</span>
+            <h2 id="partners-heading">The Right Platforms. <span>Greater Possibilities.</span></h2>
+          </div>
+          <p>Connect your brand with audiences across leading advertising platforms. We bring strategy, creative ideas, and campaign planning together to help you reach people where they search, connect, and do business.</p>
+        </div>
+        <ul class="row g-4 partners-list">
+          <li class="col-12 col-sm-6 col-lg-3">
+            <a class="partner-card" href="Sem.html">
+              <span class="partner-brand"><i class="fa-brands fa-microsoft" aria-hidden="true"></i><span>Microsoft <small>Advertising</small></span></span>
+              <p>Reach customers exploring products and services through Bing search advertising.</p>
+              <span class="partner-link">Explore search marketing <span aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <a class="partner-card" href="social-media-ads.html">
+              <span class="partner-brand"><i class="fa-brands fa-meta" aria-hidden="true"></i><span>Meta <small>Facebook &amp; Instagram</small></span></span>
+              <p>Build awareness and start conversations with creative social media campaigns.</p>
+              <span class="partner-link">Explore social advertising <span aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <a class="partner-card" href="google-ads.html">
+              <span class="partner-brand"><i class="fa-brands fa-google" aria-hidden="true"></i><span>Google <small>Ads</small></span></span>
+              <p>Connect with people searching for what you offer through focused Google Ads campaigns.</p>
+              <span class="partner-link">Explore Google Ads <span aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <a class="partner-card" href="social-media-ads.html">
+              <span class="partner-brand"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn <small>Advertising</small></span></span>
+              <p>Put your message in front of professional audiences and business decision-makers.</p>
+              <span class="partner-link">Explore B2B advertising <span aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- About Section -->
     <section class="section about" id="about">
-      <div class="container about-grid">
-        <div class="about-image">
+      <div class="container about-grid row g-4 bootstrap-layout">
+        <div class="about-image col-12 col-lg-6">
           <img
             src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
             alt="Modern creative agency workspace"
-            loading="lazy">
+            loading="lazy" class="img-fluid">
           <div class="image-badge">
             <strong>Think Big.</strong>
             <span>Create Impact.</span>
           </div>
         </div>
 
-        <div class="about-content">
+        <div class="about-content col-12 col-lg-6">
           <span class="eyebrow dark-eyebrow">WHO WE ARE</span>
           <h2>We Make Great Brands <span>Stand Out.</span></h2>
           <p>
-            Global Advertising Media is a creative advertising agency
-            focused on helping businesses build stronger brands,
-            reach wider audiences and communicate with confidence.
+            Your business has its own story, goals, and challenges.
+            We take the time to understand them before we start
+            planning your advertising.
           </p>
           <p>
-            From outdoor advertising and brand identity to digital
-            marketing and campaign planning, we bring your ideas to life.
+            From your first idea to the finished campaign, we work
+            with you on the message, design, and next steps — with
+            clear communication along the way.
           </p>
 
           <div class="about-points">
@@ -234,6 +252,10 @@
             <div><span>✓</span> Client-focused execution</div>
           </div>
           <a href="#contact" class="text-link">Discover Our Approach ↗</a>
+          <div class="conversation-note">
+            <strong>Not sure where to start? Let's talk.</strong>
+            <p>Tell us what you're working on. We'll help you find a practical next step for your brand.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -256,9 +278,9 @@
       </p>
     </div>
 
-    <div class="service-grid">
+    <div class="service-grid row g-4 bootstrap-layout">
 
-      <article class="service-card">
+      <article class="service-card col-12 col-md-6 col-xl-4">
         <div class="service-icon">01</div>
         <h3>Digital Marketing</h3>
         <p>
@@ -268,7 +290,7 @@
         <a href="#digital-marketing">Learn More ↗</a>
       </article>
 
-      <article class="service-card">
+      <article class="service-card col-12 col-md-6 col-xl-4">
         <div class="service-icon">02</div>
         <h3>Outdoor Advertising</h3>
         <p>
@@ -278,7 +300,7 @@
         <a href="#outdoor-advertising">Learn More ↗</a>
       </article>
 
-      <article class="service-card">
+      <article class="service-card col-12 col-md-6 col-xl-4">
         <div class="service-icon">03</div>
         <h3>Branding &amp; Design</h3>
         <p>
@@ -288,7 +310,7 @@
         <a href="#branding-design">Learn More ↗</a>
       </article>
 
-      <article class="service-card">
+      <article class="service-card col-12 col-md-6 col-xl-4">
         <div class="service-icon">04</div>
         <h3>Media Planning</h3>
         <p>
@@ -298,7 +320,7 @@
         <a href="#media-planning">Learn More ↗</a>
       </article>
 
-      <article class="service-card">
+      <article class="service-card col-12 col-md-6 col-xl-4">
         <div class="service-icon">05</div>
         <h3>Creative Production</h3>
         <p>
@@ -308,7 +330,7 @@
         <a href="#creative-production">Learn More ↗</a>
       </article>
 
-      <article class="service-card">
+      <article class="service-card col-12 col-md-6 col-xl-4">
         <div class="service-icon">06</div>
         <h3>Campaign Strategy</h3>
         <p>
@@ -558,16 +580,16 @@
       </button>
     </div>
 
-    <div class="portfolio-grid">
+    <div class="portfolio-grid row g-4 bootstrap-layout">
 
       <!-- Project 1: Outdoor Media -->
-      <article class="portfolio-card portfolio-large"
+      <article class="portfolio-card portfolio-large col-12 col-md-6"
                data-category="outdoor" id="outdoor">
 
         <img
           src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=85"
           alt="Illuminated city skyline and outdoor advertising"
-          loading="lazy">
+          loading="lazy" class="img-fluid">
 
         <div class="portfolio-info">
           <span>OUTDOOR MEDIA</span>
@@ -612,12 +634,12 @@
       </article>
 
       <!-- Project 2: Branding -->
-      <article class="portfolio-card" data-category="branding" id="branding">
+      <article class="portfolio-card col-12 col-md-6" data-category="branding" id="branding">
 
         <img
           src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85"
           alt="Creative graphic design and branding"
-          loading="lazy">
+          loading="lazy" class="img-fluid">
 
         <div class="portfolio-info">
           <span>BRAND IDENTITY</span>
@@ -662,12 +684,12 @@
       </article>
 
       <!-- Project 3: Digital Marketing -->
-      <article class="portfolio-card" data-category="digital" id="digital">
+      <article class="portfolio-card col-12 col-md-6" data-category="digital" id="digital">
 
         <img
           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85"
           alt="Digital marketing analytics and campaign performance"
-          loading="lazy">
+          loading="lazy" class="img-fluid">
 
         <div class="portfolio-info">
           <span>DIGITAL CAMPAIGNS</span>
@@ -712,13 +734,13 @@
       </article>
       
 <!-- Project 4: Print Advertising -->
-<article class="portfolio-card" id="print"
+<article class="portfolio-card col-12 col-md-6" id="print"
          data-category="print">
 
   <img
     src="https://images.unsplash.com/photo-1504270997636-07ddfbd48945?auto=format&fit=crop&w=900&q=85"
     alt="Printed promotional materials and advertising design"
-    loading="lazy">
+    loading="lazy" class="img-fluid">
 
   <div class="portfolio-info">
     <span>PRINT ADVERTISING</span>
@@ -764,13 +786,13 @@
 
 
 <!-- Project 5: Social Media -->
-<article class="portfolio-card" id="social-media"
+<article class="portfolio-card col-12 col-md-6" id="social-media"
          data-category="social-media">
 
   <img
     src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=900&q=85"
     alt="Social media content and digital campaign concept"
-    loading="lazy">
+    loading="lazy" class="img-fluid">
 
   <div class="portfolio-info">
     <span>SOCIAL MEDIA CAMPAIGNS</span>
@@ -816,13 +838,13 @@
 
 
 <!-- Project 6: Creative Campaigns -->
-<article class="portfolio-card" id="creative-campaigns"
+<article class="portfolio-card col-12 col-md-6" id="creative-campaigns"
          data-category="creative">
 
   <img
     src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=85"
     alt="Creative campaign artwork and visual communication"
-    loading="lazy">
+    loading="lazy" class="img-fluid">
 
   <div class="portfolio-info">
     <span>CREATIVE CAMPAIGNS</span>
@@ -881,10 +903,27 @@
 
     <!-- Why Choose Us -->
    
-<section class="section why-us" id="why-us">
-  <div class="container why-grid">
+<section class="section studio-section" id="how-we-work" aria-labelledby="studio-title">
+<div class="container"><div class="studio-heading"><div><span class="eyebrow">GOOD WORK STARTS WITH A CONVERSATION</span><h2 id="studio-title">Your goals. A clear plan.<br><span>A team working with you.</span></h2></div><p>You know your business. We bring the advertising perspective. Together, we turn your priorities into a practical plan, with your feedback at every stage.</p></div>
+<ol class="studio-steps">
+<li><span class="studio-number">01</span><h3>First, we listen</h3><p>Tell us about your customers, challenges and what a successful project would mean to you.</p></li>
+<li><span class="studio-number">02</span><h3>Agree on the plan</h3><p>Review the channels, deliverables, budget and timeline before work begins.</p></li>
+<li><span class="studio-number">03</span><h3>Create together</h3><p>Explore the creative direction, share feedback and approve the campaign materials.</p></li>
+<li><span class="studio-number">04</span><h3>Launch and learn</h3><p>Review the available performance data and decide what to improve next.</p></li>
+</ol><a class="btn btn-primary" href="start-your-project.html">Plan your project ↗</a></div></section>
+<section class="section studio-industries" id="industries" aria-labelledby="industries-title"><div class="container">
+<div class="studio-heading"><div><span class="eyebrow">BUILT AROUND YOUR BUSINESS</span><h2 id="industries-title">Different businesses.<br><span>Thoughtful approaches.</span></h2></div><p>A local shop and a growing B2B company need different conversations. Explore how advertising can support the goals that matter in your industry.</p></div>
+<div class="studio-industry-grid">
+<article><span class="studio-symbol" aria-hidden="true">↗</span><h3>Retail &amp; e-commerce</h3><p>Bring products into focus with clear offers, engaging creative and a smoother path to purchase.</p><a href="google-ads.html">Explore search advertising ↗</a></article>
+<article><span class="studio-symbol" aria-hidden="true">⌂</span><h3>Property &amp; local services</h3><p>Help nearby customers understand your offer and take the next step with a relevant enquiry.</p><a href="Seo.html">Explore search visibility ↗</a></article>
+<article><span class="studio-symbol" aria-hidden="true">◎</span><h3>Hospitality &amp; lifestyle</h3><p>Share the experience behind your brand through visual stories, seasonal content and social campaigns.</p><a href="social-media-ads.html">Explore social campaigns ↗</a></article>
+<article><span class="studio-symbol" aria-hidden="true">✳</span><h3>B2B &amp; professional services</h3><p>Explain complex services clearly and give decision-makers useful reasons to start a conversation.</p><a href="branding-design.html">Explore brand communication ↗</a></article>
+</div><div class="studio-invitation"><div><h3>Have an idea, but need help shaping it?</h3><p>You do not need a finished brief. Start with your goal and we can take it from there.</p></div><a class="btn btn-primary" href="start-your-project.html">Let's work out the next step ↗</a></div></div></section>
 
-    <div>
+<section class="section why-us" id="why-us">
+  <div class="container why-grid row g-4 bootstrap-layout">
+
+    <div class="col-12 col-lg-6">
       <span class="eyebrow dark-eyebrow">
         WHY GLOBAL ADVERTISING MEDIA
       </span>
@@ -903,7 +942,7 @@
       </a>
     </div>
 
-    <div class="why-list">
+    <div class="why-list col-12 col-lg-6">
 
       <div class="why-item" id="creative-thinking">
         <span>01</span>
@@ -958,8 +997,8 @@
 
 <!-- FAQ Section -->
 <section class="section faq" id="faq">
-    <div class="container faq-grid">
-      <div class="faq-heading">
+    <div class="container faq-grid row g-4 bootstrap-layout">
+      <div class="faq-heading col-12 col-lg-6">
         <span class="eyebrow dark-eyebrow">HAVE QUESTIONS?</span>
         <h2>Let's Clear Things <span>Up.</span></h2>
         <p>
@@ -971,7 +1010,7 @@
         </a>
       </div>
   
-      <div class="faq-list">
+      <div class="faq-list col-12 col-lg-6">
         <details class="faq-item">
           <summary>What services does your agency provide?</summary>
           <p>
@@ -1009,8 +1048,8 @@
   
     <!-- Contact Section -->
     <section class="section contact" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-content">
+      <div class="container contact-grid row g-4 bootstrap-layout">
+        <div class="contact-content col-12 col-lg-6">
           <span class="eyebrow dark-eyebrow">GET IN TOUCH</span>
           <h2>Have a Project<br>in <span>Mind?</span></h2>
           <p>
@@ -1033,19 +1072,19 @@
           </div>
         </div>
 
-        <form class="contact-form" action="#" method="post">
-          <h3>Start a Conversation</h3>
+        <form class="contact-form col-12 col-lg-6" action="#" method="post">
+          <h3 class="start-form-heading">Start a Conversation</h3>
 
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name"
-            placeholder="Enter your full name" required>
+            placeholder="Enter your full name" required class="form-control">
 
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email"
-            placeholder="you@example.com" required>
+            placeholder="you@example.com" required class="form-control">
 
           <label for="service">Interested In</label>
-          <select id="service" name="service" required>
+          <select id="service" name="service" required class="form-select">
             <option value="" disabled selected>Select a service</option>
             <option>Digital Marketing</option>
             <option>Outdoor Advertising</option>
@@ -1057,13 +1096,13 @@
 
           <label for="message">Your Message</label>
           <textarea id="message" name="message" rows="4"
-            placeholder="Tell us about your project..." required></textarea>
+            placeholder="Tell us about your project..." required class="form-control"></textarea>
 
           <button type="submit" class="btn btn-primary form-button">
             Send Inquiry ↗
           </button>
           <p class="form-note">
-            Demo form: connect a backend or form service to receive inquiries.
+            We look forward to hearing about your project.
           </p>
         </form>
       </div>
@@ -1097,15 +1136,15 @@
     <div class="footer-divider"></div>
 
     <!-- Main Footer -->
-    <div class="footer-main">
+    <div class="footer-main row g-4 bootstrap-layout">
 
       <!-- Brand -->
-      <div class="footer-brand">
+      <div class="footer-brand col-12 col-md-6 col-xl-3">
         <a href="index.html" class="footer-logo">
           <img
             src="logo.png"
             alt="Global Advertising Media logo"
-            loading="lazy"
+            loading="lazy" class="img-fluid"
           >
         </a>
 
@@ -1122,19 +1161,22 @@
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-column">
+      <div class="footer-column col-12 col-md-6 col-xl-3">
         <h3>Explore</h3>
         <ul class="footer-nav">
           <li><a href="index.html#home">Home <span>↗</span></a></li>
           <li><a href="index.html#about">About Us <span>↗</span></a></li>
           <li><a href="index.html#services">Our Services <span>↗</span></a></li>
+          <li><a href="website-designing.html">Website Designing<span>↗</span></a></li>
+          <li><a href="digital-advertising.html">Digital Advertisement<span>↗</span></a></li>
           <li><a href="index.html#portfolio">Our Work <span>↗</span></a></li>
+          <li><a href="start-your-project.html">Start Your Project <span>↗</span></a></li>
           <li><a href="index.html#contact">Contact <span>↗</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-column">
+      <div class="footer-column col-12 col-md-6 col-xl-3">
         <h3>What We Do</h3>
         <ul class="footer-nav">
           <li><a href="index.html#digital-marketing">Digital Marketing <span>↗</span></a></li>
@@ -1142,21 +1184,24 @@
           <li><a href="index.html#branding-design">Branding &amp; Design <span>↗</span></a></li>
           <li><a href="index.html#media-planning">Media Planning <span>↗</span></a></li>
           <li><a href="index.html#creative-production">Creative Production <span>↗</span></a></li>
+           <li><a href="website-development.html">Website Development<span>↗</span></a></li>
+            <li><a href="content-management.html">Content Management<span>↗</span></a></li>
+            <li><a href="seo.html">Search Engine Optimization(SEO)<span>↗</span></a></li>
+             <li><a href="email-marketing.html">Email Marketing<span>↗</span></a></li>
+             <li><a href="domain-registration.html">Domain Registration<span>↗</span></a></li>
         </ul>
       </div>
 
       <!-- Social Links -->
-      <div class="footer-column footer-connect">
-        <h3>Connect With Us</h3>
-        <p>Have an idea, a question, or a new project? We'd love to hear from you.</p>
-
-        <a
-          class="footer-email-link"
-          href="index.html#contact"
-        >
-          Let's talk about your project <span>↗</span>
-        </a>
-
+      <div class="footer-column footer-connect col-12 col-md-6 col-xl-3">
+        <h3>Contact Us</h3>
+        <p class="footer-company-name">GLOBAL ADVERTISING MEDIA PRIVATE LIMITED</p>
+        <address class="footer-office"><strong>Sales Office</strong><p>Office No. 5, Ground Floor, Shree Naman Plaza, S. V. Road, Opp. Shankar Lane, Kandivali (West), Mumbai - 400 067, Maharashtra, INDIA.</p></address>
+        <ul class="footer-contact-list" aria-label="Contact numbers">
+          <li><a href="tel:+919324850002"><span aria-hidden="true">☎</span> +91 9324850002</a></li>
+          <li><a href="tel:+919892994104"><span aria-hidden="true">☎</span> +91 9892994104</a></li>
+        </ul>
+        <div class="footer-websites"><strong>Website:</strong><a href="https://www.globaladvertisingmedia.com">www.globaladvertisingmedia.com</a><a href="https://www.globaladvertisingmedia.in">www.globaladvertisingmedia.in</a></div>
         <div class="footer-social">
           <a href="https://www.facebook.com/"
              target="_blank" rel="noopener noreferrer"
@@ -1210,8 +1255,9 @@
   </div>
 </footer>
 
-
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
+<script src="responsive.js"></script>
 </body>
 </html>
 

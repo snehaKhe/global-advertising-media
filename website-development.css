@@ -309,8 +309,7 @@ html {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
     gap: clamp(35px, 5vw, 75px);
-    padding: clamp(75px, 9vw, 125px) 8%;
-    min-height: 600px;
+    min-height: 500px;
     background:
         radial-gradient(
             circle at 85% 15%,
@@ -377,7 +376,6 @@ html {
 .web-hero-content h1 {
     margin: 0 0 24px;
     color: var(--web-navy);
-    font-size: clamp(38px, 4.3vw, 66px);
     font-weight: 800;
     line-height: 1.09;
     letter-spacing: -2px;
